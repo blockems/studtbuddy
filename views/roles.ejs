@@ -1,0 +1,26 @@
+<!-- products.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <nav class="top-menu">
+      <ul>
+        <li><a href="/users">Users</a></li>
+        <li><a href="/roles">Roles</a></li>
+        <li><a href="/skills">Skills</a></li>
+        <li><a href="/admin/initdb">Initialize Database</a></li>
+      </ul>
+    </nav>
+    <h1>Products</h1>
+    <ul>
+      <% for (const role of roles) { %>
+        <li><%= role.description %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
