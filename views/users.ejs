@@ -1,0 +1,17 @@
+<!-- users.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+  </head>
+  <body>
+    <h1>Users</h1>
+    <ul>
+      <% for (const user of users) { %>
+        <li><%= user.name %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
