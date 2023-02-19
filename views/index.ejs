@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <%- include('partials/menu') %>
+    <h1>Welcome to my Node.js app</h1>
+    <form action="/api-call" method="get">
+      <label for="jobtitle">Job Title:</label>
+      <input type="text" name="jobtitle" id="jobtitle" required>
+      <label for="industry">Industry:</label>
+      <input type="text" name="industry" id="industry" required>
+      <label for="location">Location:</label>
+      <input type="text" name="location" id="location" required>
+      <label for="joblevel">Job Level:</label>
+      <input type="text" name="joblevel" id="joblevel" required>
+      <label for="companysize">Company Size:</label>
+      <input type="text" name="companysize" id="companysize" required>
+      <button type="submit">Submit</button>
+    </form>
+    
+    <% if (result) { %>
+      <h2>API Results:</h2>
+      <pre><%= result %></pre>
+    <% } %>
+  </body>
+</html>

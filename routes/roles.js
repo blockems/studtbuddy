@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render('roles', { products: rows });
+    res.render('roles', { roles: rows });
   });
 });
 

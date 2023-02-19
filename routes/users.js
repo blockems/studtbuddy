@@ -7,7 +7,7 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./data/database.db');
 
 router.get('/', (req, res) => {
-  db.all('SELECT * FROM users', [], (err, rows) => {
+  db.all('SELECT * FROM user', [], (err, rows) => {
     if (err) {
       return console.error(err.message);
     }

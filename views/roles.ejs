@@ -2,25 +2,22 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body>
-    <nav class="top-menu">
-      <ul>
-        <li><a href="/users">Users</a></li>
-        <li><a href="/roles">Roles</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/admin/initdb">Initialize Database</a></li>
-      </ul>
-    </nav>
-    <h1>Products</h1>
-    <ul>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/menu') %>
+    <h1>Roles</h1>
+    <table class="striped-table">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
       <% for (const role of roles) { %>
-        <li><%= role.description %></li>
+      <tr>
+        <td><%= role.name %></td>
+        <td><%= role.description %></td>
+      </tr>
       <% } %>
-    </ul>
+  </table>
   </body>
 </html>

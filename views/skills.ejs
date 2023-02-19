@@ -1,0 +1,59 @@
+<!-- products.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/menu') %>
+    <h1>Skills</h1>
+    <table class="striped-table">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <% for (const skill of skills) { %>
+      <tr>
+        <td>Using a scale of emergent, competent, expert and lead, Can you do a break down of the skills and knowledge required to be rated at emergent in the area of <%= skill.name %>.<br>
+        Can you put this into a table with the following headings: <br>
+        Skill Name, Level, Description<br>
+        Place the contents in JSON format.
+        Construct the JSON object so as the name, description and level of the skill are on the base level, with the skills in a skills array.
+        Within the skills array, break each skill down into its sub skills using the same format.
+        </td>
+        <td><%= skill.description %></td>
+      </tr>
+      <tr>
+        <td>Using a scale of emergent, competent, expert and lead, Can you do a break down of the skills and knowledge required to be rated at competent in the area of <%= skill.name %>.<br>
+          Can you put this into a table with the following headings: <br>
+          Skill Name, Level, Description<br>
+          Place the contents in JSON format.
+          Construct the JSON object so as the name, description and level of the skill are on the base level, with the skills in a skills array.
+          Within the skills array, break each skill down into its sub skills using the same format.
+          </td>
+        <td><%= skill.description %></td>
+      </tr>
+      <tr>
+        <td>Using a scale of emergent, competent, expert and lead, Can you do a break down of the skills and knowledge required to be rated at expert in the area of <%= skill.name %>.<br>
+          Can you put this into a table with the following headings: <br>
+          Skill Name, Level, Description<br>
+          Place the contents in JSON format.
+          Construct the JSON object so as the name, description and level of the skill are on the base level, with the skills in a skills array.
+          Within the skills array, break each skill down into its sub skills using the same format.
+          </td>
+        <td><%= skill.description %></td>
+      </tr>
+      <tr>
+        <td>Using a scale of emergent, competent, expert and lead, Can you do a break down of the skills and knowledge required to be rated at lead in the area of <%= skill.name %>.<br>
+          Can you put this into a table with the following headings: <br>
+          Skill Name, Level, Description<br>
+          Place the contents in JSON format.
+          Construct the JSON object so as the name, description and level of the skill are on the base level, with the skills in a skills array.
+          Within the skills array, break each skill down into its sub skills using the same format.
+          </td>
+        <td><%= skill.description %></td>
+      </tr>
+      <% } %>
+  </table>
+</body>
+</html>

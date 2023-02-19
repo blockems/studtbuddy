@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/menu') %>
+    <h1>skill detail</h1>
+    <table class="striped-table">
+      <tr>
+        <th>Role</th>
+        <th>Skill</th>
+        <th>Seniority</th>
+        <th>importance</th>
+        <th>Description</th>
+        <!--th>Prompt</th-->
+      </tr>
+      <% for (const skill of skills) { %>
+      <tr>
+        <td><%= skill.name %></td>
+        <td><%= skill.skillname %></td>
+        <td><%= skill.seniority %></td>
+        <td><%= skill.importance %></td>
+        <td><%= skill.skilldescription %></td>
+        <!--td>Please give me a set of 20 multi choice questions to test a <%= skill.name %> for their competence in <%= skill.skillname %>. Provide a JSON object with fields containing the question, multi choice answers, the correct answer and an explanation for the correct answer. </td-->
+      </tr>
+      <% if (questions && questions.length > 0) { %>
+      <tr>
+        <td colspan="5"><h2>Questions</h2></td>
+      </tr>
+      <% for (const question of questions) { %>
+      <tr>
+        <td colspan="3"><%= question.questions %></td>
+        <td>&nbsp;</td>
+        <td >Correct answer: <%= question.correct_answer %>.</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <ul>
+            <% const options = JSON.parse(question.options); %>
+            <% for (let i = 0; i < options.length; i++) { %>
+              <li><%= options[i] %></li>
+            <% } %>
+          </ul>
+        </td>
+        <td>&nbsp;</td>
+        <td>Explanation: <%= question.explanation %></td>
+      </tr>
+      <% } %>
+      <% } %>
+      <% } %>
+  </table>
+  </body>
+</html>

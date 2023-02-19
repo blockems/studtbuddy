@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head') %>
+    <script type="text/javascript">
+       document.addEventListener('DOMContentLoaded', function() {
+        const rows = document.querySelectorAll(".table-row");
+        const secondDiv = document.getElementById("secondDiv");
+
+        rows.forEach(row => {
+            const rowId = row.id;
+            row.addEventListener("click", function() {
+            // Strip "row-" from rowId to get the actual id value
+            //const id = rowId.replace("row-", "");
+            const role_id = row.getAttribute("data-role");
+            const skill_id = row.getAttribute("data-skill");
+            
+            // Remove the "bold" class from all rows
+            rows.forEach(r => {
+                r.classList.remove("bold");
+            });
+
+            // Add the "bold" class to the clicked row
+            row.classList.add("bold");
+
+            // Call endpoint to get content of div with id parameter
+            fetch(`/getskills/${skill_id}/${role_id}`)
+            .then(response => response.text())
+            .then(data => {
+                // Populate div with returned content
+                secondDiv.innerHTML = data;
+                secondDiv.style.display = "block";
+            });
+            });
+        });
+        });
+  </script>
+</head>
+<body>
+  <%- include('partials/menu') %>
+    <h1>Skill hierarchy</h1>
+    <% let totalColumns = 0 %>
+    <% if (skills && skills.length) { %>
+        <% totalColumns = Object.keys(skills[0]).length %>
+    <% } %>
+    <div class="scrollable">
+    <table  class="striped-table">
+      <thead>
+          <tr>
+              <% for (let i = 0; i < totalColumns; i++) { %>
+                  <% let columnName = Object.keys(skills[0])[i] %>
+                  <th><%= columnName %></th>
+              <% } %>
+          </tr>
+      </thead>
+      <tbody>
+          <!-- Loop through the records -->
+          <% skills.forEach((record) => { %>
+              <tr id="row-<%= record.skill_id %>" class="table-row" data-skill="<%= record.skill_id %>" data-role="<%= record.role_id %>">
+                  <% for (let i = 0; i < totalColumns; i++) { %>
+                      <% let columnName = Object.keys(record)[i] %>
+                      <td><%= record[columnName] %></td>
+                  <% } %>
+                  <td>Please give me 20 multi choice questions to test the capabilities of a </td>
+              </tr>
+          <% }) %>
+      </tbody>
+  </table>
+  </div>
+  <div id="secondDiv">Nothing Selected</div>
+</body>
+</html>

@@ -1,13 +1,9 @@
-<!-- users.ejs -->
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Users</title>
-  </head>
-  <body>
-    <h1>Users</h1>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/menu') %>
     <ul>
       <% for (const user of users) { %>
         <li><%= user.name %></li>
