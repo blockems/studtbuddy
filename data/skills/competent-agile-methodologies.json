@@ -1,0 +1,150 @@
+{
+    "name": "Agile Methodologies",
+    "description": "A set of values, principles, and practices that enable teams to deliver value faster and with higher quality.",
+    "level": "Competent",
+    "skills": [
+      {
+        "name": "Agile principles and values",
+        "level": "Competent",
+        "description": "Deep understanding of the Agile Manifesto and its underlying principles",
+        "sub-skills": [
+          {
+            "name": "The four values of Agile",
+            "level": "Competent",
+            "description": "Deep understanding of the four values that underpin the Agile Manifesto"
+          },
+          {
+            "name": "The twelve principles of Agile",
+            "level": "Competent",
+            "description": "Deep understanding of the twelve principles that underpin the Agile Manifesto"
+          }
+        ]
+      },
+      {
+        "name": "Scrum framework",
+        "level": "Competent",
+        "description": "Deep understanding of Scrum roles, events, artifacts, and their interactions",
+        "sub-skills": [
+          {
+            "name": "Scrum roles",
+            "level": "Competent",
+            "description": "Deep understanding of the three Scrum roles and their responsibilities"
+          },
+          {
+            "name": "Scrum events",
+            "level": "Competent",
+            "description": "Deep understanding of the five Scrum events and their purpose"
+          },
+          {
+            "name": "Scrum artifacts",
+            "level": "Competent",
+            "description": "Deep understanding of the three Scrum artifacts and their purpose"
+          }
+        ]
+      },
+      {
+        "name": "User stories",
+        "level": "Competent",
+        "description": "Ability to write effective user stories that meet the INVEST criteria",
+        "sub-skills": [
+          {
+            "name": "Independent",
+            "level": "Competent",
+            "description": "Ability to write user stories that can be completed independently of other stories"
+          },
+          {
+            "name": "Negotiable",
+            "level": "Competent",
+            "description": "Ability to write user stories that can be refined or changed over time"
+          },
+          {
+            "name": "Valuable",
+            "level": "Competent",
+            "description": "Ability to write user stories that deliver value to the customer"
+          },
+          {
+            "name": "Estimable",
+            "level": "Competent",
+            "description": "Ability to write user stories that can be estimated"
+          },
+          {
+            "name": "Small",
+            "level": "Competent",
+            "description": "Ability to write user stories that are small enough to be completed in a single development iteration"
+          },
+          {
+            "name": "Testable",
+            "level": "Competent",
+            "description": "Ability to write user stories that can be tested and verified"
+          }
+        ]
+      },
+      {
+        "name": "Agile planning and estimation",
+        "level": "Competent",
+        "description": "Ability to create and estimate work items in an Agile project",
+        "sub-skills": [
+          {
+            "name": "Task creation",
+            "level": "Competent",
+            "description": "Ability to break down user stories into actionable tasks"
+        },
+        {
+        "name": "Estimation",
+        "level": "Competent",
+        "description": "Ability to estimate the effort required for a given task or user story, using techniques like planning poker or affinity estimation"
+        },
+        {
+        "name": "Prioritization",
+        "level": "Competent",
+        "description": "Ability to prioritize user stories or tasks based on business value, technical dependencies, or other criteria"
+        }
+        ]
+        },
+        {
+        "name": "Agile team collaboration",
+        "level": "Competent",
+        "description": "Ability to collaborate effectively within an Agile team and with stakeholders",
+        "sub-skills": [
+        {
+        "name": "Communication",
+        "level": "Competent",
+        "description": "Ability to communicate effectively within the team and with stakeholders, using techniques like daily stand-ups, sprint reviews, and retrospectives"
+        },
+        {
+        "name": "Collaboration",
+        "level": "Competent",
+        "description": "Ability to work collaboratively within the team and across functional areas, using techniques like pair programming, mob programming, and cross-functional training"
+        },
+        {
+        "name": "Self-organization",
+        "level": "Competent",
+        "description": "Ability to work in a self-organizing team environment, where team members are empowered to make decisions and take ownership of their work"
+        }
+        ]
+        },
+        {
+        "name": "Agile technical practices",
+        "level": "Competent",
+        "description": "Ability to apply Agile technical practices to software development, using techniques like continuous integration, test-driven development, and refactoring",
+        "sub-skills": [
+        {
+        "name": "Continuous integration",
+        "level": "Competent",
+        "description": "Ability to set up and maintain a continuous integration pipeline, using tools like Jenkins, Travis CI, or CircleCI"
+        },
+        {
+        "name": "Test-driven development",
+        "level": "Competent",
+        "description": "Ability to write automated tests before writing code, using techniques like unit testing, integration testing, and acceptance testing"
+        },
+        {
+        "name": "Refactoring",
+        "level": "Competent",
+        "description": "Ability to refactor code to improve its design, maintainability, and extensibility, using techniques like SOLID principles, design patterns, and code smells"
+        }
+        ]
+        }
+        ]
+        }
+  

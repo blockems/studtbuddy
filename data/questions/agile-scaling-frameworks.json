@@ -1,0 +1,229 @@
+{
+    "rolename":"Agile Coach",
+    "roleid":"47",
+    "skillname":"Agile scaling Frameworks",
+    "skillid":"247",        
+    "questions": [
+      {
+        "question": "1. Which of the following frameworks is primarily focused on scaling agile for large enterprises?",
+        "options": [
+          "SAFe",
+          "LeSS",
+          "Scrum",
+          "Kanban"
+        ],
+        "correct_answer": "SAFe",
+        "explanation": "SAFe (Scaled Agile Framework) is a popular framework for scaling agile for large enterprises. LeSS (Large-Scale Scrum) is another framework for scaling Scrum, but is generally better suited for smaller organizations."
+      },
+      {
+        "question": "2. What is the primary difference between SAFe and LeSS?",
+        "options": [
+          "SAFe is primarily focused on Scrum, while LeSS is focused on Kanban.",
+          "SAFe is primarily focused on large enterprises, while LeSS is focused on small to mid-sized organizations.",
+          "SAFe is primarily focused on planning and execution, while LeSS is focused on product development.",
+          "SAFe is primarily focused on formal processes, while LeSS is focused on informal processes."
+        ],
+        "correct_answer": "SAFe is primarily focused on large enterprises, while LeSS is focused on small to mid-sized organizations.",
+        "explanation": "The primary difference between SAFe and LeSS is that SAFe is designed for large enterprises, while LeSS is designed for small to mid-sized organizations. Both frameworks are primarily focused on Scrum, but LeSS also supports Kanban."
+      },
+      {
+        "question": "3. Which of the following is a key component of the SAFe framework?",
+        "options": [
+          "Scrum of Scrums (SoS)",
+          "Product Vision",
+          "Minimum Viable Product (MVP)",
+          "Continuous Delivery (CD)"
+        ],
+        "correct_answer": "Scrum of Scrums (SoS)",
+        "explanation": "Scrum of Scrums (SoS) is a key component of the SAFe framework. SoS is a meeting where representatives from each team meet to discuss progress, identify and resolve inter-team dependencies, and identify risks and impediments."
+      },
+      {
+        "question": "4. Which of the following is a key component of the LeSS framework?",
+        "options": [
+          "Portfolio Management",
+          "Value Stream Mapping",
+          "Minimum Viable Product (MVP)",
+          "Product Backlog"
+        ],
+        "correct_answer": "Product Backlog",
+        "explanation": "Product Backlog is a key component of the LeSS framework. It is a prioritized list of features that are needed to deliver the product, and is maintained by the Product Owner."
+      },
+      {
+        "question": "5. What is the primary goal of the Nexus framework?",
+        "options": [
+          "To scale Scrum for small teams",
+          "To scale Scrum for large enterprises",
+          "To improve communication and collaboration between teams",
+          "To improve product quality and reduce time-to-market"
+        ],
+        "correct_answer": "To scale Scrum for large enterprises",
+        "explanation": "The primary goal of the Nexus framework is to scale Scrum for large enterprises. The framework is based on Scrum, but includes additional practices and events to support collaboration and alignment across multiple teams."
+      },
+      {
+        "question": "6. Which of the following is a key difference between the Nexus and the SAFe frameworks?",
+        "options": [
+        "The Nexus framework is designed for small to mid-sized organizations, while SAFe is designed for large enterprises.",
+        "The Nexus framework is based on Scrum, while SAFe is based on Kanban.",
+        "The Nexus framework is less prescriptive than SAFe, allowing for more flexibility and adaptability.",
+        "The Nexus framework includes more formal processes than SAFe, making it more suitable for highly regulated industries."
+        ],
+        "correct_answer": "The Nexus framework is less prescriptive than SAFe, allowing for more flexibility and adaptability.",
+        "explanation": "One of the key differences between the Nexus and the SAFe frameworks is that the Nexus framework is less prescriptive than SAFe. This allows organizations to tailor the framework to their specific needs and context, and enables greater flexibility and adaptability."
+        },
+        {
+        "question": "7. Which of the following is a key component of the Nexus framework?",
+        "options": [
+        "Program Increment (PI)",
+        "Scrum of Scrums (SoS)",
+        "Minimum Viable Product (MVP)",
+        "Value Stream Mapping"
+        ],
+        "correct_answer": "Program Increment (PI)",
+        "explanation": "Program Increment (PI) is a key component of the Nexus framework. A PI is a fixed timebox (usually 8-12 weeks) during which multiple teams work together to deliver a set of features or capabilities. The PI provides a cadence for planning, coordination, and integration across multiple teams."
+        },
+        {
+        "question": "8. Which of the following is a key principle of the Disciplined Agile (DA) framework?",
+        "options": [
+        "Embrace change and uncertainty",
+        "Optimize the whole",
+        "Manage flow",
+        "Deliver incrementally, with continuous feedback"
+        ],
+        "correct_answer": "Embrace change and uncertainty",
+        "explanation": "One of the key principles of the Disciplined Agile (DA) framework is to embrace change and uncertainty. This principle recognizes that organizations operate in complex and dynamic environments, and that the ability to adapt and respond to change is essential for success."
+        },
+        {
+        "question": "9. Which of the following is a key difference between the Disciplined Agile (DA) and the SAFe frameworks?",
+        "options": [
+        "The DA framework is more focused on continuous improvement and learning, while SAFe is more focused on planning and execution.",
+        "The DA framework is less prescriptive than SAFe, allowing for more flexibility and adaptability.",
+        "The DA framework is primarily focused on Scrum, while SAFe is focused on both Scrum and Kanban.",
+        "The DA framework is more suitable for small to mid-sized organizations, while SAFe is designed for large enterprises."
+        ],
+        "correct_answer": "The DA framework is less prescriptive than SAFe, allowing for more flexibility and adaptability.",
+        "explanation": "One of the key differences between the Disciplined Agile (DA) and the SAFe frameworks is that the DA framework is less prescriptive than SAFe. This allows organizations to tailor the framework to their specific needs and context, and enables greater flexibility and adaptability."
+        },
+        {
+        "question": "10. What is the primary goal of the Nexus+ framework?",
+        "options": [
+        "To improve communication and collaboration between teams",
+        "To improve product quality and reduce time-to-market",
+        "To scale Scrum for small teams",
+        "To scale Scrum for large enterprises with complex dependencies"
+        ],
+        "correct_answer":"To scale Scrum for large enterprises with complex dependencies",
+        "explanation": "The primary goal of the Nexus+ framework is to scale Scrum for large enterprises with complex dependencies. The framework is designed to support the coordination and integration of multiple teams working on interdependent products or solutions."
+        },
+        {
+        "question": "11. Which of the following is a key component of the Nexus+ framework?",
+        "options": [
+        "Scrum of Scrums (SoS)",
+        "Product Backlog",
+        "Program Increment (PI)",
+        "Portfolio Management"
+        ],
+        "correct_answer": "Scrum of Scrums (SoS)",
+        "explanation": "Scrum of Scrums (SoS) is a key component of the Nexus+ framework. The SoS provides a forum for representatives from each team to collaborate on resolving inter-team dependencies and risks, and to coordinate activities across teams."
+        },
+        {
+        "question": "12. Which of the following is a key principle of the Nexus+ framework?",
+        "options": [
+        "Deliver working solutions frequently",
+        "Optimize the whole",
+        "Enable self-organization",
+        "Empower the team"
+        ],
+        "correct_answer": "Optimize the whole",
+        "explanation": "One of the key principles of the Nexus+ framework is to optimize the whole. This principle emphasizes the importance of viewing the entire system as a whole, rather than focusing on individual teams or components, in order to achieve better outcomes."
+        },
+        {
+        "question": "13. Which of the following is a key difference between the Nexus+ and the SAFe frameworks?",
+        "options": [
+        "The Nexus+ framework is more focused on Scrum, while SAFe is more focused on Kanban.",
+        "The Nexus+ framework is designed for small to mid-sized organizations, while SAFe is designed for large enterprises.",
+        "The Nexus+ framework is less prescriptive than SAFe, allowing for more flexibility and adaptability.",
+        "The Nexus+ framework includes more formal processes than SAFe, making it more suitable for highly regulated industries."
+        ],
+        "correct_answer": "The Nexus+ framework is less prescriptive than SAFe, allowing for more flexibility and adaptability.",
+        "explanation": "One of the key differences between the Nexus+ and the SAFe frameworks is that the Nexus+ framework is less prescriptive than SAFe. This allows organizations to tailor the framework to their specific needs and context, and enables greater flexibility and adaptability."
+        },
+        {
+        "question": "14. What is the primary goal of the Scrum@Scale framework?",
+        "options": [
+        "To improve communication and collaboration between teams",
+        "To improve product quality and reduce time-to-market",
+        "To scale Scrum for small teams",
+        "To scale Scrum for large enterprises"
+        ],
+        "correct_answer": "To scale Scrum for large enterprises",
+        "explanation": "The primary goal of the Scrum@Scale framework is to scale Scrum for large enterprises. The framework is based on Scrum, but includes additional practices and techniques to support coordination and integration across multiple teams and products."
+        },
+        {
+        "question": "15. Which of the following is a key component of the Scrum@Scale framework?",
+        "options": [
+        "Scrum of Scrums (SoS)",
+        "Minimum Viable Product (MVP)",
+        "Value Stream Mapping",
+        "Product Backlog"
+        ],
+        "correct_answer": "Scrum of Scrums (SoS)",
+        "explanation": "Scrum of Scrums (SoS) is a key component of the Scrum@Scale framework.The SoS provides a forum for representatives from each team to collaborate on resolving inter-team dependencies and risks, and to coordinate activities across teams."
+        },
+        {
+        "question": "16. Which of the following is a key principle of the Scrum@Scale framework?",
+        "options": [
+        "Optimize the whole",
+        "Deliver incrementally, with continuous feedback",
+        "Manage flow",
+        "Empower the team"
+        ],
+        "correct_answer": "Optimize the whole",
+        "explanation": "One of the key principles of the Scrum@Scale framework is to optimize the whole. This principle emphasizes the importance of viewing the entire system as a whole, rather than focusing on individual teams or components, in order to achieve better outcomes."
+        },
+        {
+        "question": "17. Which of the following is a key difference between the Scrum@Scale and the SAFe frameworks?",
+        "options": [
+        "The Scrum@Scale framework is more focused on Scrum, while SAFe is more focused on Kanban.",
+        "The Scrum@Scale framework is designed for small to mid-sized organizations, while SAFe is designed for large enterprises.",
+        "The Scrum@Scale framework is less prescriptive than SAFe, allowing for more flexibility and adaptability.",
+        "The Scrum@Scale framework includes more formal processes than SAFe, making it more suitable for highly regulated industries."
+        ],
+        "correct_answer": "The Scrum@Scale framework is less prescriptive than SAFe, allowing for more flexibility and adaptability.",
+        "explanation": "One of the key differences between the Scrum@Scale and the SAFe frameworks is that the Scrum@Scale framework is less prescriptive than SAFe. This allows organizations to tailor the framework to their specific needs and context, and enables greater flexibility and adaptability."
+        },
+        {
+        "question": "18. What is the primary goal of the Kanban Method?",
+        "options": [
+        "To improve communication and collaboration between teams",
+        "To improve product quality and reduce time-to-market",
+        "To enable continuous delivery and flow",
+        "To scale Scrum for large enterprises"
+        ],
+        "correct_answer": "To enable continuous delivery and flow",
+        "explanation": "The primary goal of the Kanban Method is to enable continuous delivery and flow. The method emphasizes the visualization and management of work items, the establishment of work-in-progress limits, and the use of metrics to measure and improve flow."
+        },
+        {
+        "question": "19. Which of the following is a key component of the Kanban Method?",
+        "options": [
+        "Program Increment (PI)",
+        "Scrum of Scrums (SoS)",
+        "Value Stream Mapping",
+        "Minimum Viable Product (MVP)"
+        ],
+        "correct_answer": "Value Stream Mapping",
+        "explanation": "Value Stream Mapping is a key component of the Kanban Method. It is a technique for identifying and visualizing the flow of value through a system, and for identifying opportunities for improvement."
+        },
+        {
+        "question": "20. Which of the following is a key difference between the Kanban Method and the Scrum framework?",
+        "options": [
+        "The Kanban Method is more focused on continuous improvement and flow, while Scrum is more focused on planning and execution.",
+        "The Kanban Method is less prescriptive than Scrum, allowing for more flexibility and adaptability.",
+        "The Kanban Method is more suitable for small to mid-sized organizations, while Scrum is designed for large enterprises.",
+        "The Kanban Method is based on the principles of Lean manufacturing, while Scrum is based on the principles of Agile software development."
+        ],
+        "correct_answer": "The Kanban Method is more focused on continuous improvement and flow, while Scrum is more focused on planning and execution.",
+        "explanation": "One of the key differences between the Kanban Method and the Scrum framework is that the Kanban Method is more focused on continuous improvement and flow, while Scrum is more focused on planning and execution. While both frameworks are based on Agile principles, the Kanban Method is generally considered more flexible and adaptable than Scrum, and is better suited for organizations with less predictable workloads or more fluid requirements."
+    }
+]
+}
+  

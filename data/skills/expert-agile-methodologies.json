@@ -1,0 +1,150 @@
+{
+    "name": "Agile Methodologies",
+    "description": "A set of values, principles, and practices that enable teams to deliver value faster and with higher quality.",
+    "level": "Expert",
+    "skills": [
+      {
+        "name": "Agile principles and values",
+        "level": "Expert",
+        "description": "Mastery of the Agile Manifesto and its underlying principles, and ability to apply them in complex and challenging situations",
+        "sub-skills": [
+          {
+            "name": "The four values of Agile",
+            "level": "Expert",
+            "description": "Mastery of the four values that underpin the Agile Manifesto, and ability to balance them in dynamic and changing environments"
+          },
+          {
+            "name": "The twelve principles of Agile",
+            "level": "Expert",
+            "description": "Mastery of the twelve principles that underpin the Agile Manifesto, and ability to apply them in complex and challenging situations"
+          }
+        ]
+      },
+      {
+        "name": "Scrum framework",
+        "level": "Expert",
+        "description": "Mastery of Scrum roles, events, artifacts, and their interactions, and ability to customize them to fit the needs of the team and the organization",
+        "sub-skills": [
+          {
+            "name": "Scrum roles",
+            "level": "Expert",
+            "description": "Mastery of the three Scrum roles and their responsibilities, and ability to coach and mentor others in their implementation"
+          },
+          {
+            "name": "Scrum events",
+            "level": "Expert",
+            "description": "Mastery of the five Scrum events and their purpose, and ability to facilitate them effectively and efficiently"
+          },
+          {
+            "name": "Scrum artifacts",
+            "level": "Expert",
+            "description": "Mastery of the three Scrum artifacts and their purpose, and ability to use them as a means of communication and collaboration"
+          }
+        ]
+      },
+      {
+        "name": "User stories",
+        "level": "Expert",
+        "description": "Ability to write effective and efficient user stories, and ability to coach and mentor others in their implementation",
+        "sub-skills": [
+          {
+            "name": "Independent",
+            "level": "Expert",
+            "description": "Ability to write user stories that can be completed independently of other stories, and ability to design systems that allow for their implementation"
+          },
+          {
+            "name": "Negotiable",
+            "level": "Expert",
+            "description": "Ability to write user stories that can be refined or changed over time, and ability to facilitate their negotiation with stakeholders and team members"
+          },
+          {
+            "name": "Valuable",
+            "level": "Expert",
+            "description": "Ability to write user stories that deliver value to the customer, and ability to design systems that maximize their value"
+          },
+          {
+            "name": "Estimable",
+            "level": "Expert",
+            "description": "Ability to write user stories that can be estimated, and ability to use estimation techniques to improve the accuracy and reliability of the estimates"
+          },
+          {
+            "name": "Small",
+            "level": "Expert",
+            "description": "Ability to write user stories that are small enough to be completed in a single development iteration, and ability to design systems that allow for their implementation"
+        },
+        {
+        "name": "Testable",
+        "level": "Expert",
+        "description": "Ability to write user stories that can be tested and verified, and ability to design systems that facilitate their testing"
+        }
+        ]
+        },
+        {
+        "name": "Agile planning and estimation",
+        "level": "Expert",
+        "description": "Ability to plan and estimate work items in an Agile project, and ability to coach and mentor others in their implementation",
+        "sub-skills": [
+        {
+        "name": "Task creation",
+        "level": "Expert",
+        "description": "Ability to break down user stories into actionable tasks, and ability to design systems that facilitate their creation and management"
+        },
+        {
+        "name": "Estimation",
+        "level": "Expert",
+        "description": "Ability to estimate the effort required for a given task or user story, and ability to use estimation techniques to improve the accuracy and reliability of the estimates"
+        },
+        {
+        "name": "Prioritization",
+        "level": "Expert",
+        "description": "Ability to prioritize user stories or tasks based on business value, technical dependencies, or other criteria, and ability to use prioritization techniques to optimize value delivery"
+        }
+        ]
+        },
+        {
+        "name": "Agile team collaboration",
+        "level": "Expert",
+        "description": "Ability to collaborate effectively within an Agile team and with stakeholders, and ability to coach and mentor others in their implementation",
+        "sub-skills": [
+        {
+        "name": "Communication",
+        "level": "Expert",
+        "description": "Ability to communicate effectively within the team and with stakeholders, using advanced techniques like non-violent communication and active listening"
+        },
+        {
+        "name": "Collaboration",
+        "level": "Expert",
+        "description": "Ability to work collaboratively within the team and across functional areas, using advanced techniques like facilitation, conflict resolution, and consensus building"
+        },
+        {
+        "name": "Self-organization",
+        "level": "Expert",
+        "description": "Ability to work in a self-organizing team environment, where team members are empowered to make decisions and take ownership of their work, and ability to coach and mentor others in their implementation"
+        }
+        ]
+        },
+        {
+        "name": "Agile technical practices",
+        "level": "Expert",
+        "description": "Ability to apply Agile technical practices to software development, and ability to coach and mentor others in their implementation",
+        "sub-skills": [
+        {
+        "name": "Continuous integration",
+        "level": "Expert",
+        "description": "Ability to set up and maintain a complex continuous integration pipeline, using advanced techniques like pipeline visualization, automated testing, and parallelization"
+        },
+        {
+        "name": "Test-driven development",
+        "level": "Expert",
+        "description": "Ability to write high-quality automated tests before writing code, using advanced techniques like behavior-driven development, mutation testing, and property-based testing"
+        },
+        {
+        "name": "Refactoring",
+        "level": "Expert",
+        "description": "Ability to refactor complex and legacy code to improve its design, maintainability, and extensibility, using advanced techniques like microservices, domain-driven design, and aspect-oriented programming"
+        }
+        ]
+        }
+        ]
+        }
+  

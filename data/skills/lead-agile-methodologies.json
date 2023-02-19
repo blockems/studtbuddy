@@ -1,0 +1,118 @@
+{
+    "name": "Agile Methodologies",
+    "description": "A set of values, principles, and practices that enable teams to deliver value faster and with higher quality.",
+    "level": "Lead",
+    "skills": [
+      {
+        "name": "Agile coaching and mentoring",
+        "level": "Lead",
+        "description": "Ability to coach and mentor individuals, teams, and organizations in Agile values, principles, and practices, and ability to continuously improve their performance and effectiveness",
+        "sub-skills": [
+          {
+            "name": "Individual coaching",
+            "level": "Lead",
+            "description": "Ability to provide one-on-one coaching to individuals, using advanced techniques like cognitive-behavioral coaching, mindfulness, and emotional intelligence"
+          },
+          {
+            "name": "Team coaching",
+            "level": "Lead",
+            "description": "Ability to provide team-level coaching, using advanced techniques like team dynamics, conflict resolution, and collaborative problem-solving"
+          },
+          {
+            "name": "Organizational coaching",
+            "level": "Lead",
+            "description": "Ability to provide coaching at the organizational level, using advanced techniques like Lean Startup, DevOps, and Business Agility"
+          }
+        ]
+      },
+      {
+        "name": "Agile transformation",
+        "level": "Lead",
+        "description": "Ability to lead the Agile transformation of an organization, and ability to create and implement an Agile transformation strategy that aligns with the organization's vision and goals",
+        "sub-skills": [
+          {
+            "name": "Vision and strategy",
+            "level": "Lead",
+            "description": "Ability to develop a clear and compelling vision for the Agile transformation, and ability to create a strategy that aligns with the organization's goals and culture"
+          },
+          {
+            "name": "Leadership and change management",
+            "level": "Lead",
+            "description": "Ability to lead the transformational change process, and ability to manage resistance, facilitate buy-in, and create a culture of continuous improvement"
+          },
+          {
+            "name": "Metrics and continuous improvement",
+            "level": "Lead",
+            "description": "Ability to create and use metrics to measure the success of the transformation, and ability to continuously improve the process based on feedback and results"
+          }
+        ]
+      },
+      {
+        "name": "Agile governance and scaling",
+        "level": "Lead",
+        "description": "Ability to design and implement Agile governance and scaling frameworks that enable the organization to deliver value at scale, and ability to continuously improve their effectiveness",
+        "sub-skills": [
+          {
+            "name": "Governance frameworks",
+            "level": "Lead",
+            "description": "Ability to design and implement governance frameworks that enable the organization to balance autonomy and alignment, and ability to continuously improve their effectiveness"
+          },
+          {
+            "name": "Scaling frameworks",
+            "level": "Lead",
+            "description": "Ability to design and implement scaling frameworks that enable the organization to deliver value at scale, and ability to continuously improve their effectiveness"
+          },
+          {
+            "name": "Portfolio management",
+            "level": "Lead",
+            "description": "Ability to manage the organization's portfolio of initiatives, using Agile techniques like Lean Portfolio Management and Value Stream Mapping"
+          }
+        ]
+      },
+      {
+        "name":"Agile thought leadership",
+        "level": "Lead",
+        "description": "Ability to provide thought leadership in the Agile community, and ability to influence and shape the evolution of Agile values, principles, and practices",
+        "sub-skills": [
+          {
+            "name": "Public speaking and writing",
+            "level": "Lead",
+            "description": "Ability to communicate effectively with the Agile community through public speaking, writing, and other forms of media, and ability to inspire and motivate others through the sharing of best practices and thought leadership"
+          },
+          {
+            "name": "Research and development",
+            "level": "Lead",
+            "description": "Ability to conduct research and development in Agile values, principles, and practices, and ability to contribute to the evolution of Agile through the creation of new ideas, frameworks, and tools"
+          },
+          {
+            "name": "Community engagement",
+            "level": "Lead",
+            "description": "Ability to engage with the Agile community through conferences, user groups, and other forms of community outreach, and ability to build and maintain relationships with other thought leaders and influencers in the community"
+          }
+        ]
+      },
+      {
+        "name": "Agile innovation and experimentation",
+        "level": "Lead",
+        "description": "Ability to promote and facilitate Agile innovation and experimentation, and ability to create a culture of learning and continuous improvement",
+        "sub-skills": [
+          {
+            "name": "Innovation frameworks",
+            "level": "Lead",
+            "description": "Ability to design and implement innovation frameworks that enable the organization to experiment and learn, using techniques like Design Thinking, Lean Startup, and DevOps"
+          },
+          {
+            "name": "Learning culture",
+            "level": "Lead",
+            "description": "Ability to create a culture of learning and continuous improvement, and ability to encourage and reward experimentation and innovation"
+          },
+          {
+            "name": "Agile maturity models",
+            "level": "Lead",
+            "description": "Ability to use Agile maturity models to assess the organization's level of Agile adoption and to create a roadmap for improvement"
+          }
+        ]
+      }
+    ]
+}
+  

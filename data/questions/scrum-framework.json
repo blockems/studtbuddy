@@ -1,0 +1,229 @@
+{
+    "rolename": "Agile Coach",
+    "roleid": "37",
+    "skillname":"Scrum Framework",
+    "skillid":"244",
+    "questions": [
+      {
+        "question": "1. Which of the following is NOT a role in the Scrum Framework?",
+        "options": [
+          "Scrum Master",
+          "Product Owner",
+          "Development Team",
+          "Project Manager"
+        ],
+        "correct_answer": "Project Manager",
+        "explanation": "The Scrum Framework does not have a role for a Project Manager. Instead, the responsibilities of a Project Manager are distributed among the other roles, such as the Scrum Master and the Product Owner."
+      },
+      {
+        "question": "2. Which of the following is a key principle of the Scrum Framework?",
+        "options": [
+          "Deliver incrementally, with continuous feedback",
+          "Optimize the whole",
+          "Manage flow",
+          "Enable self-organization"
+        ],
+        "correct_answer": "Deliver incrementally, with continuous feedback",
+        "explanation": "One of the key principles of the Scrum Framework is to deliver incrementally, with continuous feedback. This principle emphasizes the importance of delivering value to the customer early and often, and of using feedback to guide the development process."
+      },
+      {
+        "question": "3. Which of the following is a key component of the Scrum Framework?",
+        "options": [
+          "Product Backlog",
+          "Project Plan",
+          "Requirements Document",
+          "Use Case Diagram"
+        ],
+        "correct_answer": "Product Backlog",
+        "explanation": "The Product Backlog is a key component of the Scrum Framework. It is a prioritized list of features or requirements that the Development Team works on during the Sprint."
+      },
+      {
+        "question": "4. What is the recommended duration of a Sprint in the Scrum Framework?",
+        "options": [
+          "2 weeks",
+          "4 weeks",
+          "6 weeks",
+          "8 weeks"
+        ],
+        "correct_answer": "2 weeks",
+        "explanation": "The recommended duration of a Sprint in the Scrum Framework is 2 weeks. This allows the team to deliver value to the customer frequently and to use feedback to guide the development process."
+      },
+      {
+        "question": "5. Which of the following is a key responsibility of the Scrum Master in the Scrum Framework?",
+        "options": [
+          "Managing the Product Backlog",
+          "Providing technical guidance to the Development Team",
+          "Facilitating the Scrum Events",
+          "Making decisions about the product"
+        ],
+        "correct_answer": "Facilitating the Scrum Events",
+        "explanation": "One of the key responsibilities of the Scrum Master in the Scrum Framework is to facilitate the Scrum Events, such as the Sprint Review and the Sprint Retrospective. The Scrum Master is also responsible for ensuring that the Scrum Framework is understood and followed by the team."
+      },
+      {
+        "question": "6. Which of the following is a key responsibility of the Product Owner in the Scrum Framework?",
+        "options": [
+          "Managing the Sprint Backlog",
+          "Providing technical guidance to the Development Team",
+          "Prioritizing the Product Backlog",
+          "Facilitating the Daily Scrum"
+        ],
+        "correct_answer": "Prioritizing the Product Backlog",
+        "explanation": "One of the key responsibilities of the Product Owner in the Scrum Framework is to prioritize the Product Backlog. The Product Owner is also responsible for ensuring that the team understands the product vision and the requirements, and for making decisions about the product based on feedback from stakeholders."
+    },
+    {
+    "question": "7. Which of the following is a key responsibility of the Development Team in the Scrum Framework?",
+    "options": [
+    "Creating the Product Backlog",
+    "Providing technical guidance to the Product Owner",
+    "Delivering a potentially releasable Increment at the end of each Sprint",
+    "Facilitating the Sprint Review"
+    ],
+    "correct_answer": "Delivering a potentially releasable Increment at the end of each Sprint",
+    "explanation": "One of the key responsibilities of the Development Team in the Scrum Framework is to deliver a potentially releasable Increment at the end of each Sprint. The Development Team is also responsible for self-organizing and managing its own work, and for continuously improving its processes and practices."
+    },
+    {
+    "question": "8. What is the purpose of the Sprint Review in the Scrum Framework?",
+    "options": [
+    "To plan the work that will be done in the next Sprint",
+    "To inspect and adapt the process and the product",
+    "To review the progress of the project with stakeholders",
+    "To prioritize the Product Backlog"
+    ],
+    "correct_answer": "To inspect and adapt the process and the product",
+    "explanation": "The purpose of the Sprint Review in the Scrum Framework is to inspect and adapt the process and the product. During the Sprint Review, the team demonstrates the Increment that was developed during the Sprint and receives feedback from stakeholders, which is used to guide the next Sprint."
+    },
+    {
+    "question": "9. What is the purpose of the Sprint Retrospective in the Scrum Framework?",
+    "options": [
+    "To plan the work that will be done in the next Sprint",
+    "To inspect and adapt the process and the product",
+    "To review the progress of the project with stakeholders",
+    "To prioritize the Product Backlog"
+    ],
+    "correct_answer": "To inspect and adapt the process and the product",
+    "explanation": "The purpose of the Sprint Retrospective in the Scrum Framework is to inspect and adapt the process and the product. During the Sprint Retrospective, the team reflects on the previous Sprint and identifies opportunities for improvement, which are used to guide the next Sprint."
+    },
+    {
+    "question": "10. Which of the following is a key benefit of the Scrum Framework?",
+    "options": [
+    "Improved communication and collaboration",
+    "Reduced time-to-market",
+    "Improved product quality",
+    "All of the above"
+    ],
+    "correct_answer": "All of the above",
+    "explanation": "The Scrum Framework provides several key benefits, including improved communication and collaboration, reduced time-to-market, and improved product quality. By using a time-boxed iterative approach and by focusing on delivering value to the customer early and often, the Scrum Framework enables teams to be more responsive to changing requirements and to deliver high-quality products in a more efficient manner."
+    },
+    {
+    "question": "11. Which of the following is a characteristic of a well-written Product Backlog?",
+    "options": [
+    "It is detailed and includes all possible requirements",
+    "It is ordered by priority and reflects the customer's needs",
+    "It is managed by the Development Team and the Scrum Master",
+    "It is updated only at the end of each Sprint"
+    ],
+    "correct_answer": "It is ordered by priority and reflects the customer's needs",
+    "explanation": "A well-written Product Backlog is ordered by priority and reflects the customer's needs. This enables the team to focus on delivering the most valuable features first and to use feedback to guide the development process. The Product Backlog should also be updated and refined continuously, not just at the end of each Sprint."
+},
+{
+"question": "12. What is the purpose of the Daily Scrum in the Scrum Framework?",
+"options": [
+"To plan the work for the day",
+"To inspect and adapt the process and the product",
+"To review the progress of the project with stakeholders",
+"To prioritize the Product Backlog"
+],
+"correct_answer": "To plan the work for the day",
+"explanation": "The purpose of the Daily Scrum in the Scrum Framework is to plan the work for the day. During the Daily Scrum, the Development Team members share their progress, identify any obstacles or risks, and plan their work for the next 24 hours. The Daily Scrum is a time-boxed event that should not exceed 15 minutes."
+},
+{
+"question": "13. Which of the following is a characteristic of a well-functioning Development Team in the Scrum Framework?",
+"options": [
+"They have a dedicated Project Manager to guide their work",
+"They are cross-functional and self-organizing",
+"They are managed and directed by the Product Owner",
+"They have a fixed set of tasks to complete in each Sprint"
+],
+"correct_answer": "They are cross-functional and self-organizing",
+"explanation": "A well-functioning Development Team in the Scrum Framework is cross-functional and self-organizing. This means that the team has all the necessary skills and competencies to deliver a potentially releasable Increment, and that it manages its own work and processes. The Development Team is also responsible for continuously improving its practices and for adapting to changing requirements and feedback."
+},
+{
+"question": "14. Which of the following is a potential risk of using the Scrum Framework?",
+"options": [
+"The team may be too focused on delivering individual features, rather than on delivering a cohesive product",
+"The team may become too self-organizing and lose sight of the project goals",
+"The Product Owner may become too controlling and micromanage the Development Team",
+"The Scrum Master may become too prescriptive and rigid in the implementation of the Scrum Framework"
+],
+"correct_answer": "The team may be too focused on delivering individual features, rather than on delivering a cohesive product",
+"explanation": "One potential risk of using the Scrum Framework is that the team may become too focused on delivering individual features, rather than on delivering a cohesive product. This can lead to a lack of integration and coherence in the product, and can make it difficult to deliver value to the customer. The Product Owner and the Scrum Master should work with the team to ensure that the product vision and the customer needs are always the primary focus."
+},
+{
+"question": "15. What is the purpose of the Sprint Goal in the Scrum Framework?",
+"options": [
+"To define the scope of the Sprint",
+"To provide a high-level objective for the Sprint",
+"To specify the technical tasks that must be completed in the Sprint",
+"To prioritize the Product Backlog"
+],
+"correct_answer": "To provide a high-level objective for the Sprint",
+"explanation": "The purpose of the Sprint Goal in the Scrum Framework is to provide a high-level objective for the Sprint. The Sprint Goal should be defined by the Product Owner and should reflect the customer needs and the product vision. The Sprint Goal should guide the work of the Development Team during the Sprint and should be reviewed and revised as necessary during the Sprint Review."
+},
+{
+"question": "16. Which of the following is a characteristic of a well-written Sprint Backlog in the Scrum Framework?",
+"options": [
+"It is detailed and includes all possible tasks",
+"It is managed by the Scrum Master",
+"It is updated only at the end of each Sprint",
+"It is a plan that the Development Team creates to achieve the Sprint Goal"
+],
+"correct_answer": "It is a plan that the Development Team creates to achieve the Sprint Goal",
+"explanation": "A well-written Sprint Backlog in the Scrum Framework is a plan that the Development Team creates to achieve the Sprint Goal. It should include all the tasks that the Development Team has identified as necessary to deliver the Sprint Goal, but should not include unnecessary details or tasks. The Sprint Backlog should be updated and refined continuously throughout the Sprint."
+},
+{
+"question": "17. What is the purpose of the Sprint Burndown Chart in the Scrum Framework?",
+"options": [
+"To show the progress of the project with stakeholders",
+"To track the team's capacity and velocity",
+"To measure the team's adherence to the Scrum Framework",
+"To visualize the team's progress during the Sprint"
+],
+"correct_answer": "To visualize the team's progress during the Sprint",
+"explanation": "The purpose of the Sprint Burndown Chart in the Scrum Framework is to visualize the team's progress during the Sprint. The Sprint Burndown Chart shows how much work remains to be done in the Sprint, and how quickly the team is progressing toward the Sprint Goal. The Sprint Burndown Chart can help the team to identify any issues or risks and to adapt its work accordingly."
+},
+{
+"question": "18. Which of the following is a key principle of the Agile Manifesto?",
+"options": [
+"Working software over comprehensive documentation",
+"Processes and tools over individuals and interactions",
+"Following a plan over responding to change",
+"Customer satisfaction through contract negotiation"
+],
+"correct_answer": "Working software over comprehensive documentation",
+"explanation": "One of the key principles of the Agile Manifesto is to value working software over comprehensive documentation. This principle emphasizes the importance of delivering value to the customer through a working product, rather than through extensive documentation or planning. The Agile Manifesto also values individuals and interactions over processes and tools, and responding to change over following a plan."
+},
+{
+"question": "19. Which of the following is a key benefit of the Scrum Framework for the Product Owner?",
+"options": [
+"Increased visibility into the development process",
+"Reduced time-to-market",
+"Improved collaboration with stakeholders",
+"Greater control over the Development Team"
+],
+"correct_answer": "Increased visibility into the development process",
+"explanation": "One of the key benefits of the Scrum Framework for the Product Owner is increased visibility into the development process. The Scrum Framework provides the Product Owner with regular opportunities to review the product Increment and to provide feedback to the Development Team. This enables the Product Owner to stay informed about the status of the project and to make informed decisions about the product."
+},
+{
+"question": "20. Which of the following is a key benefit of the Scrum Framework for the Development Team?",
+"options": [
+"Greater control over the project",
+"Reduced time-to-market",
+"Improved collaboration with stakeholders",
+"Increased focus on delivering value to the customer"
+],
+"correct_answer": "Increased focus on delivering value to the customer",
+"explanation": "One of the key benefits of the Scrum Framework for the Development Team is increased focus on delivering value to the customer. The Scrum Framework emphasizes the importance of delivering a potentially releasable Increment at the end of each Sprint, which enables the team to receive feedback from the customer and to adapt its work accordingly. By focusing on delivering value to the customer early and often, the Development Team can be more responsive to changing requirements and can deliver high-quality products in a more efficient manner."
+}
+]
+}
+  

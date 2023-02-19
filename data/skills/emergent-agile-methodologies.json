@@ -1,0 +1,149 @@
+{
+  "name": "Agile Methodologies",
+  "description": "A set of values, principles, and practices that enable teams to deliver value faster and with higher quality.",
+  "level": "Emergent",
+  "skills": [
+    {
+      "name": "Agile principles and values",
+      "level": "Emergent",
+      "description": "Understanding of the Agile Manifesto and its underlying principles",
+      "sub-skills": [
+        {
+          "name": "The four values of Agile",
+          "level": "Emergent",
+          "description": "Understanding of the four values that underpin the Agile Manifesto"
+        },
+        {
+          "name": "The twelve principles of Agile",
+          "level": "Emergent",
+          "description": "Understanding of the twelve principles that underpin the Agile Manifesto"
+        }
+      ]
+    },
+    {
+      "name": "Scrum framework",
+      "level": "Emergent",
+      "description": "Understanding of Scrum roles, events, artifacts, and their interactions",
+      "sub-skills": [
+        {
+          "name": "Scrum roles",
+          "level": "Emergent",
+          "description": "Understanding of the three Scrum roles and their responsibilities"
+        },
+        {
+          "name": "Scrum events",
+          "level": "Emergent",
+          "description": "Understanding of the five Scrum events and their purpose"
+        },
+        {
+          "name": "Scrum artifacts",
+          "level": "Emergent",
+          "description": "Understanding of the three Scrum artifacts and their purpose"
+        }
+      ]
+    },
+    {
+      "name": "User stories",
+      "level": "Emergent",
+      "description": "Ability to write user stories that meet the INVEST criteria",
+      "sub-skills": [
+        {
+          "name": "Independent",
+          "level": "Emergent",
+          "description": "Ability to write user stories that can be completed independently of other stories"
+        },
+        {
+          "name": "Negotiable",
+          "level": "Emergent",
+          "description": "Ability to write user stories that can be refined or changed over time"
+        },
+        {
+          "name": "Valuable",
+          "level": "Emergent",
+          "description": "Ability to write user stories that deliver value to the customer"
+        },
+        {
+          "name": "Estimable",
+          "level": "Emergent",
+          "description": "Ability to write user stories that can be estimated"
+        },
+        {
+          "name": "Small",
+          "level": "Emergent",
+          "description": "Ability to write user stories that are small enough to be completed in a single development iteration"
+        },
+        {
+          "name": "Testable",
+          "level": "Emergent",
+          "description": "Ability to write user stories that can be tested and verified"
+        }
+      ]
+    },
+    {
+      "name": "Agile planning and estimation",
+      "level": "Emergent",
+      "description": "Ability to create and estimate work items in an Agile project",
+      "sub-skills": [
+        {
+          "name": "Task creation",
+          "level": "Emergent",
+          "description": "Ability to break down user stories into actionable tasks"
+        },
+        {
+          "name": "Estimation",
+          "level": "Emergent",
+          "description": "Ability to estimate the effort required for a given task or user story"
+        },
+        {
+          "name": "Prioritization",
+          "level": "Emergent",
+          "description": "Ability to prioritize user stories or tasks based on business value or other criteria"
+        }
+      ]
+    },
+    {
+      "name": "Agile team collaboration",
+      "level": "Emergent",
+      "description": "Ability to collaborate effectively within an Agile team",
+      "sub-skills": [
+        {
+          "name": "Communication",
+          "level": "Emergent",
+          "description": "Ability to communicate effectively within the team and with stakeholders"
+        },
+        {
+          "name": "Collaboration",
+          "level": "Emergent",
+          "description": "Ability to work collaboratively within the team and across functional areas"
+        },
+        {
+          "name": "Self-organization",
+          "level": "Emergent",
+          "description": "Ability to work in a self-organizing team environment"
+        }
+      ]
+    },
+    {
+      "name": "Agile technical practices",
+      "level": "Emergent",
+      "description": "Ability to apply Agile technical practices to software development",
+      "sub-skills": [
+        {
+          "name": "Continuous integration",
+          "level": "Emergent",
+          "description": "Understanding of continuous integration and its benefits"
+        },
+        {
+          "name": "Test-driven development",
+          "level": "Emergent",
+          "description": "Understanding of test-driven development and its benefits"
+        },
+        {
+        "name": "Refactoring",
+        "level": "Emergent",
+        "description": "Understanding of refactoring and its benefits"
+        }
+      ]
+    }
+  ]
+}
