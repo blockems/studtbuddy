@@ -1,0 +1,412 @@
+{
+    "Initiatives": [
+        {
+            "Number": "1",
+            "Description": "Establish Framework",
+            "Estimate": 5,
+            "Epics": [
+                {
+                    "Number": "1.1",
+                    "Description": "Node.js application with SQLite backend",
+                    "Estimate": 5,
+                    "Features": [
+                        {
+                            "Number": "1.1.1",
+                            "Description": "Set up Node.js environment",
+                            "Estimate": 3,
+                            "Stories": [
+                                {
+                                    "Number": "1.1.1.1",
+                                    "Description": "Install required packages and dependencies",
+                                    "Estimate": 2
+                                },
+                                {
+                                    "Number": "1.1.1.2",
+                                    "Description": "Configure server settings",
+                                    "Estimate": 1
+                                }
+                            ]
+                        },
+                        {
+                            "Number": "1.1.2",
+                            "Description": "Logging via Winston",
+                            "Estimate": 2,
+                            "Stories": [
+                                {
+                                    "Number": "1.1.2.1",
+                                    "Description": "Set up Winston for local file logging",
+                                    "Estimate": 2
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Number": "2",
+            "Description": "Design Data Models",
+            "Estimate": 12,
+            "Epics": [
+                {
+                    "Number": "2.1",
+                    "Description": "Design user model",
+                    "Estimate": 2,
+                    "Features": [
+                        {
+                            "Number": "2.1.1",
+                            "Description": "Define user schema",
+                            "Estimate": 2,
+                            "Stories": [
+                                {
+                                    "Number": "2.1.1.1",
+                                    "Description": "Define user attributes and relationships",
+                                    "Estimate": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Number": "2.2",
+                    "Description": "Design role/skill/subskill model",
+                    "Estimate": 10,
+                    "Features": [
+                        {
+                            "Number": "2.2.1",
+                            "Description": "Define role/skill/subskill schema",
+                            "Estimate": 4,
+                            "Stories": [
+                                {
+                                    "Number": "2.2.1.1",
+                                    "Description": "Define role/skill/subskill attributes and relationships",
+                                    "Estimate": 4
+                                }
+                            ]
+                        },
+                        {
+                            "Number": "2.2.2",
+                            "Description": "Data mine ChatGPT for roles, skills, subskills, and questions",
+                            "Estimate": 6,
+                            "Stories": [
+                                {
+                                    "Number": "2.2.2.1",
+                                    "Description": "Identify 5 sample roles",
+                                    "Estimate": 3
+                                },
+                                {
+                                    "Number": "2.2.2.2",
+                                    "Description": "Identify corresponding skills, subskills, and questions",
+                                    "Estimate": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Number": "3",
+            "Description": "Build Node Basic Functionality",
+            "Estimate": 34,
+            "Epics": [
+                {
+                    "Number": "3.1",
+                    "Description": "Implement models in the database",
+                    "Estimate": 6,
+                    "Features": [
+                        {
+                            "Number": "3.1.1",
+                            "Description": "Create user model in the database",
+                            "Estimate": 3,
+                            "Stories": [
+                                {
+                                    "Number": "3.1.1.1",
+                                    "Description": "Create user table in SQLite",
+                                    "Estimate": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Number": "3.1.2",
+                            "Description": "Create role/skill/subskill model in the database",
+                            "Estimate": 3,
+                            "Stories": [
+                                {
+                                    "Number": "3.1.2.1",
+                                    "Description": "Create role, skill, and subskill tables in SQLite",
+                                    "Estimate": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Number": "3.2",
+                    "Description": "Develop conversational UI",
+                    "Estimate": 7,
+                    "Features": [
+                        {
+                            "Number": "3.2.1",
+                            "Description": "Create UI for user input",
+                            "Estimate": 4,
+                            "Stories": [
+                                {
+                                    "Number": "3.2.1.1",
+                                    "Description": "Design UI for collecting user role and expertise",
+                                    "Estimate": 2
+                                },
+                                {
+                                    "Number": "3.2.1.2",
+                                    "Description": "Integrate ChatGPT API for conversational interaction",
+                                    "Estimate": 2
+                                }
+                            ]
+                        },
+                        {
+                            "Number": "3.2.2",
+                            "Description": "Handle user input and role collection",
+                            "Estimate": 3,
+                            "Stories": [
+                                {
+                                    "Number": "3.2.2.1",
+                                    "Description": "Process user input and store role data",
+                                    "Estimate": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Number": "3.3",
+                    "Description": "Break role down into skills and competencies",
+                    "Estimate": 9,
+                    "Features": [
+                        {
+                            "Number": "3.3.1",
+                            "Description": "Ask ChatGPT for role breakdown",
+                            "Estimate": 5,
+                            "Stories": [
+                                {
+                                    "Number": "3.3.1.1",
+                                    "Description": "Request role breakdown from ChatGPT API",
+                                    "Estimate": 5
+                                }
+                            ]
+                        },
+                        {
+                            "Number": "3.3.2",
+                            "Description": "Save role breakdown to database",
+                            "Estimate": 4,
+                            "Stories": [
+                                {
+                                    "Number": "3",
+                                    "Estimate": 3,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.1.1.1",
+                                            "Description": "Implement user schema in SQLite",
+                                            "Estimate": 3
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Number": "3.1.2",
+                                    "Description": "Create role/skill/subskill model in the database",
+                                    "Estimate": 3,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.1.2.1",
+                                            "Description": "Implement role/skill/subskill schema in SQLite",
+                                            "Estimate": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Number": "3.2",
+                            "Description": "Develop UI for role and expertise input",
+                            "Estimate": 4,
+                            "Features": [
+                                {
+                                    "Number": "3.2.1",
+                                    "Description": "Create conversational chat with ChatGPT API",
+                                    "Estimate": 4,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.2.1.1",
+                                            "Description": "Design UI for conversational chat",
+                                            "Estimate": 2
+                                        },
+                                        {
+                                            "Number": "3.2.1.2",
+                                            "Description": "Integrate ChatGPT API",
+                                            "Estimate": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Number": "3.3",
+                            "Description": "Develop role breakdown functionality",
+                            "Estimate": 8,
+                            "Features": [
+                                {
+                                    "Number": "3.3.1",
+                                    "Description": "Ask ChatGPT to break down role into skills and competencies",
+                                    "Estimate": 4,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.3.1.1",
+                                            "Description": "Retrieve role breakdown from ChatGPT API",
+                                            "Estimate": 4
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Number": "3.3.2",
+                                    "Description": "Save role breakdown to database",
+                                    "Estimate": 4,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.3.2.1",
+                                            "Description": "Insert role breakdown data into SQLite",
+                                            "Estimate": 4
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Number": "3.4",
+                            "Description": "Develop test and result handling",
+                            "Estimate": 12,
+                            "Features": [
+                                {
+                                    "Number": "3.4.1",
+                                    "Description": "Design test result data model",
+                                    "Estimate": 2,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.4.1.1",
+                                            "Description": "Define test result attributes and relationships",
+                                            "Estimate": 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Number": "3.4.2",
+                                    "Description": "Build test-taking functionality",
+                                    "Estimate": 7,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.4.2.1",
+                                            "Description": "Develop function to select 15 questions",
+                                            "Estimate": 3
+                                        },
+                                        {
+                                            "Number": "3.4.2.2",
+                                            "Description": "Design UI for test-taking",
+                                            "Estimate": 2
+                                        },
+                                        {
+                                            "Number": "3.4.2.3",
+                                            "Description": "Implement result tracking during testing",
+                                            "Estimate": 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Number": "3.4.3",
+                                    "Description": "Save test results",
+                                    "Estimate": 2,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.4.3.1",
+                                            "Description": "Insert test results into SQLite",
+                                            "Estimate": 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Number": "3.4.4",
+                                    "Description": "Develop result comparison functionality",
+                                    "Estimate": 1,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.4.4.1",
+                                            "Description": "Build a module to tally results against expected competencies",
+                                            "Estimate": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Number": "3.4.5",
+                                    "Description": "Build UI to display results",
+                                    "Estimate": 2,
+                                    "Stories": [
+                                        {
+                                            "Number": "3.4.5.1",
+                                            "Description": "Design a UI module for displaying test results",
+                                            "Estimate": 2
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Number": "5",
+                    "Description": "Include Employment History",
+                    "Estimate": 16,
+                    "Epics": [
+                        {
+                            "Number": "5.1",
+                            "Description": "Auto read resume to update experience",
+                            "Estimate": 16,
+                            "Features": [
+                                {
+                                    "Number": "5.1.1",
+                                    "Description": "Parse employment history from resume",
+                                    "Estimate": 4,
+                                    "Stories": [
+                                        {
+                                            "Number": "5.1.1.1",
+                                            "Description": "Develop algorithm to extract employment history from resume",
+                                            "Estimate": 2
+                                        },
+                                        {
+                                            "Number": "5.1.1.2",
+                                            "Description": "Test resume parsing with different resume formats",
+                                            "Estimate": 2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Number": "5.1.2",
+                                    "Description": "Update user schema and insert parsed employment history",
+                                    "Estimate": 6,
+                                    "Stories": [
+                                        {
+                                            "Number": "5.1.2.1",
+                                            "Description": "Modify user schema to include employment history attributes",
+                                            "Estimate": 3
+                                        },
+                                        {
+                                            "Number": "5.1.2.2",
+                                            "Description": "Insert parsed employment history into SQLite database",
+                                            "Estimate": 3
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

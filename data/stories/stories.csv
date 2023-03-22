@@ -1,0 +1,68 @@
+﻿Parent,Number,Level,Description,Estimate
+0,1,Initiative,Establish Framework,5
+2,1.1,Epic,Node.js application with SQLite backend,5
+3,1.1.1,Feature,Set up Node.js environment,3
+4,1.1.1.1,Story,Install required packages and dependencies,2
+4,1.1.1.2,Story,Configure server settings,1
+3,1.1.2,Feature,Logging via Winston,2
+7,1.1.2.1,Story,Set up Winston for local file logging,2
+0,2,Initiative,Design Data Models,12
+9,2.1,Epic,Design user model,2
+10,2.1.1,Feature,Define user schema,2
+11,2.1.1.1,Story,Define user attributes and relationships,2
+9,2.2,Epic,Design role/skill/subskill model,10
+13,2.2.1,Feature,Define role/skill/subskill schema,4
+14,2.2.1.1,Story,Define role/skill/subskill attributes and relationships,4
+13,2.2.2,Feature,"Data mine ChatGPT for roles, skills, subskills, and questions",6
+16,2.2.2.1,Story,Identify 5 sample roles,3
+16,2.2.2.2,Story,"Identify corresponding skills, subskills, and questions",3
+0,3,Initiative,Build Node Basic Functionality,34
+19,3.1,Epic,Implement models in the database,6
+20,3.1.1,Feature,Create user model in the database,2
+21,3.1.1.1,Story,Define user table and relations in SQLite,2
+20,3.1.2,Feature,Create role/skill/subskill model in the database,4
+23,3.1.2.1,Story,Define role/skill/subskill table and relations in SQLite,4
+19,3.2,Epic,Develop UI for role and expertise input,8
+25,3.2.1,Feature,Create a conversation page with ChatGPT API,8
+26,3.2.1.1,Story,Design UI for user interaction,4
+26,3.2.1.2,Story,Integrate ChatGPT API for conversation,4
+19,3.3,Epic,Generate role breakdown and save to database,8
+29,3.3.1,Feature,Retrieve role breakdown from ChatGPT,4
+30,3.3.1.1,Story,"Fetch skills, knowledge, and competencies from ChatGPT API",4
+29,3.3.2,Feature,Save role breakdown to database,4
+32,3.3.2.1,Story,Insert role breakdown data into SQLite,4
+19,3.4,Epic,Develop test and result handling,12
+34,3.4.1,Feature,Design test result data model,2
+35,3.4.1.1,Story,Define test result attributes and relationships,2
+34,3.4.2,Feature,Build test-taking functionality,7
+37,3.4.2.1,Story,Develop function to select 15 questions,3
+37,3.4.2.2,Story,Design UI for test-taking,2
+37,3.4.2.3,Story,Implement result tracking during testing,2
+34,3.4.3,Feature,Save test results in the database,2
+41,3.4.3.1,Story,Insert test result data into SQLite,2
+34,3.4.4,Feature,Analyze results and compare to competencies,6
+43,3.4.4.1,Story,Compare test results to expected competencies,3
+43,3.4.4.2,Story,Generate competency-based analysis,3
+34,3.4.5,Feature,Develop UI for result display,6
+46,3.4.5.1,Story,Design UI for displaying test results and analysis,3
+46,3.4.5.2,Story,Integrate result display UI with the analysis module,3
+0,4,Initiative,Creating a Personalized Training and Development Plan,18
+49,4.1,Epic,Build tailored development plan for each employee,10
+50,4.1.1,Feature,Identify employee's strengths and weaknesses,4
+51,4.1.1.1,Story,Analyze test results and experience to determine strengths and weaknesses,4
+50,4.1.2,Feature,Generate a personalized development plan,6
+53,4.1.2.1,Story,Develop algorithm to create a plan based on identified strengths and weaknesses,3
+53,4.1.2.2,Story,Design UI for displaying the development plan,3
+49,4.2,Epic,Incorporate industry experience into the plan,8
+56,4.2.1,Feature,Research industry trends and best practices,4
+57,4.2.1.1,Story,Identify relevant trends and practices for each role,4
+56,4.2.2,Feature,Integrate industry experience into the development plan,4
+59,4.2.2.1,Story,Update the development plan algorithm to consider industry experience,4
+0,5,Initiative,Include Employment History,16
+61,5.1,Epic,Auto read resume to update experience,16
+62,5.1.1,Feature,Parse employment history from resume,4
+63,5.1.1.1,Story,Develop algorithm to extract employment history from resume,2
+63,5.1.1.2,Story,Test resume parsing with different resume formats,2
+62,5.1.2,Feature,Update user schema and insert parsed employment history,6
+66,5.1.2.1,Story,Modify user schema to include employment history attributes,3
+66,5.1.2.2,Story,Insert parsed employment history into SQLite database,3

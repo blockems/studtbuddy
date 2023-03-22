@@ -2,14 +2,12 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const fs = require('fs');
+require("dotenv").config();
 
 const { Configuration, OpenAIApi } = require("openai");
 
-// Read the API key from a file
-const apiKey = fs.readFileSync('openaiapikey.txt', 'utf8').trim();
-
 const configuration = new Configuration({
-    apiKey,
+    apiKey: process.env.OPENAI_API_KEY
 });
 
 const openai = new OpenAIApi(configuration);
@@ -21,58 +19,42 @@ router.get('/', async (req, res) => {
 router.get('/api-call', async (req, res) => {
 
     const { jobtitle, industry, location, joblevel, companysize } = req.query;
-    const prompt = `Create for me a list of required and recommended skills for the role of ${joblevel} ${jobtitle}, in the ${industry} industry for a ${companysize} company located in ${location}.`; // produce the list in JSON format.`;
+    const prompt = `Using a scale of emergent, competent, expert and lead, 
+    Can you do a break down of the skills and knowledge required to be rated as competent in the role of a ${jobtitle}.
+    Can you put this into a table with the following headings:
+    Skill Name, Level, Description
+    Place the contents in JSON format. 
+    Construct the JSON object so as the name, description and level of the skill are on the base level, with the skills in a skills array. 
+    Within the skills array, break each skill down into its sub skills using the same format.`;
 
     // Set up the request parameters for the API call
     const params = {
-        model: 'text-davinci-002',
-        prompt
-        /*max_tokens: 50,
-        temperature: 0.7,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0 */
+        model: 'gpt-3.5-turbo',
+        temperature: 0.2,
+        messages: [{"role":"user", "content": prompt}]
     };
 
-    console.log(params);
-
-    openai.createCompletion(params)
+    openai.createChatCompletion(params)
     .then(response => {
         console.log('API called successfully. Returned data: ');
-        console.log(response.data.choices[0].text);
-        
-        const result = response.data.choices[0].text;
-        console.log(result);
+        console.log(response.data.choices[0].message.content);
+
+        const roleDescription = JSON.parse(response.data.choices[0].message.content, (key, value) => {
+            //This is becasue chatgpt sometimes returns capital leters in key names....
+            // But only when it feels like it. Bloody AI's, thing they are human or something
+            if (typeof key === 'string') {
+              return value;
+            } else {
+              const lowerCaseKey = key.toLowerCase();
+              return {[lowerCaseKey]: value};
+            }
+          });
+
+        res.render('index', {data:roleDescription});
     })
     .catch(error => {
         console.error(error);
     });
-
-        /*
-      const { jobtitle, industry, location, joblevel, companysize } = req.query;
-  
-      const prompt = `Create for me a list of required and recommended skills for the role of ${joblevel} ${jobtitle}, in the ${industry} industry for a ${companysize} company located in ${location}. produce the list in JSON format.`;
-      const response = await openai.createCompletion({
-        model: 'text-davinci-002',
-        prompt,
-        max_tokens: 50,
-        temperature: 0.7,
-        top_p: 1.0,
-        frequency_penalty: 0.0,
-        presence_penalty: 0.0,
-      });
-
-      console.log(response);
-
-      const result = response.choices[0].text;
-  
-      res.render('index', { result });
-    } catch (error) {
-      console.error(error);
-      res.render('index', { result: 'Error retrieving data from the API' });
-    }
-
-    */
   });
 
 module.exports = router;

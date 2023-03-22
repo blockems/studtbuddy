@@ -4,6 +4,19 @@
   </head>
   <body>
     <%- include('partials/menu') %>
+    <% if (typeof data !== 'undefined') { %>
+      <h1><%= data.name %> (<%= data.level %>)</h1>
+      <p><%= data.description %></p>
+      <% for (var i = 0; i < data.skills.length; i++) { %>
+        <h2><%= data.skills[i].name %> (<%= data.skills[i].level %>)</h2>
+        <p><%= data.skills[i].description %></p>
+
+        <% for (var j = 0; j < data.skills[i].subskills.length; j++) { %>
+          <h3><%= data.skills[i].subskills[j].name %> (<%= data.skills[i].subskills[j].level %>)</h3>
+          <p><%= data.skills[i].subskills[j].description %></p>
+        <% } %>
+      <% } %>
+    <% } else { %>
     <h1>Welcome to my Node.js app</h1>
     <form action="/api-call" method="get">
       <label for="jobtitle">Job Title:</label>
@@ -18,10 +31,6 @@
       <input type="text" name="companysize" id="companysize" required>
       <button type="submit">Submit</button>
     </form>
-    
-    <% if (result) { %>
-      <h2>API Results:</h2>
-      <pre><%= result %></pre>
     <% } %>
   </body>
 </html>

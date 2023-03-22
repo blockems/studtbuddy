@@ -1,0 +1,88 @@
+{
+    "name": "Test Analyst",
+    "description": "Responsible for designing and executing tests to ensure quality of software applications",
+    "level": "competent",  
+    "skills": [
+      {
+        "skillName": "Requirement Analysis",
+        "description": "Ability to read and analyze software requirements and create test cases",
+        "level": "competent",
+  
+        "subSkills": [
+          {
+            "subSkillName": "Requirement Understanding",
+            "description": "Ability to comprehend and analyze software requirements",
+            "level": "competent"
+          },
+          {
+            "subSkillName": "Test Case Design",
+            "description": "Ability to create test cases based on software requirements",
+            "level": "competent"
+          }
+        ]
+      },
+  
+      {
+        "skillName": "Test Execution",
+        "description": "Ability to execute tests and report defects",
+        "level": "competent",
+  
+        "subSkills": [
+          {
+            "subSkillName": "Test Execution",
+            "description": "Ability to execute tests and report defects",
+            "level": "competent"
+          },
+          {
+            "subSkillName": "Defect Reporting",
+            "description": "Ability to report defects accurately and comprehensively",
+            "level": "competent"
+          }
+        ]
+      },
+  
+      {
+        "skillName": "Test Automation",
+        "description": "Ability to create and execute automated tests using test automation tools",
+        "level": "competent",
+  
+        "subSkills": [
+          {
+            "subSkillName": "Test Automation Tools",
+            "description": "Knowledge of test automation tools and ability to usethem effectively",
+            "level": "competent"
+          },
+          {
+            "subSkillName": "Test Script Development",
+            "description": "Ability to develop automated test scripts",
+            "level": "competent"
+          }
+        ]
+      },
+  
+      {
+        "skillName": "Testing Techniques",
+        "description": "Knowledge of different types of testing and ability to apply them appropriately",
+        "level": "competent",
+  
+        "subSkills": [
+          {
+            "subSkillName": "Functional Testing",
+            "description": "Ability to test software for functional correctness",
+            "level": "competent"
+          },
+          {
+            "subSkillName": "Performance Testing",
+            "description": "Ability to test software for performance and scalability",
+            "level": "competent"
+          },
+          {
+            "subSkillName": "Security Testing",
+            "description": "Ability to test software for security vulnerabilities",
+            "level": "competent"
+          }
+        ]
+      }
+    ]
+  }
+  

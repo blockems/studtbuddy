@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/menu') %>
+    <h1>Stories</h1>
+    <button id="add-story-btn" type="button">Add New Story</button>
+    <table class="story_table">
+        <thead>
+          <th>Order</th>
+          <th>Summary</th>
+          <th>Assigned</th>
+          <th>Estimate</th>
+        </thead>
+        <tbody>
+          <% for (const story of stories) { %>
+            <tr title="<%= story.story_type %>"
+              <% if (story.story_type == 'Initiative') { %>
+                class="initiative_story"><td
+              <% } else if (story.story_type == 'Epic') { %>
+                class="epic_story"><td style="padding-left: 10px;"
+              <% } else if (story.story_type == 'Feature') { %>
+                class="feature_story"><td style="padding-left: 20px;"
+              <% } else { %>
+                class="story_story"><td style="padding-left: 30px;"
+              <% } %>
+              contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="order_no"><%= story.order_no %></td>
+              <td contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="summary"><%= story.summary %></td>
+              <td contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="last_name"><%= story.first_name %> <%= story.last_name %></td>
+              <td contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="estimate"><%= story.estimate %></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="2" style="border:1px solid #f2f2f2; font-size:x-small" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="description"><%= story.description %></td>
+              <td colspan="2" style="border:1px solid #f2f2f2; font-size:x-small" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="acceptance_criteria"><%= story.acceptance_criteria %></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </th>    
+  </table>
+  <div id="add-story-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="add-story-form">
+        <label for="order_no">Order:</label>
+        <input type="number" id="order_no" name="order_no" required><br>
+  
+        <label for="summary">Summary:</label>
+        <input type="text" id="summary" name="summary" required><br>
+  
+        <label for="last_name">Assigned:</label>
+        <input type="text" id="last_name" name="last_name" required><br>
+  
+        <label for="estimate">Estimate:</label>
+        <input type="number" id="estimate" name="estimate" required><br>
+  
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+  
+        <label for="acceptance_criteria">Acceptance Criteria:</label>
+        <textarea id="acceptance_criteria" name="acceptance_criteria"></textarea><br>
+  
+        <button type="submit">Add Story</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    // Add event listener to each editable td element
+    const tdList = document.querySelectorAll('td[contenteditable="true"]');
+    tdList.forEach(td => {
+      td.addEventListener('input', function() {
+        // Get the story_id and fieldname from the data attribute
+        const story_id = this.dataset.storyid;
+        const fieldname = this.dataset.fieldname;
+
+        // Send an AJAX request to the Node.js endpoint
+        const xhr = new XMLHttpRequest();
+        const url = `/stories/${story_id}/${fieldname}`;
+        const data = { [fieldname]: this.textContent };
+        xhr.open('PUT', url);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(data));
+      });
+    });
+
+    const addStoryBtn = document.getElementById('add-story-btn');
+    const addStoryModal = document.getElementById('add-story-modal');
+    const addStoryForm = document.getElementById('add-story-form');
+    const closeBtn = document.getElementsByClassName('close')[0];
+
+    // Show the modal when the button is clicked
+    addStoryBtn.onclick = function() {
+      addStoryModal.style.display = "block";
+    }
+
+    // Hide the modal when the close button is clicked
+    closeBtn.onclick = function() {
+      addStoryModal.style.display = "none";
+    }
+
+    // Hide the modal when the user clicks outside of it
+    window.onclick = function(event) {
+      if (event.target == addStoryModal) {
+        addStoryModal.style.display = "none";
+      }
+    }
+
+    // Submit the form when the user clicks the submit button
+    addStoryForm.onsubmit = function(event) {
+      event.preventDefault();
+
+      // Get the form data
+      const order_no = document.getElementById('order_no').value;
+      const summary = document.getElementById('summary').value;
+      const last_name = document.getElementById('last_name').value;
+      const estimate = document.getElementById('estimate').value;
+      const description = document.getElementById('description').value;
+      const acceptance_criteria = document.getElementById('acceptance_criteria').value;
+
+      // Send an AJAX request to the Node.js endpoint to add the new story
+      const xhr = new XMLHttpRequest();
+      const url = '/stories';
+      const data = {
+      order_no,
+      summary,
+      last_name,
+      estimate,
+      description,
+      acceptance_criteria
+      };
+      xhr.open('POST', url);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.onload = function() {
+      if (xhr.status === 200) {
+      // Reload the page to show the new story
+      location.reload();
+      } else {
+      // Display an error message
+      console.error(xhr.statusText);
+      }
+      };
+      xhr.send(JSON.stringify(data));
+      // Hide the modal
+      addStoryModal.style.display = "none";
+    }
+  </script>
+  </body>
+  
+</html>

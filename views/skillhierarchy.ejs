@@ -60,7 +60,7 @@
                       <% let columnName = Object.keys(record)[i] %>
                       <td><%= record[columnName] %></td>
                   <% } %>
-                  <td>Please give me 20 multi choice questions to test the capabilities of a </td>
+                  <td>Please give me 20 multi choice questions to test the capabilities of a <%= record.name %>. please place the results ina a JSON object with column one being the questions, column two the multichoice answers, column three the correct answer, and column four the explanation as to why the answer is correct.</td>
               </tr>
           <% }) %>
       </tbody>

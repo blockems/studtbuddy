@@ -68,3 +68,70 @@ div.scrollable {
 .bold {
   font-weight: bold;
 }
+
+.story_table
+{
+border-collapse: collapse;
+  width: 100%;
+}
+
+.story_table th {
+  border: 1px solid #ddd;
+  font-size: small;
+}
+
+.story_table .epic_story td {
+  background-color: #d3dbbc;
+}
+
+.story_table .feature_story td {
+  background-color: #cedae4;
+}
+
+.story_table .story_story td {
+  background-color: #f2f2f2;
+}
+
+.story_table .initiative_story td {
+  background-color: #c1d9d3;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button */
+#add-story-btn {
+  margin-bottom: 10px;
+}
