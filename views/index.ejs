@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html>
     <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/index.css">
   </head>
   <body>
-    <%- include('partials/menu') %>
-    <% if (typeof data !== 'undefined') { %>
-      <h1><%= data.name %> (<%= data.level %>)</h1>
-      <p><%= data.description %></p>
-      <% for (var i = 0; i < data.skills.length; i++) { %>
-        <h2><%= data.skills[i].name %> (<%= data.skills[i].level %>)</h2>
-        <p><%= data.skills[i].description %></p>
+    <% if (typeof session.user !== 'undefined') { %>
+      <%- include('partials/menu') %>
+      <% if (typeof data !== 'undefined') { %>
+        <h1><%= data.name %> (<%= data.level %>)</h1>
+        <p><%= data.description %></p>
+        <% for (var i = 0; i < data.skills.length; i++) { %>
+          <h2><%= data.skills[i].name %> (<%= data.skills[i].level %>)</h2>
+          <p><%= data.skills[i].description %></p>
 
-        <% for (var j = 0; j < data.skills[i].subskills.length; j++) { %>
-          <h3><%= data.skills[i].subskills[j].name %> (<%= data.skills[i].subskills[j].level %>)</h3>
-          <p><%= data.skills[i].subskills[j].description %></p>
+          <% for (var j = 0; j < data.skills[i].subskills.length; j++) { %>
+            <h3><%= data.skills[i].subskills[j].name %> (<%= data.skills[i].subskills[j].level %>)</h3>
+            <p><%= data.skills[i].subskills[j].description %></p>
+          <% } %>
         <% } %>
+      <% } else { %>
+        <h1>Welcome <%= session.user%></h1>
+        <div class="container">
+          <div class="panel left-panel">
+            <div class="top-panel">
+              <h2>Previous roles</h2>
+            </div>
+            <div class="bottom-panel">
+              <h2>In-demand roles</h2>
+              <div id="in-demand-roles"></div>
+            </div>
+          </div>
+          <div class="panel middle-panel">
+            <div class="role button-holder">
+              <h2>Current role</h2> <button id="open-modal" class="top-right">new</button>
+              <div id="active-roles"></div>
+            </div>
+          </div>
+          <div class="panel right-panel">
+            <div class="history">
+              <h2>Your activity</h2>
+              <div id="history"></div>  
+            </div>
+          </div>
+        </div>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <form id="search-form">
+              <input type="text" id="search-input" name="search-query" placeholder="Search...">
+              <ul id="search-results"></ul>
+            </form>
+          </div>
+        </div>
       <% } %>
     <% } else { %>
-    <h1>Welcome to my Node.js app</h1>
-    <form action="/api-call" method="get">
-      <label for="jobtitle">Job Title:</label>
-      <input type="text" name="jobtitle" id="jobtitle" required>
-      <label for="industry">Industry:</label>
-      <input type="text" name="industry" id="industry" required>
-      <label for="location">Location:</label>
-      <input type="text" name="location" id="location" required>
-      <label for="joblevel">Job Level:</label>
-      <input type="text" name="joblevel" id="joblevel" required>
-      <label for="companysize">Company Size:</label>
-      <input type="text" name="companysize" id="companysize" required>
-      <button type="submit">Submit</button>
-    </form>
-    <% } %>
+      <%- include('partials/login') %>
+  <%}%>  
   </body>
+  <%- include('partials/script') %>
+  <script src="/js/index.js"></script>
+  <%- include('partials/footer') %>
 </html>

@@ -1,10 +1,18 @@
 <nav class="top-menu">
     <ul>
-      <li><a href="/users">Users</a></li>
-      <li><a href="/roles">Roles</a></li>
-      <li><a href="/skills">Skills</a>
-        <li><a href="/stories">Stories</a>
-      <li><a href="/skillhierarchy">Skills Hierarchy</a></li>
-      <li><a href="/">Home</a></li>
+      <% if (typeof session === 'undefined') { %>
+        <li class="user-menu"><a href="/login">Login</a></li>
+        <li class="user-menu"><a href="/signup">Sign up</a></li>
+      <% } else { %>
+        <% if (typeof session !== 'undefined' && session.usertype===1) { %>  
+        <li><a href="/users">Users</a></li>
+        <% } %>
+        <li><a href="/roles">Roles</a></li>
+        <li><a href="/skills">Skills</a></li>
+        <li><a href="/stories">Stories</a></li>
+        <li><a href="/skillhierarchy">Skills Hierarchy</a></li>
+        <li><a href="/">Home</a></li>
+        <li class="user-menu"><a href="#"><%= session.user %></a>-<a href="/logout">Logout</a></li>
+      <% } %>
     </ul>
 </nav>

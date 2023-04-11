@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./data/database.db');
+//Shared dn connection
+const db = require('../shared.js');
 
 router.get('/:id1/:id2', (req, res) => {
   const id1 = req.params.id1;
@@ -26,7 +26,7 @@ router.get('/:id1/:id2', (req, res) => {
       }
       const questions = rows;
 
-      res.render('getskills', { skills: skills, questions: questions });
+      res.render('getskills', {title:"Skills Hierarchy", skills: skills, questions: questions, session: req.session});
     });
   });
 });

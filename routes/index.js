@@ -13,12 +13,11 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 router.get('/', async (req, res) => {
-    res.render('index', { result: 'New Form' });
+  res.render('index', { title: 'My App', session: req.session});
 });
 
-router.get('/api-call', async (req, res) => {
-
-    const { jobtitle, industry, location, joblevel, companysize } = req.query;
+router.get('/skill-list', async (req, res) => {
+    const { jobtitle} = req.query;
     const prompt = `Using a scale of emergent, competent, expert and lead, 
     Can you do a break down of the skills and knowledge required to be rated as competent in the role of a ${jobtitle}.
     Can you put this into a table with the following headings:
@@ -41,7 +40,7 @@ router.get('/api-call', async (req, res) => {
 
         const roleDescription = JSON.parse(response.data.choices[0].message.content, (key, value) => {
             //This is becasue chatgpt sometimes returns capital leters in key names....
-            // But only when it feels like it. Bloody AI's, thing they are human or something
+            // But only when it feels like it. Bloody AI's, think they are human or something
             if (typeof key === 'string') {
               return value;
             } else {
@@ -55,6 +54,11 @@ router.get('/api-call', async (req, res) => {
     .catch(error => {
         console.error(error);
     });
+  });
+
+  router.get('/logout', (req, res) => {
+    req.session.destroy();
+    res.redirect('/');
   });
 
 module.exports = router;

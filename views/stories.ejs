@@ -8,32 +8,59 @@
     <button id="add-story-btn" type="button">Add New Story</button>
     <table class="story_table">
         <thead>
-          <th>Order</th>
+          <th>No</th>
+          <th>T</th>
+          <th>Status</th>
           <th>Summary</th>
           <th>Assigned</th>
           <th>Estimate</th>
         </thead>
         <tbody>
           <% for (const story of stories) { %>
-            <tr title="<%= story.story_type %>"
+            <tr title="<%= story.story_type %>" style="<% if (story.status === 'Done') { %>background-color: #888; color: #ccc; text-decoration: line-through;<%} else {%>background-color:#EEE;<%}%>">
+              <td contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="order_no" style="text-align:right;"><%= story.order_no %></td>
               <% if (story.story_type == 'Initiative') { %>
-                class="initiative_story"><td
+                <td><img src="img/I.png"></td>
               <% } else if (story.story_type == 'Epic') { %>
-                class="epic_story"><td style="padding-left: 10px;"
+                <td><img src="img/E.png"></td>
               <% } else if (story.story_type == 'Feature') { %>
-                class="feature_story"><td style="padding-left: 20px;"
+                <td><img src="img/F.png"></td>
               <% } else { %>
-                class="story_story"><td style="padding-left: 30px;"
+                <td><img src="img/S.png"></td>
               <% } %>
-              contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="order_no"><%= story.order_no %></td>
-              <td contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="summary"><%= story.summary %></td>
+              <td><div data-storyid="<%= story.id %>" data-fieldname="status">
+                    <select onchange="updateStatus(this)">
+                      <option value="New" <% if (story.status == null || story.status == 'New') {%>selected<%}%>>New</option>
+                      <option value="Endorsed" <% if (story.status =='Endorsed') {%>selected<%}%>>Endorsed</option>
+                      <option value="Discovery" <% if (story.status =='Discovery') {%>selected<%}%>>Discovery</option>
+                      <option value="Backlog" <% if (story.status =='Backlog') {%>selected<%}%>>Backlog</option>
+                      <option value="PI Planned" <% if (story.status =='PI Planned') {%>selected<%}%>>PI Planned</option>
+                      <option value="Sprint Planned" <% if (story.status =='Sprint Planned') {%>selected<%}%>>Sprint Planned</option>
+                      <option value="In Build" <% if (story.status =='In Build') {%>selected<%}%>>In Build</option>
+                      <option value="Ready to Test" <% if (story.status =='Ready to Test') {%>selected<%}%>>Ready to Test</option>
+                      <option value="In Testing" <% if (story.status =='In Testing') {%>selected<%}%>>In Testing</option>
+                      <option value="Ready to Release" <% if (story.status =='Ready to Release') {%>selected<%}%>>Ready to Release</option>
+                      <option value="In Hypercare" <% if (story.status =='In Hypercare') {%>selected<%}%>>In Hypercare</option>
+                      <option value="Done" <% if (story.status == 'Done') {%>selected<%}%>>Done</option>
+                    </select>
+                </div>
+              </td>
+              <% if (story.story_type == 'Initiative') { %>
+                <td contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="summary"><%= story.summary %></td>
+              <% } else if (story.story_type == 'Epic') { %>
+                <td style="padding-left: 20px;" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="summary"><%= story.summary %></td>
+              <% } else if (story.story_type == 'Feature') { %>
+                <td style="padding-left: 40px;" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="summary"><%= story.summary %></td>
+              <% } else { %>
+                <td style="padding-left: 60px;" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="summary"><%= story.summary %></td>
+              <% } %>
               <td contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="last_name"><%= story.first_name %> <%= story.last_name %></td>
               <td contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="estimate"><%= story.estimate %></td>
             </tr>
-            <tr>
+            <tr <% if (story.status === 'Done') { %>style="background-color: #888; color: #ccc; text-decoration: line-through;"<%}%>>
               <td></td>
-              <td colspan="2" style="border:1px solid #f2f2f2; font-size:x-small" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="description"><%= story.description %></td>
-              <td colspan="2" style="border:1px solid #f2f2f2; font-size:x-small" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="acceptance_criteria"><%= story.acceptance_criteria %></td>
+              <td colspan="3" style="border:1px solid #f2f2f2;"><div class="multiline-text" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="description"><% if (story.description != null) { %><%= story.description.trim().replace(/[\r\n]+/g, '').replace(/<br\s*\/?>/g, '\n')%><% } else { %>&nbsp;<% } %></div></td>              
+              <td colspan="2" style="border:1px solid #f2f2f2;"><div class="multiline-text" contenteditable="true" data-storyid="<%= story.id %>" data-fieldname="acceptance_criteria"><% if (story.acceptance_criteria != null) { %><%= story.acceptance_criteria.trim().replace(/[\r\n]+/g, '').replace(/<br\s*\/?>/g, '\n')%><% } else { %>&nbsp;<% } %></div></td>
             </tr>
           <% } %>
         </tbody>
@@ -66,18 +93,30 @@
     </div>
   </div>
   <script>
+
+function updateStatus(select) {
+      const story_id = select.parentElement.dataset.storyid;
+      const fieldname = select.parentElement.dataset.fieldname;
+      const status = select.value;
+      const xhr = new XMLHttpRequest();
+      const url = `/stories/${story_id}/${fieldname}`;
+      const data = { [fieldname]: status };
+      xhr.open('PUT', url);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify(data));
+    }
+
     // Add event listener to each editable td element
-    const tdList = document.querySelectorAll('td[contenteditable="true"]');
+    const tdList = document.querySelectorAll('[contenteditable="true"]');
     tdList.forEach(td => {
       td.addEventListener('input', function() {
         // Get the story_id and fieldname from the data attribute
         const story_id = this.dataset.storyid;
         const fieldname = this.dataset.fieldname;
-
         // Send an AJAX request to the Node.js endpoint
         const xhr = new XMLHttpRequest();
         const url = `/stories/${story_id}/${fieldname}`;
-        const data = { [fieldname]: this.textContent };
+        const data = { [fieldname]: this.innerText.replace(/\n/g, '<br>')};
         xhr.open('PUT', url);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(data));

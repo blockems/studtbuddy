@@ -1,25 +1,20 @@
-// users.js
-
 const express = require('express');
 const router = express.Router();
 
-const sqlite3 = require('sqlite3').verbose();
-
+//Shared dn connection
+const db = require('../shared.js');
 
 router.get('/', (req, res) => {
-  const db = new sqlite3.Database('./data/database.db');
-  db.all('SELECT s.*, u.id as user_id, u.first_name, u.last_name FROM stories s LEFT JOIN users u ON s.assigned_id = u.id ORDER BY order_no', [], (err, rows) => {
+  db.all('SELECT s.*, u.id as user_id, u.firstname, u.lastname FROM stories s LEFT JOIN users u ON s.assigned_id = u.id ORDER BY order_no', [], (err, rows) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render('stories', { stories: rows });
+    res.render('stories', {title:"Story database", stories: rows, session: req.session});
   });
-  db.close();
 });
 
 // Handle PUT request to /stories/:story_id/:fieldname
 router.put('/:story_id/:fieldname', (req, res) => {
-  const db = new sqlite3.Database('./data/database.db');
   const { story_id, fieldname } = req.params;
   const { [fieldname]: newFieldValue } = req.body;
 
@@ -34,12 +29,10 @@ router.put('/:story_id/:fieldname', (req, res) => {
       res.send('Story updated successfully');
     }
   });
-  db.close();
 });
 
 router.post('/', async (req, res) => {
   const { order_no, summary, last_name, estimate, description, acceptance_criteria } = req.body;
-  const db = new sqlite3.Database('./data/database.db');
   try {
     const result = await db.run(`
       INSERT INTO stories (order_no, summary, estimate, description, acceptance_criteria, story_type)
@@ -53,7 +46,6 @@ router.post('/', async (req, res) => {
     console.error(error);
     res.status(500).send('Internal Server Error');
   }
-  db.close();
 });
 
 module.exports = router;

@@ -1,0 +1,128 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .history {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #3781c6;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: grid;
+    /* Add styles for the history panel on the right */
+  }
+
+  .top-panel {
+    height: 50%;
+    /* Add styles for the active roles panel on the top left */
+    border: 1px solid #3781c6;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: grid;
+  }
+
+  .bottom-panel {
+    height: 50%;
+    /* Add styles for the most in demand roles panel on the bottom left */
+    border: 1px solid #3781c6;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: grid;
+  }
+    
+  .panel {
+    box-sizing: border-box;
+  }
+  
+  .left-panel {
+    flex: 0 0 25%;
+  }
+  
+  .middle-panel {
+    flex: 0 0 50%;
+    border: 1px solid #3781c6;
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+  
+  .right-panel {
+    flex: 0 0 25%;
+  }
+
+  /* Modal styles */
+
+  /* Style for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Style for the search input and results */
+#search-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#search-results li {
+  margin-bottom: 5px;
+}
+
+#search-results button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#search-results button:hover {
+  background-color: #3e8e41;
+}
+
+/* Style for the close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  

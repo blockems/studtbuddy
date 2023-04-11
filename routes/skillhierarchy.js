@@ -3,8 +3,8 @@
 const express = require('express');
 const router = express.Router();
 
-const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./data/database.db');
+//Shared dn connection
+const db = require('../shared.js');
 
 router.get('/', (req, res) => {
   db.all("SELECT r.name, r.description, rs.seniority, rs.importance, s.name as skillname, s.description as skilldescription, s.id as skill_id, r.id as role_id, \
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render('skillhierarchy', { skills: rows });
+    res.render('skillhierarchy', { title:"Skills Heirarchy", skills: rows, session: req.session});
   });
 });
 
