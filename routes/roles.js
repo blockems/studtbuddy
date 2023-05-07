@@ -34,9 +34,6 @@ router.post('/search', (req, res) => {
 router.post('/newrole', (req, res) => {
   const { roleId } = req.body;
   const userId = req.session.userid; // access the session.userid value
-
-  console.log(req.body);
-
   const sql = `
     INSERT INTO user_roles (user_id, role_id, startdate, enddate, notes)
     VALUES (?, ?, ?, ?, ?)
@@ -108,27 +105,64 @@ router.get('/history', (req, res) => {
   res.json(myhistory);
 });
 
-router.get('/active-roles', (req, res) => {
+router.get('/skills-required/:id', (req, res) => {
+  const roleId = req.params.id;
   const userId = req.session.userid;
-  const sql = `
-    SELECT r.*
-    FROM roles r
-    INNER JOIN user_roles ru ON r.id = ru.role_id
-    WHERE ru.user_id = ? AND ru.enddate IS NULL
-  `;
-
-  db.all(sql, [userId], (err, rows) => {
-    if (err) {
-      console.error(err.message);
-      res.status(500).send('Internal server error');
+  const query = `SELECT rs.role_id, s.id as skill_id, s.name as skillname, rs.seniority, rs.importance, s.description as skilldescription, r.id, r.date as resultdate, r.score,
+                  case when rs.seniority = 'Competent' then 1 when rs.seniority = 'Expert' then 2 when rs.seniority = 'Lead' then 3 else 0 end as seniorityorder,
+                  r.id as result_id, r.date, r.user_id, r.no_questions, r.no_correct, r.score
+                  FROM roles_skills rs
+                  JOIN skills s ON s.id = rs.skill_id
+                  LEFT OUTER JOIN results r ON r.skill_id = s.id AND r.user_id = ?
+                  WHERE rs.importance = 'Required' AND rs.role_id = ?
+                  ORDER BY rs.importance DESC, seniorityorder, skillname;`;
+  
+  db.all(query, [userId, roleId], (error, result) => {
+    if (error) {
+      res.status(500).send({ error: 'Error retrieving skill information' });
     } else {
-      if (rows.length === 0) {
-        res.status(200).send([{id:0, name: 'No Active Roles'}]);
-      } else {
-        res.json(rows);
-      }
+      res.json(result);
     }
   });
 });
+
+router.get('/skills-recommended/:id', (req, res) => {
+  const roleId = req.params.id;
+  const userId = req.session.userid;
+  const query = `SELECT rs.role_id, s.id as skill_id, s.name as skillname, rs.seniority, rs.importance, s.description as skilldescription, r.id, r.date as resultdate, r.score,
+                  case when rs.seniority = 'Competent' then 1 when rs.seniority = 'Expert' then 2 when rs.seniority = 'Lead' then 3 else 0 end as seniorityorder,
+                  r.id as result_id, r.date, r.user_id, r.no_questions, r.no_correct, r.score
+                  FROM roles_skills rs
+                  JOIN skills s ON s.id = rs.skill_id
+                  LEFT OUTER JOIN results r ON r.skill_id = s.id AND r.user_id = ?
+                  WHERE rs.importance = 'Recommended' AND rs.role_id = ?
+                  ORDER BY rs.importance DESC, seniorityorder, skillname;`;
+  
+  db.all(query, [userId, roleId], (error, result) => {
+    if (error) {
+      res.status(500).send({ error: 'Error retrieving skill information' });
+    } else {
+      res.json(result);
+    }
+  });
+});
+
+router.get('/active-roles', (req, res) => {
+  const userId = req.session.userid;
+  const parentQuery = `SELECT r.id, r.name, r.description, ru.startdate, ru.enddate, ru.id AS userRoleId
+                       FROM roles r
+                       INNER JOIN user_roles ru ON r.id = ru.role_id
+                       WHERE ru.user_id = ? AND ru.enddate IS NULL
+                       ORDER BY ru.startdate DESC`;
+
+  db.all(parentQuery, userId, (parentError, parentResults) => {
+    if (parentError) {
+      res.status(500).send({ error: 'Error retrieving parent data' });
+    } else {
+      res.json(parentResults);
+    }
+  });
+});
+
 
 module.exports = router;

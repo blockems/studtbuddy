@@ -1,27 +1,35 @@
---select * from stories
+/*
+SELECT r.*, s.skill_name
+FROM roles r
+INNER JOIN user_roles ru ON r.id = ru.role_id
+LEFT JOIN skills s ON r.skill_id = s.id
+WHERE ru.user_id = ? AND ru.enddate IS NULL
+*/
 
---SELECT s.*, u.id as user_id, u.first_name, u.last_name FROM stories s LEFT JOIN users u ON s.assigned_id = u.id order by order_no
+--SELECT name FROM sqlite_master WHERE type='table'
 
--- Add a new column of type VARCHAR(20)
---ALTER TABLE users ADD COLUMN usertype int default 2;
+/*
+SELECT r.name, r.description, rs.seniority, rs.importance, s.name as skillname, s.description as skilldescription, s.id as skill_id, r.id as role_id,
+    case when rs.seniority = 'Competent' then 1 when rs.seniority = 'Expert' then 2 when rs.seniority = 'Lead' then 3 else 0 end as seniorityorder
+    FROM roles r, roles_skills rs, skills s, user_roles ru
+    WHERE r.id = rs.role_id and s.id = rs.skill_id and r.id = ru.role_id and ru.user_id = 1 and ru.enddate is null
+    order by r.name asc, seniorityorder, rs.importance desc
+*/
 
---ALTER TABLE users ADD COLUMN email text not null
+/*
+SELECT *
+                       FROM roles r
+                       INNER JOIN user_roles ru ON r.id = ru.role_id
+                       WHERE ru.user_id = 1 AND ru.enddate IS NULL
 
--- Drop the old column
---ALTER TABLE stories DROP COLUMN order_no;
+*/
 
--- Rename the new column to the original name
---ALTER TABLE stories RENAME COLUMN order_id TO order_no;
 
---delete FROM stories
+SELECT rs.role_id, s.id as skill_id, s.name as skillname, rs.seniority, rs.importance, s.description as skilldescription,
+    case when rs.seniority = 'Competent' then 1 when rs.seniority = 'Expert' then 2 when rs.seniority = 'Lead' then 3 else 0 end as seniorityorder
+    FROM roles_skills rs, skills s
+    WHERE s.id = rs.skill_id and rs.role_id = 39
+    order by seniorityorder, rs.importance desc
 
---update stories set parent_id = 0 where parent_id = -1
 
---drop table users
-
---select * from users
-
-SELECT r.*
-    FROM roles r
-    INNER JOIN user_roles ru ON r.id = ru.role_id
-    WHERE ru.user_id = 1 AND ru.enddate IS NULL
+    --select * from roles_skills

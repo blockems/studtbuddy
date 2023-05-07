@@ -9,10 +9,10 @@ router.get('/:id1/:id2', (req, res) => {
   const id2 = req.params.id2;
 
   // First database call to retrieve role/skill information
-  db.all('SELECT r.name, rs.seniority, rs.importance, s.name as skillname, s.description as skilldescription \
-        FROM roles r, roles_skills rs, skills s \
-        WHERE r.id = rs.role_id and s.id = rs.skill_id and skill_id = ? and r.id = ? \
-        order by r.name asc, rs.importance desc', [id1, id2], (err, rows) => {
+  db.all(`SELECT r.name, rs.seniority, rs.importance, s.name as skillname, s.description as skilldescription
+        FROM roles r, roles_skills rs, skills s
+        WHERE r.id = rs.role_id and s.id = rs.skill_id and skill_id = ? and r.id = ?
+        order by r.name asc, rs.importance desc`, [id1, id2], (err, rows) => {
     if (err) {
       return console.error(err.message);
     }
