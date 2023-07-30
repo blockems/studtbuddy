@@ -21,28 +21,12 @@
       <% } else { %>
         <h1>Welcome <%= session.user%></h1>
         <div class="container">
-          <div class="panel left-panel">
-            <div class="top-panel">
-              <h2>Previous roles</h2>
-            </div>
-            <div class="bottom-panel">
-              <h2>In-demand roles</h2>
-              <div id="in-demand-roles"></div>
-            </div>
-          </div>
           <div class="panel middle-panel">
             <div class="role button-holder">
               <h2>Current role</h2> <button id="open-modal" class="top-right">new</button>
               <div id="active-roles"></div>
             </div>
           </div>
-          <div class="panel right-panel">
-            <div class="history">
-              <h2>Your activity</h2>
-              <div id="history"></div>  
-            </div>
-          </div>
-        </div>
         <div class="table-container" id="agile-program-lead-details">
           <div id="required-table"></div>
           <div id="recommended-table"></div>
@@ -55,6 +39,7 @@
               <ul id="search-results"></ul>
             </form>
           </div>
+        </div>
         </div>
       <% } %>
     <% } else { %>

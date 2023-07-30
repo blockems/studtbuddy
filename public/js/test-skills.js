@@ -14,29 +14,35 @@ async function startTest() {
 
   let correctAnswers = 0;
   let explanations = [];
-
+  let skillCorrectAnswers = {};
 
   for (const question of questions) {
     const userAnswer = await showModal(question);
     if (userAnswer === question.correct_answer) {
-        correctAnswers++;
+      correctAnswers++;
+
+      // Update the skillCorrectAnswers object
+      if (skillCorrectAnswers[question.skill_id]) {
+        skillCorrectAnswers[question.skill_id]++;
+      } else {
+        skillCorrectAnswers[question.skill_id] = 1;
+      }
     } else {
-        explanations.push({
-            question: question.questions,
-            options: question.options,
-            userAnswer: userAnswer,
-            correctAnswer: question.correct_answer,
-            explanation: question.explanation
-        });
-    }
+      explanations.push({
+        questionText: question.questions,
+        options: question.options,
+        userAnswer: userAnswer,
+        correctAnswer: question.correct_answer,
+        explanation: question.explanation
+      });
+    }    
   }
+
   displayResults(correctAnswers, explanations);
   await sendResults(correctAnswers, explanations);
 }
 
 function showModal(question) {
-    console.log(`showModal called for question: ${question.questions}`);
-
     return new Promise((resolve) => {
       const modal = document.createElement('div');
       modal.className = 'modal';
@@ -79,23 +85,22 @@ function showModal(question) {
     });
 }
 
-  
-  function displayResults(correctAnswers, explanations) {
-    const resultsContainer = document.createElement('div');
-    resultsContainer.className = 'results';
-  
-    const resultsHeader = document.createElement('h2');
-    resultsHeader.innerText = `You answered ${correctAnswers} out of ${explanations.length + correctAnswers} questions correctly.`;
-    resultsContainer.appendChild(resultsHeader);
-  
-    const wrongAnswersHeader = document.createElement('h3');
-    wrongAnswersHeader.innerText = 'Incorrect Answers:';
-    resultsContainer.appendChild(wrongAnswersHeader);
-  
-    const explanationsList = document.createElement('ul');
-    resultsContainer.appendChild(explanationsList);
-  
-    const explanationsTable = document.createElement('table');
+function displayResults(correctAnswers, explanations) {
+  const resultsContainer = document.createElement('div');
+  resultsContainer.className = 'results';
+
+  const resultsHeader = document.createElement('h2');
+  resultsHeader.innerText = `You answered ${correctAnswers} out of ${explanations.length + correctAnswers} questions correctly.`;
+  resultsContainer.appendChild(resultsHeader);
+
+  const wrongAnswersHeader = document.createElement('h3');
+  wrongAnswersHeader.innerText = 'Incorrect Answers:';
+  resultsContainer.appendChild(wrongAnswersHeader);
+
+  const explanationsList = document.createElement('ul');
+  resultsContainer.appendChild(explanationsList);
+
+  const explanationsTable = document.createElement('table');
   resultsContainer.appendChild(explanationsTable);
 
   const tableHeader = document.createElement('thead');
@@ -114,12 +119,12 @@ function showModal(question) {
   const tableBody = document.createElement('tbody');
   explanationsTable.appendChild(tableBody);
 
-  explanations.forEach(({ question, options, userAnswer, correctAnswer, explanation }) => {
+  explanations.forEach(({ questionText, options, userAnswer, correctAnswer, explanation }) => {
     const explanationRow = document.createElement('tr');
     tableBody.appendChild(explanationRow);
 
     const questionCell = document.createElement('td');
-    questionCell.innerText = question;
+    questionCell.innerText = questionText;
     explanationRow.appendChild(questionCell);
 
     const optionsCell = document.createElement('td');
@@ -138,29 +143,28 @@ function showModal(question) {
     explanationCell.innerText = explanation;
     explanationRow.appendChild(explanationCell);
   });
-  
-    document.querySelector('.container').appendChild(resultsContainer);
-  }
+  document.querySelector('.container').appendChild(resultsContainer);
+}
 
-  async function sendResults(correctAnswers, explanations) {
-    const URL = 'skillhierarchy/submit-results'; // Replace with the actual endpoint URL for your server
-    const data = {
-      correctAnswers,
-      explanations,
-    };
-  
-    const response = await fetch(URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-  
-    if (response.ok) {
-      console.log('Results and explanations submitted successfully');
-    } else {
-      console.error('Error submitting results and explanations');
-    }
+async function sendResults(correctAnswers, explanations) {
+  const URL = '/skillhierarchy/submit-results';
+  const data = {
+    correctAnswers,
+    explanations,
+  };
+
+  const response = await fetch(URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (response.ok) {
+    console.log('Results and explanations submitted successfully');
+  } else {
+    console.error('Error submitting results and explanations');
   }
+}
   

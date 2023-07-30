@@ -46,7 +46,7 @@ app.use(session({
 
 // Check if user is logged in
 const authMiddleware = (req, res, next) => {
-  if (req.session && req.session.userid) {
+  if (req.session?.userid) {
     return next();
   } else {
     return res.redirect('/login');

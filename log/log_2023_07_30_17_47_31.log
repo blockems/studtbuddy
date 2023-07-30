@@ -1,0 +1,1943 @@
+2023-07-30 17:47:31,891 - __main__ - INFO - port: 5001
+2023-07-30 17:47:31,891 - __main__ - INFO - debug: True
+2023-07-30 17:47:31,891 - __main__ - INFO - log_level: DEBUG
+2023-07-30 17:47:31,891 - __main__ - INFO - numeric_level: 10
+2023-07-30 17:47:31,891 - __main__ - INFO - 
+            Error levels:
+            * DEBUG
+            * INFO
+            * WARNING
+            * ERROR
+            * CRITICAL
+2023-07-30 17:47:31,891 - __main__ - INFO - Role: Agile Coach
+2023-07-30 17:47:31,891 - __main__ - INFO - Competency: Emergent
+2023-07-30 17:47:31,891 - __main__ - INFO - Current answer: 
+2023-07-30 17:47:31,892 - __main__ - INFO - Prompt: 
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+2023-07-30 17:47:31,892 - __main__ - INFO - Role format: {'Role': 'Role Name', 'Level': 'Competency Level', 'Description': 'Role Description', 'Required': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description', 'Skills': ['Skill 1', 'Skill 2', 'etc'], 'Knowledge': ['Knowledge 1', 'Knowledge 2', 'etc'], 'Deliverables': ['Deliverable 1', 'Deliverable 2', 'etc'], 'Attributes': ['Attribute 1', 'Attribute 2', 'etc']}, 'etc'], 'Recommended': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description', 'Skills': ['Skill 1', 'Skill 2', 'etc'], 'Knowledge': ['Knowledge 1', 'Knowledge 2', 'etc'], 'Deliverables': ['Deliverable 1', 'Deliverable 2', 'etc'], 'Attributes': ['Attribute 1', 'Attribute 2', 'etc']}, 'etc']}
+2023-07-30 17:47:31,892 - __main__ - INFO - Expert format: {'experts': [{'Name': 'Expert Name', 'Description': 'Expert Description'}]}
+2023-07-30 17:47:31,892 - __main__ - INFO - 
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+      Use the following format for the JSON object:
+      {"Role": "Role Name", "Level": "Competency Level", "Description": "Role Description", "Required": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description", "Skills": ["Skill 1", "Skill 2", "etc"], "Knowledge": ["Knowledge 1", "Knowledge 2", "etc"], "Deliverables": ["Deliverable 1", "Deliverable 2", "etc"], "Attributes": ["Attribute 1", "Attribute 2", "etc"]}, "etc"], "Recommended": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description", "Skills": ["Skill 1", "Skill 2", "etc"], "Knowledge": ["Knowledge 1", "Knowledge 2", "etc"], "Deliverables": ["Deliverable 1", "Deliverable 2", "etc"], "Attributes": ["Attribute 1", "Attribute 2", "etc"]}, "etc"]}
+2023-07-30 17:48:07,264 - __main__ - DEBUG - {
+  "id": "chatcmpl-7hvRFxuivUL3bT4zMCK3PPf0j0bBq",
+  "object": "chat.completion",
+  "created": 1690703253,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n    \"Role\": \"Agile Coach\", \n    \"Level\": \"Emergent\",\n    \"Description\": \"An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.\", \n    \"Required\": [\n        {\n            \"Name\": \"Communication\",\n            \"Level\": \"Competent\", \n            \"Description\": \"The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders\",\n            \"Skills\": [\"Active listening\", \"Clear written and oral communication\", \"Negotiation\", \"Tactful feedback\"],\n            \"Knowledge\": [\"Understanding of communication channels\", \"Knowledge of communication principles\", \"Awareness of emotional intelligence\"],\n            \"Deliverables\": [\"Clear and concise team updates\", \"Effective meeting facilitation\"],\n            \"Attributes\": [\"Empathy\", \"Patience\", \"Open-minded\"]\n        }, \n        {\n            \"Name\": \"Agile Methodologies\",\n            \"Level\": \"Competent\", \n            \"Description\": \"Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.\",\n            \"Skills\": [\"Scrum management\", \"Kanban boards management\", \"Continuous improvement process\"],\n            \"Knowledge\": [\"Principles of Agile methodologies\", \"Understanding of Agile practices\"],\n            \"Deliverables\": [\"Successful deployment of Agile methodologies\", \"Improvement in team's Agile maturity\"],\n            \"Attributes\": [\"Flexibility\", \"Adaptability\", \"Progressive thinker\"]\n        }\n    ],\n    \"Recommended\": [\n        {\n            \"Name\": \"Leadership\",\n            \"Level\": \"Emergent\", \n            \"Description\": \"Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment\",\n            \"Skills\": [\"Team building\", \"Strategic planning\", \"Coaching and mentoring\"],\n            \"Knowledge\": [\"Understanding of leadership styles\", \"Knowledge of motivation techniques\"],\n            \"Deliverables\": [\"Improved team morale and productivity\", \"Creation of a culture of continuous learning\"],\n            \"Attributes\": [\"Inspirational\", \"Resilient\", \"Respectful\"]\n        },\n        {\n            \"Name\": \"Problem Solving\",\n            \"Level\": \"Emergent\", \n            \"Description\": \"Ability to identify, analyze, and resolve complex problems effectively\",\n            \"Skills\": [\"Critical thinking\", \"Conflict resolution\", \"Creative problem solving\"],\n            \"Knowledge\": [\"Understanding of problem-solving methods\", \"Knowledge of conflict management techniques\"],\n            \"Deliverables\": [\"Resolution of team conflicts\", \"Problem resolution strategies\"],\n            \"Attributes\": [\"Analytical\", \"Pragmatic\", \"Resilient\"]\n        }\n    ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 556,
+    "total_tokens": 925
+  }
+}
+2023-07-30 17:48:07,265 - __main__ - INFO - {
+    "Role": "Agile Coach", 
+    "Level": "Emergent",
+    "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.", 
+    "Required": [
+        {
+            "Name": "Communication",
+            "Level": "Competent", 
+            "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+            "Skills": ["Active listening", "Clear written and oral communication", "Negotiation", "Tactful feedback"],
+            "Knowledge": ["Understanding of communication channels", "Knowledge of communication principles", "Awareness of emotional intelligence"],
+            "Deliverables": ["Clear and concise team updates", "Effective meeting facilitation"],
+            "Attributes": ["Empathy", "Patience", "Open-minded"]
+        }, 
+        {
+            "Name": "Agile Methodologies",
+            "Level": "Competent", 
+            "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+            "Skills": ["Scrum management", "Kanban boards management", "Continuous improvement process"],
+            "Knowledge": ["Principles of Agile methodologies", "Understanding of Agile practices"],
+            "Deliverables": ["Successful deployment of Agile methodologies", "Improvement in team's Agile maturity"],
+            "Attributes": ["Flexibility", "Adaptability", "Progressive thinker"]
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Leadership",
+            "Level": "Emergent", 
+            "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+            "Skills": ["Team building", "Strategic planning", "Coaching and mentoring"],
+            "Knowledge": ["Understanding of leadership styles", "Knowledge of motivation techniques"],
+            "Deliverables": ["Improved team morale and productivity", "Creation of a culture of continuous learning"],
+            "Attributes": ["Inspirational", "Resilient", "Respectful"]
+        },
+        {
+            "Name": "Problem Solving",
+            "Level": "Emergent", 
+            "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+            "Skills": ["Critical thinking", "Conflict resolution", "Creative problem solving"],
+            "Knowledge": ["Understanding of problem-solving methods", "Knowledge of conflict management techniques"],
+            "Deliverables": ["Resolution of team conflicts", "Problem resolution strategies"],
+            "Attributes": ["Analytical", "Pragmatic", "Resilient"]
+        }
+    ]
+}
+2023-07-30 17:48:07,266 - __main__ - INFO - Current answer: {
+    "Role": "Agile Coach", 
+    "Level": "Emergent",
+    "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.", 
+    "Required": [
+        {
+            "Name": "Communication",
+            "Level": "Competent", 
+            "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+            "Skills": ["Active listening", "Clear written and oral communication", "Negotiation", "Tactful feedback"],
+            "Knowledge": ["Understanding of communication channels", "Knowledge of communication principles", "Awareness of emotional intelligence"],
+            "Deliverables": ["Clear and concise team updates", "Effective meeting facilitation"],
+            "Attributes": ["Empathy", "Patience", "Open-minded"]
+        }, 
+        {
+            "Name": "Agile Methodologies",
+            "Level": "Competent", 
+            "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+            "Skills": ["Scrum management", "Kanban boards management", "Continuous improvement process"],
+            "Knowledge": ["Principles of Agile methodologies", "Understanding of Agile practices"],
+            "Deliverables": ["Successful deployment of Agile methodologies", "Improvement in team's Agile maturity"],
+            "Attributes": ["Flexibility", "Adaptability", "Progressive thinker"]
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Leadership",
+            "Level": "Emergent", 
+            "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+            "Skills": ["Team building", "Strategic planning", "Coaching and mentoring"],
+            "Knowledge": ["Understanding of leadership styles", "Knowledge of motivation techniques"],
+            "Deliverables": ["Improved team morale and productivity", "Creation of a culture of continuous learning"],
+            "Attributes": ["Inspirational", "Resilient", "Respectful"]
+        },
+        {
+            "Name": "Problem Solving",
+            "Level": "Emergent", 
+            "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+            "Skills": ["Critical thinking", "Conflict resolution", "Creative problem solving"],
+            "Knowledge": ["Understanding of problem-solving methods", "Knowledge of conflict management techniques"],
+            "Deliverables": ["Resolution of team conflicts", "Problem resolution strategies"],
+            "Attributes": ["Analytical", "Pragmatic", "Resilient"]
+        }
+    ]
+}
+2023-07-30 17:48:07,267 - __main__ - DEBUG - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban boards management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": []
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": []
+    }
+  ]
+}
+2023-07-30 17:48:07,267 - __main__ - INFO - I want a response to the following question:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        Please return the results as a json object with the following structure:    
+        {"experts": [{"Name": "Expert Name", "Description": "Expert Description"}]}
+2023-07-30 17:48:10,642 - __main__ - DEBUG - {
+  "id": "chatcmpl-7hvRo3lHqxtyit8S5MQJB26WQnMdm",
+  "object": "chat.completion",
+  "created": 1690703288,
+  "model": "gpt-3.5-turbo-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"experts\": [\n    {\n      \"Name\": \"Lyssa Adkins\",\n      \"Description\": \"Agile Coach and Trainer\"\n    },\n    {\n      \"Name\": \"Michael Sahota\",\n      \"Description\": \"Leading Agile and Lean Transformation Expert\"\n    },\n    {\n      \"Name\": \"Esther Derby\",\n      \"Description\": \"Agile Coach, Trainer, and Author\"\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 217,
+    "completion_tokens": 87,
+    "total_tokens": 304
+  }
+}
+2023-07-30 17:48:10,643 - __main__ - INFO - {
+  "experts": [
+    {
+      "Name": "Lyssa Adkins",
+      "Description": "Agile Coach and Trainer"
+    },
+    {
+      "Name": "Michael Sahota",
+      "Description": "Leading Agile and Lean Transformation Expert"
+    },
+    {
+      "Name": "Esther Derby",
+      "Description": "Agile Coach, Trainer, and Author"
+    }
+  ]
+}
+2023-07-30 17:48:10,643 - __main__ - INFO - Experts: {
+  "experts": [
+    {
+      "Name": "Lyssa Adkins",
+      "Description": "Agile Coach and Trainer"
+    },
+    {
+      "Name": "Michael Sahota",
+      "Description": "Leading Agile and Lean Transformation Expert"
+    },
+    {
+      "Name": "Esther Derby",
+      "Description": "Agile Coach, Trainer, and Author"
+    }
+  ]
+}
+2023-07-30 17:48:10,644 - __main__ - INFO - Pretend you are Lyssa Adkins reviewing the output of the following task:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+    Please review each element in the json object below, and in the score array, add your name, a score from 1 to 100, and a comment on how you scored the element.
+
+    the current json object is: 
+    
+    {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban boards management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": []
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": []
+    }
+  ]
+}
+    
+    If you think an element is missing, add it and its component skills, knowledge, deliverables, attributes and score arrays to the json object and score appropriately.
+    
+    Only return the json object.
+2023-07-30 17:48:23,730 - __main__ - DEBUG - {
+  "id": "chatcmpl-7hvRr5FXAMRRTJxbAqZuqGnsXdmlv",
+  "object": "chat.completion",
+  "created": 1690703291,
+  "model": "gpt-3.5-turbo-16k-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"Role\": \"Agile Coach\",\n  \"Level\": \"Emergent\",\n  \"Description\": \"An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.\",\n  \"Required\": [\n    {\n      \"Name\": \"Communication\",\n      \"Level\": \"Competent\",\n      \"Description\": \"The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders\",\n      \"Skills\": [\n        \"Active listening\",\n        \"Clear written and oral communication\",\n        \"Negotiation\",\n        \"Tactful feedback\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of communication channels\",\n        \"Knowledge of communication principles\",\n        \"Awareness of emotional intelligence\"\n      ],\n      \"Deliverables\": [\n        \"Clear and concise team updates\",\n        \"Effective meeting facilitation\"\n      ],\n      \"Attributes\": [\n        \"Empathy\",\n        \"Patience\",\n        \"Open-minded\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 90,\n          \"Comment\": \"Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Agile Methodologies\",\n      \"Level\": \"Competent\",\n      \"Description\": \"Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.\",\n      \"Skills\": [\n        \"Scrum management\",\n        \"Kanban board management\",\n        \"Continuous improvement process\"\n      ],\n      \"Knowledge\": [\n        \"Principles of Agile methodologies\",\n        \"Understanding of Agile practices\"\n      ],\n      \"Deliverables\": [\n        \"Successful deployment of Agile methodologies\",\n        \"Improvement in team's Agile maturity\"\n      ],\n      \"Attributes\": [\n        \"Flexibility\",\n        \"Adaptability\",\n        \"Progressive thinker\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 85,\n          \"Comment\": \"Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level.\"\n        }\n      ]\n    }\n  ],\n  \"Recommended\": [\n    {\n      \"Name\": \"Leadership\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment\",\n      \"Skills\": [\n        \"Team building\",\n        \"Strategic planning\",\n        \"Coaching and mentoring\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of leadership styles\",\n        \"Knowledge of motivation techniques\"\n      ],\n      \"Deliverables\": [\n        \"Improved team morale and productivity\",\n        \"Creation of a culture of continuous learning\"\n      ],\n      \"Attributes\": [\n        \"Inspirational\",\n        \"Resilient\",\n        \"Respectful\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 95,\n          \"Comment\": \"Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Problem Solving\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to identify, analyze, and resolve complex problems effectively\",\n      \"Skills\": [\n        \"Critical thinking\",\n        \"Conflict resolution\",\n        \"Creative problem solving\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of problem-solving methods\",\n        \"Knowledge of conflict management techniques\"\n      ],\n      \"Deliverables\": [\n        \"Resolution of team conflicts\",\n        \"Problem resolution strategies\"\n      ],\n      \"Attributes\": [\n        \"Analytical\",\n        \"Pragmatic\",\n        \"Resilient\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 90,\n          \"Comment\": \"Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 907,
+    "completion_tokens": 899,
+    "total_tokens": 1806
+  }
+}
+2023-07-30 17:48:23,732 - __main__ - INFO - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban board management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 17:48:23,732 - __main__ - INFO - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban board management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 17:48:23,732 - __main__ - INFO - Pretend you are Michael Sahota reviewing the output of the following task:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+    Please review each element in the json object below, and in the score array, add your name, a score from 1 to 100, and a comment on how you scored the element.
+
+    the current json object is: 
+    
+    {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban board management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ]
+}
+    
+    If you think an element is missing, add it and its component skills, knowledge, deliverables, attributes and score arrays to the json object and score appropriately.
+    
+    Only return the json object.
+2023-07-30 17:48:41,772 - __main__ - DEBUG - {
+  "id": "chatcmpl-7hvS4ZqduJ1SImR7jgknTBv8PvxzJ",
+  "object": "chat.completion",
+  "created": 1690703304,
+  "model": "gpt-3.5-turbo-16k-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"Role\": \"Agile Coach\",\n  \"Level\": \"Emergent\",\n  \"Description\": \"An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.\",\n  \"Required\": [\n    {\n      \"Name\": \"Communication\",\n      \"Level\": \"Competent\",\n      \"Description\": \"The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders\",\n      \"Skills\": [\n        \"Active listening\",\n        \"Clear written and oral communication\",\n        \"Negotiation\",\n        \"Tactful feedback\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of communication channels\",\n        \"Knowledge of communication principles\",\n        \"Awareness of emotional intelligence\"\n      ],\n      \"Deliverables\": [\n        \"Clear and concise team updates\",\n        \"Effective meeting facilitation\"\n      ],\n      \"Attributes\": [\n        \"Empathy\",\n        \"Patience\",\n        \"Open-minded\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 90,\n          \"Comment\": \"Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Agile Methodologies\",\n      \"Level\": \"Competent\",\n      \"Description\": \"Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.\",\n      \"Skills\": [\n        \"Scrum management\",\n        \"Kanban board management\",\n        \"Continuous improvement process\"\n      ],\n      \"Knowledge\": [\n        \"Principles of Agile methodologies\",\n        \"Understanding of Agile practices\"\n      ],\n      \"Deliverables\": [\n        \"Successful deployment of Agile methodologies\",\n        \"Improvement in team's Agile maturity\"\n      ],\n      \"Attributes\": [\n        \"Flexibility\",\n        \"Adaptability\",\n        \"Progressive thinker\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 85,\n          \"Comment\": \"Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Team Facilitation\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to facilitate and guide team discussions, decision-making processes, and collaborative sessions effectively\",\n      \"Skills\": [\n        \"Facilitation techniques\",\n        \"Active listening\",\n        \"Conflict resolution\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of group dynamics\",\n        \"Knowledge of decision-making techniques\"\n      ],\n      \"Deliverables\": [\n        \"Effective team meetings\",\n        \"Smooth decision-making processes\"\n      ],\n      \"Attributes\": [\n        \"Empathy\",\n        \"Neutral facilitation\",\n        \"Conflict resolution skills\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 90,\n          \"Comment\": \"Team facilitation is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    }\n  ],\n  \"Recommended\": [\n    {\n      \"Name\": \"Leadership\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment\",\n      \"Skills\": [\n        \"Team building\",\n        \"Strategic planning\",\n        \"Coaching and mentoring\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of leadership styles\",\n        \"Knowledge of motivation techniques\"\n      ],\n      \"Deliverables\": [\n        \"Improved team morale and productivity\",\n        \"Creation of a culture of continuous learning\"\n      ],\n      \"Attributes\": [\n        \"Inspirational\",\n        \"Resilient\",\n        \"Respectful\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 95,\n          \"Comment\": \"Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Problem Solving\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to identify, analyze, and resolve complex problems effectively\",\n      \"Skills\": [\n        \"Critical thinking\",\n        \"Conflict resolution\",\n        \"Creative problem solving\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of problem-solving methods\",\n        \"Knowledge of conflict management techniques\"\n      ],\n      \"Deliverables\": [\n        \"Resolution of team conflicts\",\n        \"Problem resolution strategies\"\n      ],\n      \"Attributes\": [\n        \"Analytical\",\n        \"Pragmatic\",\n        \"Resilient\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 90,\n          \"Comment\": \"Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1146,
+    "completion_tokens": 1098,
+    "total_tokens": 2244
+  }
+}
+2023-07-30 17:48:41,772 - __main__ - INFO - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban board management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Team Facilitation",
+      "Level": "Emergent",
+      "Description": "Ability to facilitate and guide team discussions, decision-making processes, and collaborative sessions effectively",
+      "Skills": [
+        "Facilitation techniques",
+        "Active listening",
+        "Conflict resolution"
+      ],
+      "Knowledge": [
+        "Understanding of group dynamics",
+        "Knowledge of decision-making techniques"
+      ],
+      "Deliverables": [
+        "Effective team meetings",
+        "Smooth decision-making processes"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Neutral facilitation",
+        "Conflict resolution skills"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Team facilitation is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 17:48:41,773 - __main__ - INFO - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban board management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Team Facilitation",
+      "Level": "Emergent",
+      "Description": "Ability to facilitate and guide team discussions, decision-making processes, and collaborative sessions effectively",
+      "Skills": [
+        "Facilitation techniques",
+        "Active listening",
+        "Conflict resolution"
+      ],
+      "Knowledge": [
+        "Understanding of group dynamics",
+        "Knowledge of decision-making techniques"
+      ],
+      "Deliverables": [
+        "Effective team meetings",
+        "Smooth decision-making processes"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Neutral facilitation",
+        "Conflict resolution skills"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Team facilitation is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 17:48:41,773 - __main__ - INFO - Pretend you are Esther Derby reviewing the output of the following task:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+    Please review each element in the json object below, and in the score array, add your name, a score from 1 to 100, and a comment on how you scored the element.
+
+    the current json object is: 
+    
+    {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban board management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Team Facilitation",
+      "Level": "Emergent",
+      "Description": "Ability to facilitate and guide team discussions, decision-making processes, and collaborative sessions effectively",
+      "Skills": [
+        "Facilitation techniques",
+        "Active listening",
+        "Conflict resolution"
+      ],
+      "Knowledge": [
+        "Understanding of group dynamics",
+        "Knowledge of decision-making techniques"
+      ],
+      "Deliverables": [
+        "Effective team meetings",
+        "Smooth decision-making processes"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Neutral facilitation",
+        "Conflict resolution skills"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Team facilitation is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ]
+}
+    
+    If you think an element is missing, add it and its component skills, knowledge, deliverables, attributes and score arrays to the json object and score appropriately.
+    
+    Only return the json object.
+2023-07-30 17:49:08,385 - __main__ - DEBUG - {
+  "id": "chatcmpl-7hvSMUXT4aEGl0i5A5xPNJkFaJnZV",
+  "object": "chat.completion",
+  "created": 1690703322,
+  "model": "gpt-3.5-turbo-16k-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"Role\": \"Agile Coach\",\n  \"Level\": \"Emergent\",\n  \"Description\": \"An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.\",\n  \"Required\": [\n    {\n      \"Name\": \"Communication\",\n      \"Level\": \"Competent\",\n      \"Description\": \"The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders\",\n      \"Skills\": [\n        \"Active listening\",\n        \"Clear written and oral communication\",\n        \"Negotiation\",\n        \"Tactful feedback\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of communication channels\",\n        \"Knowledge of communication principles\",\n        \"Awareness of emotional intelligence\"\n      ],\n      \"Deliverables\": [\n        \"Clear and concise team updates\",\n        \"Effective meeting facilitation\"\n      ],\n      \"Attributes\": [\n        \"Empathy\",\n        \"Patience\",\n        \"Open-minded\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 90,\n          \"Comment\": \"Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Agile Methodologies\",\n      \"Level\": \"Competent\",\n      \"Description\": \"Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.\",\n      \"Skills\": [\n        \"Scrum management\",\n        \"Kanban board management\",\n        \"Continuous improvement process\"\n      ],\n      \"Knowledge\": [\n        \"Principles of Agile methodologies\",\n        \"Understanding of Agile practices\"\n      ],\n      \"Deliverables\": [\n        \"Successful deployment of Agile methodologies\",\n        \"Improvement in team's Agile maturity\"\n      ],\n      \"Attributes\": [\n        \"Flexibility\",\n        \"Adaptability\",\n        \"Progressive thinker\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 85,\n          \"Comment\": \"Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Team Facilitation\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to facilitate and guide team discussions, decision-making processes, and collaborative sessions effectively\",\n      \"Skills\": [\n        \"Facilitation techniques\",\n        \"Active listening\",\n        \"Conflict resolution\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of group dynamics\",\n        \"Knowledge of decision-making techniques\"\n      ],\n      \"Deliverables\": [\n        \"Effective team meetings\",\n        \"Smooth decision-making processes\"\n      ],\n      \"Attributes\": [\n        \"Empathy\",\n        \"Neutral facilitation\",\n        \"Conflict resolution skills\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 90,\n          \"Comment\": \"Team facilitation is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Leadership\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment\",\n      \"Skills\": [\n        \"Team building\",\n        \"Strategic planning\",\n        \"Coaching and mentoring\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of leadership styles\",\n        \"Knowledge of motivation techniques\"\n      ],\n      \"Deliverables\": [\n        \"Improved team morale and productivity\",\n        \"Creation of a culture of continuous learning\"\n      ],\n      \"Attributes\": [\n        \"Inspirational\",\n        \"Resilient\",\n        \"Respectful\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 95,\n          \"Comment\": \"Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Problem Solving\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to identify, analyze, and resolve complex problems effectively\",\n      \"Skills\": [\n        \"Critical thinking\",\n        \"Conflict resolution\",\n        \"Creative problem solving\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of problem-solving methods\",\n        \"Knowledge of conflict management techniques\"\n      ],\n      \"Deliverables\": [\n        \"Resolution of team conflicts\",\n        \"Problem resolution strategies\"\n      ],\n      \"Attributes\": [\n        \"Analytical\",\n        \"Pragmatic\",\n        \"Resilient\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 90,\n          \"Comment\": \"Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Business Acumen\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to understand and interpret business goals, strategies, and industry trends in order to guide the team effectively\",\n      \"Skills\": [\n        \"Understanding of business context\",\n        \"Industry knowledge\",\n        \"Strategic thinking\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of business goals and strategies\",\n        \"Knowledge of industry trends\"\n      ],\n      \"Deliverables\": [\n        \"Alignment of team goals with business goals\",\n        \"Identification of opportunities for improvement\"\n      ],\n      \"Attributes\": [\n        \"Analytical\",\n        \"Strategic thinker\",\n        \"Adaptability\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 85,\n          \"Comment\": \"Business acumen is important for an Agile Coach to guide the team effectively. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    }\n  ],\n  \"Recommended\": [\n    {\n      \"Name\": \"Product Ownership\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Understanding and ability to perform product ownership responsibilities such as backlog management, prioritization, and stakeholder engagement\",\n      \"Skills\": [\n        \"Backlog management\",\n        \"Prioritization\",\n        \"Stakeholder engagement\"\n      ],\n      \"Knowledge\": [\n        \"Understanding of product ownership principles\",\n        \"Knowledge of stakeholder management techniques\"\n      ],\n      \"Deliverables\": [\n        \"Well-maintained product backlog\",\n        \"Satisfied stakeholders\"\n      ],\n      \"Attributes\": [\n        \"Organized\",\n        \"Collaborative\",\n        \"Customer-focused\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 80,\n          \"Comment\": \"Product ownership is a recommended competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    },\n    {\n      \"Name\": \"Technical Expertise\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Having a good understanding of technical concepts and ability to provide technical guidance to the team\",\n      \"Skills\": [\n        \"Understanding of technical concepts\",\n        \"Ability to explain technical concepts to non-technical stakeholders\",\n        \"Technical coaching\"\n      ],\n      \"Knowledge\": [\n        \"Knowledge of current technology trends\",\n        \"Understanding of the team's technical environment\"\n      ],\n      \"Deliverables\": [\n        \"Clear technical guidance\",\n        \"Improved technical skills of team members\"\n      ],\n      \"Attributes\": [\n        \"Enthusiastic\",\n        \"Adaptable\",\n        \"Continuous learner\"\n      ],\n      \"Score\": [\n        {\n          \"Name\": \"Lyssa Adkins\",\n          \"Score\": 80,\n          \"Comment\": \"Technical expertise is a recommended competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level.\"\n        }\n      ]\n    }\n  ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1344,
+    "completion_tokens": 1738,
+    "total_tokens": 3082
+  }
+}
+2023-07-30 17:49:08,386 - __main__ - INFO - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban board management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Team Facilitation",
+      "Level": "Emergent",
+      "Description": "Ability to facilitate and guide team discussions, decision-making processes, and collaborative sessions effectively",
+      "Skills": [
+        "Facilitation techniques",
+        "Active listening",
+        "Conflict resolution"
+      ],
+      "Knowledge": [
+        "Understanding of group dynamics",
+        "Knowledge of decision-making techniques"
+      ],
+      "Deliverables": [
+        "Effective team meetings",
+        "Smooth decision-making processes"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Neutral facilitation",
+        "Conflict resolution skills"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Team facilitation is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Business Acumen",
+      "Level": "Emergent",
+      "Description": "Ability to understand and interpret business goals, strategies, and industry trends in order to guide the team effectively",
+      "Skills": [
+        "Understanding of business context",
+        "Industry knowledge",
+        "Strategic thinking"
+      ],
+      "Knowledge": [
+        "Understanding of business goals and strategies",
+        "Knowledge of industry trends"
+      ],
+      "Deliverables": [
+        "Alignment of team goals with business goals",
+        "Identification of opportunities for improvement"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Strategic thinker",
+        "Adaptability"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Business acumen is important for an Agile Coach to guide the team effectively. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Product Ownership",
+      "Level": "Emergent",
+      "Description": "Understanding and ability to perform product ownership responsibilities such as backlog management, prioritization, and stakeholder engagement",
+      "Skills": [
+        "Backlog management",
+        "Prioritization",
+        "Stakeholder engagement"
+      ],
+      "Knowledge": [
+        "Understanding of product ownership principles",
+        "Knowledge of stakeholder management techniques"
+      ],
+      "Deliverables": [
+        "Well-maintained product backlog",
+        "Satisfied stakeholders"
+      ],
+      "Attributes": [
+        "Organized",
+        "Collaborative",
+        "Customer-focused"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 80,
+          "Comment": "Product ownership is a recommended competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Technical Expertise",
+      "Level": "Emergent",
+      "Description": "Having a good understanding of technical concepts and ability to provide technical guidance to the team",
+      "Skills": [
+        "Understanding of technical concepts",
+        "Ability to explain technical concepts to non-technical stakeholders",
+        "Technical coaching"
+      ],
+      "Knowledge": [
+        "Knowledge of current technology trends",
+        "Understanding of the team's technical environment"
+      ],
+      "Deliverables": [
+        "Clear technical guidance",
+        "Improved technical skills of team members"
+      ],
+      "Attributes": [
+        "Enthusiastic",
+        "Adaptable",
+        "Continuous learner"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 80,
+          "Comment": "Technical expertise is a recommended competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 17:49:08,386 - __main__ - INFO - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach at an emergent level is responsible for aiding teams in implementing and improving Agile methodology within their work processes. They guide collaboration, Agile practices, and continuous improvement.",
+  "Required": [
+    {
+      "Name": "Communication",
+      "Level": "Competent",
+      "Description": "The ability to convey ideas, feedback, and instructions clearly and effectively to various stakeholders",
+      "Skills": [
+        "Active listening",
+        "Clear written and oral communication",
+        "Negotiation",
+        "Tactful feedback"
+      ],
+      "Knowledge": [
+        "Understanding of communication channels",
+        "Knowledge of communication principles",
+        "Awareness of emotional intelligence"
+      ],
+      "Deliverables": [
+        "Clear and concise team updates",
+        "Effective meeting facilitation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Open-minded"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Communication is a crucial skill for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Competent",
+      "Description": "Understanding and ability to apply various Agile methodologies like Scrum, Kanban, etc.",
+      "Skills": [
+        "Scrum management",
+        "Kanban board management",
+        "Continuous improvement process"
+      ],
+      "Knowledge": [
+        "Principles of Agile methodologies",
+        "Understanding of Agile practices"
+      ],
+      "Deliverables": [
+        "Successful deployment of Agile methodologies",
+        "Improvement in team's Agile maturity"
+      ],
+      "Attributes": [
+        "Flexibility",
+        "Adaptability",
+        "Progressive thinker"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Understanding and applying Agile methodologies is essential for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at a competent level."
+        }
+      ]
+    },
+    {
+      "Name": "Team Facilitation",
+      "Level": "Emergent",
+      "Description": "Ability to facilitate and guide team discussions, decision-making processes, and collaborative sessions effectively",
+      "Skills": [
+        "Facilitation techniques",
+        "Active listening",
+        "Conflict resolution"
+      ],
+      "Knowledge": [
+        "Understanding of group dynamics",
+        "Knowledge of decision-making techniques"
+      ],
+      "Deliverables": [
+        "Effective team meetings",
+        "Smooth decision-making processes"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Neutral facilitation",
+        "Conflict resolution skills"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Team facilitation is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Leadership",
+      "Level": "Emergent",
+      "Description": "Ability to guide and inspire the team towards achieving their goals while nurturing a collaborative and respectful environment",
+      "Skills": [
+        "Team building",
+        "Strategic planning",
+        "Coaching and mentoring"
+      ],
+      "Knowledge": [
+        "Understanding of leadership styles",
+        "Knowledge of motivation techniques"
+      ],
+      "Deliverables": [
+        "Improved team morale and productivity",
+        "Creation of a culture of continuous learning"
+      ],
+      "Attributes": [
+        "Inspirational",
+        "Resilient",
+        "Respectful"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Leadership is a critical competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Problem Solving",
+      "Level": "Emergent",
+      "Description": "Ability to identify, analyze, and resolve complex problems effectively",
+      "Skills": [
+        "Critical thinking",
+        "Conflict resolution",
+        "Creative problem solving"
+      ],
+      "Knowledge": [
+        "Understanding of problem-solving methods",
+        "Knowledge of conflict management techniques"
+      ],
+      "Deliverables": [
+        "Resolution of team conflicts",
+        "Problem resolution strategies"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Pragmatic",
+        "Resilient"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Problem solving is crucial for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Business Acumen",
+      "Level": "Emergent",
+      "Description": "Ability to understand and interpret business goals, strategies, and industry trends in order to guide the team effectively",
+      "Skills": [
+        "Understanding of business context",
+        "Industry knowledge",
+        "Strategic thinking"
+      ],
+      "Knowledge": [
+        "Understanding of business goals and strategies",
+        "Knowledge of industry trends"
+      ],
+      "Deliverables": [
+        "Alignment of team goals with business goals",
+        "Identification of opportunities for improvement"
+      ],
+      "Attributes": [
+        "Analytical",
+        "Strategic thinker",
+        "Adaptability"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Business acumen is important for an Agile Coach to guide the team effectively. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Product Ownership",
+      "Level": "Emergent",
+      "Description": "Understanding and ability to perform product ownership responsibilities such as backlog management, prioritization, and stakeholder engagement",
+      "Skills": [
+        "Backlog management",
+        "Prioritization",
+        "Stakeholder engagement"
+      ],
+      "Knowledge": [
+        "Understanding of product ownership principles",
+        "Knowledge of stakeholder management techniques"
+      ],
+      "Deliverables": [
+        "Well-maintained product backlog",
+        "Satisfied stakeholders"
+      ],
+      "Attributes": [
+        "Organized",
+        "Collaborative",
+        "Customer-focused"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 80,
+          "Comment": "Product ownership is a recommended competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    },
+    {
+      "Name": "Technical Expertise",
+      "Level": "Emergent",
+      "Description": "Having a good understanding of technical concepts and ability to provide technical guidance to the team",
+      "Skills": [
+        "Understanding of technical concepts",
+        "Ability to explain technical concepts to non-technical stakeholders",
+        "Technical coaching"
+      ],
+      "Knowledge": [
+        "Knowledge of current technology trends",
+        "Understanding of the team's technical environment"
+      ],
+      "Deliverables": [
+        "Clear technical guidance",
+        "Improved technical skills of team members"
+      ],
+      "Attributes": [
+        "Enthusiastic",
+        "Adaptable",
+        "Continuous learner"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 80,
+          "Comment": "Technical expertise is a recommended competency for an Agile Coach. The skills, knowledge, deliverables, and attributes listed align with what is expected at an emergent level."
+        }
+      ]
+    }
+  ]
+}

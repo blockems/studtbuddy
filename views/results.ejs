@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head') %>
+  </head>
+  <body>
+    <%- include('partials/menu') %>
+    <h1><%= title %></h1>
+    <p>Correct answers: <%= correctAnswers %></p>
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>Your Answer</th>
+        <th>Correct Answer</th>
+        <th>Explanation</th>
+      </tr>
+      <% explanations.forEach(function(explanation) { %>
+      <tr>
+        <td><%= explanation.questionText %></td>
+        <td><%= explanation.userAnswer %></td>
+        <td><%= explanation.correctAnswer %></td>
+        <td><%= explanation.explanation %></td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>

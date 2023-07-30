@@ -1,0 +1,963 @@
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - port: 5001
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - debug: True
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - log_level: INFO
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - numeric_level: 20
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - 
+            Error levels:
+            * DEBUG
+            * INFO
+            * WARNING
+            * ERROR
+            * CRITICAL
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - Role: Agile Coach
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - Competency: Emergent
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - Current answer: 
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - Prompt: 
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - Role format: {'Role': 'Role Name', 'Level': 'Competency Level', 'Description': 'Role Description', 'Required': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}], 'Recommended': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}], 'Reviewers': [{'Name': 'Reviewer Name', 'Description': 'Reviewer Description'}]}
+2023-07-30 20:22:25,425 - __main__ - INFO - <module> - Expert format: {'experts': [{'Name': 'Expert Name', 'Description': 'Expert Description'}]}
+2023-07-30 20:22:25,426 - __main__ - INFO - get_skills - 
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+      Use the following format for the JSON object:
+      {"Role": "Role Name", "Level": "Competency Level", "Description": "Role Description", "Required": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description"}], "Recommended": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description"}], "Reviewers": [{"Name": "Reviewer Name", "Description": "Reviewer Description"}]}
+2023-07-30 20:22:42,749 - __main__ - INFO - get_skills - {"Role": "Agile Coach", "Level": "Emergent", "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies", "Required": [{"Name": "Agile methodologies", "Level": "Emergent", "Description": "Understanding of basic Agile methodologies and their applications"}, {"Name": "Coaching Skills", "Level": "Emergent", "Description": "Ability to guide, support and encourage team members"}, {"Name": "Team Collaboration", "Level": "Emergent", "Description": "Ability to work with team members at all levels and foster a collaborative environment"}, {"Name": "Understanding of banking regulatory requirements", "Level": "Emergent", "Description": "Basic understanding of the regulatory framework governing the banking industry"}], 
+
+"Recommended": [{"Name": "Project Management", "Level": "Emergent", "Description": "Understanding of project management principles and techniques"}, {"Name": "Technical Knowledge", "Level": "Emergent", "Description": "Basic understanding of the technical aspects of software development"}], 
+
+"Reviewers": [{"Name": "Agile Team Lead", "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"}]}
+2023-07-30 20:22:42,749 - __main__ - INFO - <module> - Current answer: {"Role": "Agile Coach", "Level": "Emergent", "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies", "Required": [{"Name": "Agile methodologies", "Level": "Emergent", "Description": "Understanding of basic Agile methodologies and their applications"}, {"Name": "Coaching Skills", "Level": "Emergent", "Description": "Ability to guide, support and encourage team members"}, {"Name": "Team Collaboration", "Level": "Emergent", "Description": "Ability to work with team members at all levels and foster a collaborative environment"}, {"Name": "Understanding of banking regulatory requirements", "Level": "Emergent", "Description": "Basic understanding of the regulatory framework governing the banking industry"}], 
+
+"Recommended": [{"Name": "Project Management", "Level": "Emergent", "Description": "Understanding of project management principles and techniques"}, {"Name": "Technical Knowledge", "Level": "Emergent", "Description": "Basic understanding of the technical aspects of software development"}], 
+
+"Reviewers": [{"Name": "Agile Team Lead", "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"}]}
+2023-07-30 20:22:42,749 - __main__ - INFO - get_experts - I want a response to the following question:
+    
+    
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        Please return the results as a json object with the following structure:    
+        {"experts": [{"Name": "Expert Name", "Description": "Expert Description"}]}
+2023-07-30 20:22:48,031 - __main__ - INFO - get_experts - {
+  "experts": [
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "Co-creator of Scrum, an agile framework for managing complex projects"
+    },
+    {
+      "Name": "Linda Rising",
+      "Description": "Author and speaker on agile development and patterns, known for her work on agile adoption and organizational change"
+    },
+    {
+      "Name": "Mike Cohn",
+      "Description": "Founder of Mountain Goat Software, author, and trainer on agile and Scrum practices"
+    }
+  ]
+}
+2023-07-30 20:22:48,031 - __main__ - INFO - <module> - Experts: {
+  "experts": [
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "Co-creator of Scrum, an agile framework for managing complex projects"
+    },
+    {
+      "Name": "Linda Rising",
+      "Description": "Author and speaker on agile development and patterns, known for her work on agile adoption and organizational change"
+    },
+    {
+      "Name": "Mike Cohn",
+      "Description": "Founder of Mountain Goat Software, author, and trainer on agile and Scrum practices"
+    }
+  ]
+}
+2023-07-30 20:22:48,031 - __main__ - INFO - get_review - Pretend you are Jeff Sutherland reviewing the output of the following task:
+    
+    
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+
+    The json object to review is:
+    
+    {"Role": "Agile Coach", "Level": "Emergent", "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies", "Required": [{"Name": "Agile methodologies", "Level": "Emergent", "Description": "Understanding of basic Agile methodologies and their applications"}, {"Name": "Coaching Skills", "Level": "Emergent", "Description": "Ability to guide, support and encourage team members"}, {"Name": "Team Collaboration", "Level": "Emergent", "Description": "Ability to work with team members at all levels and foster a collaborative environment"}, {"Name": "Understanding of banking regulatory requirements", "Level": "Emergent", "Description": "Basic understanding of the regulatory framework governing the banking industry"}], 
+
+"Recommended": [{"Name": "Project Management", "Level": "Emergent", "Description": "Understanding of project management principles and techniques"}, {"Name": "Technical Knowledge", "Level": "Emergent", "Description": "Basic understanding of the technical aspects of software development"}], 
+
+"Reviewers": [{"Name": "Agile Team Lead", "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"}]}
+    
+    Review the list for completeness, and add to the reviewers array your name and an comprehensive feedback and suggestions on how the list can be improved.
+
+    Only return the updated json object.
+2023-07-30 20:22:56,670 - __main__ - INFO - get_review - {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ],
+    "Reviewers": [
+        {
+            "Name": "Agile Team Lead",
+            "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"
+        },
+        {
+            "Name": "Jeff Sutherland",
+            "Description": "As the Agile Coach plays a crucial role in guiding and coaching team members and organizations in the adoption of Agile methodologies, it would be beneficial to include the following additional competencies:
+
+        1. Facilitation Skills: Ability to facilitate meetings, workshops, and discussions to drive collaboration and decision-making.
+        2. Change Management: Understanding of change management principles and techniques to effectively manage and navigate organizational changes during Agile transformation.
+        3. Communication Skills: Strong verbal and written communication skills to effectively convey ideas and instructions to team members and stakeholders.
+        4. Leadership Skills: Ability to lead and influence a team towards achieving Agile goals and continuous improvement.
+        5. Conflict Resolution: Proficiency in resolving conflicts and addressing disagreements within teams to ensure smooth collaboration and progress.
+        6. Continuous Learning: Eagerness to continuously learn and stay updated with the latest Agile practices and methodologies.
+        7. Emotional Intelligence: Awareness of one's own emotions and the ability to understand and manage emotions of team members for effective teamwork and collaboration.
+
+These additional competencies will further enhance the effectiveness of an Agile Coach in guiding and supporting teams and organizations in their Agile journey."
+        }
+    ]
+}
+2023-07-30 20:22:56,671 - __main__ - INFO - <module> - {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ],
+    "Reviewers": [
+        {
+            "Name": "Agile Team Lead",
+            "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"
+        },
+        {
+            "Name": "Jeff Sutherland",
+            "Description": "As the Agile Coach plays a crucial role in guiding and coaching team members and organizations in the adoption of Agile methodologies, it would be beneficial to include the following additional competencies:
+
+        1. Facilitation Skills: Ability to facilitate meetings, workshops, and discussions to drive collaboration and decision-making.
+        2. Change Management: Understanding of change management principles and techniques to effectively manage and navigate organizational changes during Agile transformation.
+        3. Communication Skills: Strong verbal and written communication skills to effectively convey ideas and instructions to team members and stakeholders.
+        4. Leadership Skills: Ability to lead and influence a team towards achieving Agile goals and continuous improvement.
+        5. Conflict Resolution: Proficiency in resolving conflicts and addressing disagreements within teams to ensure smooth collaboration and progress.
+        6. Continuous Learning: Eagerness to continuously learn and stay updated with the latest Agile practices and methodologies.
+        7. Emotional Intelligence: Awareness of one's own emotions and the ability to understand and manage emotions of team members for effective teamwork and collaboration.
+
+These additional competencies will further enhance the effectiveness of an Agile Coach in guiding and supporting teams and organizations in their Agile journey."
+        }
+    ]
+}
+2023-07-30 20:22:56,671 - __main__ - INFO - get_review - Pretend you are Linda Rising reviewing the output of the following task:
+    
+    
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+
+    The json object to review is:
+    
+    {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ],
+    "Reviewers": [
+        {
+            "Name": "Agile Team Lead",
+            "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"
+        },
+        {
+            "Name": "Jeff Sutherland",
+            "Description": "As the Agile Coach plays a crucial role in guiding and coaching team members and organizations in the adoption of Agile methodologies, it would be beneficial to include the following additional competencies:
+
+        1. Facilitation Skills: Ability to facilitate meetings, workshops, and discussions to drive collaboration and decision-making.
+        2. Change Management: Understanding of change management principles and techniques to effectively manage and navigate organizational changes during Agile transformation.
+        3. Communication Skills: Strong verbal and written communication skills to effectively convey ideas and instructions to team members and stakeholders.
+        4. Leadership Skills: Ability to lead and influence a team towards achieving Agile goals and continuous improvement.
+        5. Conflict Resolution: Proficiency in resolving conflicts and addressing disagreements within teams to ensure smooth collaboration and progress.
+        6. Continuous Learning: Eagerness to continuously learn and stay updated with the latest Agile practices and methodologies.
+        7. Emotional Intelligence: Awareness of one's own emotions and the ability to understand and manage emotions of team members for effective teamwork and collaboration.
+
+These additional competencies will further enhance the effectiveness of an Agile Coach in guiding and supporting teams and organizations in their Agile journey."
+        }
+    ]
+}
+    
+    Review the list for completeness, and add to the reviewers array your name and an comprehensive feedback and suggestions on how the list can be improved.
+
+    Only return the updated json object.
+2023-07-30 20:23:09,427 - __main__ - INFO - get_review - {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support, and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ],
+    "Reviewers": [
+        {
+            "Name": "Agile Team Lead",
+            "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"
+        },
+        {
+            "Name": "Jeff Sutherland",
+            "Description": "As the Agile Coach plays a crucial role in guiding and coaching team members and organizations in the adoption of Agile methodologies, it would be beneficial to include the following additional competencies:
+
+        1. Facilitation Skills: Ability to facilitate meetings, workshops, and discussions to drive collaboration and decision-making.
+        2. Change Management: Understanding of change management principles and techniques to effectively manage and navigate organizational changes during Agile transformation.
+        3. Communication Skills: Strong verbal and written communication skills to effectively convey ideas and instructions to team members and stakeholders.
+        4. Leadership Skills: Ability to lead and influence a team towards achieving Agile goals and continuous improvement.
+        5. Conflict Resolution: Proficiency in resolving conflicts and addressing disagreements within teams to ensure smooth collaboration and progress.
+        6. Continuous Learning: Eagerness to continuously learn and stay updated with the latest Agile practices and methodologies.
+        7. Emotional Intelligence: Awareness of one's own emotions and the ability to understand and manage emotions of team members for effective teamwork and collaboration.
+
+These additional competencies will further enhance the effectiveness of an Agile Coach in guiding and supporting teams and organizations in their Agile journey."
+        },
+        {
+            "Name": "Linda Rising",
+            "Description": "As an additional reviewer, I would suggest considering the following competencies for an Agile Coach role:
+
+        1. Knowledge of Agile frameworks: Familiarity with popular Agile frameworks such as Scrum, Kanban, or Lean, and their implementation in software development processes.
+        2. Facilitation and Collaboration Techniques: Proficiency in facilitation techniques like retrospectives, workshops, and team-building exercises to promote collaboration and effective communication within the team.
+        3. Dynamic Problem Solving: Ability to identify and address complex problems in Agile teams, and provide innovative and practical solutions.
+        4. Stakeholder Management: Skill in managing relationships and expectations with stakeholders, such as product owners, executives, and customers, to ensure alignment and successful delivery.
+        5. Agile Metrics and Measurement: Understanding of Agile metrics and their use for tracking progress, identifying bottlenecks, and driving continuous improvement.
+        6. Agile Planning and Estimation: Knowledge of Agile planning techniques, user story mapping, and estimation methods to support the team in delivering valuable software increments.
+        7. Agile Values and Principles: Deep understanding and commitment to Agile values and principles, and ability to promote them within the team and organization.
+
+These additional competencies will further strengthen the Agile Coach's ability to facilitate successful Agile transformations and help teams excel in Agile practices. It is crucial for an Agile Coach to possess a diverse skill set that encompasses both technical knowledge and interpersonal skills to effectively guide teams and organizations in their Agile journey."
+        }
+    ]
+}
+2023-07-30 20:23:09,427 - __main__ - INFO - <module> - {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support, and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ],
+    "Reviewers": [
+        {
+            "Name": "Agile Team Lead",
+            "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"
+        },
+        {
+            "Name": "Jeff Sutherland",
+            "Description": "As the Agile Coach plays a crucial role in guiding and coaching team members and organizations in the adoption of Agile methodologies, it would be beneficial to include the following additional competencies:
+
+        1. Facilitation Skills: Ability to facilitate meetings, workshops, and discussions to drive collaboration and decision-making.
+        2. Change Management: Understanding of change management principles and techniques to effectively manage and navigate organizational changes during Agile transformation.
+        3. Communication Skills: Strong verbal and written communication skills to effectively convey ideas and instructions to team members and stakeholders.
+        4. Leadership Skills: Ability to lead and influence a team towards achieving Agile goals and continuous improvement.
+        5. Conflict Resolution: Proficiency in resolving conflicts and addressing disagreements within teams to ensure smooth collaboration and progress.
+        6. Continuous Learning: Eagerness to continuously learn and stay updated with the latest Agile practices and methodologies.
+        7. Emotional Intelligence: Awareness of one's own emotions and the ability to understand and manage emotions of team members for effective teamwork and collaboration.
+
+These additional competencies will further enhance the effectiveness of an Agile Coach in guiding and supporting teams and organizations in their Agile journey."
+        },
+        {
+            "Name": "Linda Rising",
+            "Description": "As an additional reviewer, I would suggest considering the following competencies for an Agile Coach role:
+
+        1. Knowledge of Agile frameworks: Familiarity with popular Agile frameworks such as Scrum, Kanban, or Lean, and their implementation in software development processes.
+        2. Facilitation and Collaboration Techniques: Proficiency in facilitation techniques like retrospectives, workshops, and team-building exercises to promote collaboration and effective communication within the team.
+        3. Dynamic Problem Solving: Ability to identify and address complex problems in Agile teams, and provide innovative and practical solutions.
+        4. Stakeholder Management: Skill in managing relationships and expectations with stakeholders, such as product owners, executives, and customers, to ensure alignment and successful delivery.
+        5. Agile Metrics and Measurement: Understanding of Agile metrics and their use for tracking progress, identifying bottlenecks, and driving continuous improvement.
+        6. Agile Planning and Estimation: Knowledge of Agile planning techniques, user story mapping, and estimation methods to support the team in delivering valuable software increments.
+        7. Agile Values and Principles: Deep understanding and commitment to Agile values and principles, and ability to promote them within the team and organization.
+
+These additional competencies will further strengthen the Agile Coach's ability to facilitate successful Agile transformations and help teams excel in Agile practices. It is crucial for an Agile Coach to possess a diverse skill set that encompasses both technical knowledge and interpersonal skills to effectively guide teams and organizations in their Agile journey."
+        }
+    ]
+}
+2023-07-30 20:23:09,428 - __main__ - INFO - get_review - Pretend you are Mike Cohn reviewing the output of the following task:
+    
+    
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+
+    The json object to review is:
+    
+    {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support, and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ],
+    "Reviewers": [
+        {
+            "Name": "Agile Team Lead",
+            "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"
+        },
+        {
+            "Name": "Jeff Sutherland",
+            "Description": "As the Agile Coach plays a crucial role in guiding and coaching team members and organizations in the adoption of Agile methodologies, it would be beneficial to include the following additional competencies:
+
+        1. Facilitation Skills: Ability to facilitate meetings, workshops, and discussions to drive collaboration and decision-making.
+        2. Change Management: Understanding of change management principles and techniques to effectively manage and navigate organizational changes during Agile transformation.
+        3. Communication Skills: Strong verbal and written communication skills to effectively convey ideas and instructions to team members and stakeholders.
+        4. Leadership Skills: Ability to lead and influence a team towards achieving Agile goals and continuous improvement.
+        5. Conflict Resolution: Proficiency in resolving conflicts and addressing disagreements within teams to ensure smooth collaboration and progress.
+        6. Continuous Learning: Eagerness to continuously learn and stay updated with the latest Agile practices and methodologies.
+        7. Emotional Intelligence: Awareness of one's own emotions and the ability to understand and manage emotions of team members for effective teamwork and collaboration.
+
+These additional competencies will further enhance the effectiveness of an Agile Coach in guiding and supporting teams and organizations in their Agile journey."
+        },
+        {
+            "Name": "Linda Rising",
+            "Description": "As an additional reviewer, I would suggest considering the following competencies for an Agile Coach role:
+
+        1. Knowledge of Agile frameworks: Familiarity with popular Agile frameworks such as Scrum, Kanban, or Lean, and their implementation in software development processes.
+        2. Facilitation and Collaboration Techniques: Proficiency in facilitation techniques like retrospectives, workshops, and team-building exercises to promote collaboration and effective communication within the team.
+        3. Dynamic Problem Solving: Ability to identify and address complex problems in Agile teams, and provide innovative and practical solutions.
+        4. Stakeholder Management: Skill in managing relationships and expectations with stakeholders, such as product owners, executives, and customers, to ensure alignment and successful delivery.
+        5. Agile Metrics and Measurement: Understanding of Agile metrics and their use for tracking progress, identifying bottlenecks, and driving continuous improvement.
+        6. Agile Planning and Estimation: Knowledge of Agile planning techniques, user story mapping, and estimation methods to support the team in delivering valuable software increments.
+        7. Agile Values and Principles: Deep understanding and commitment to Agile values and principles, and ability to promote them within the team and organization.
+
+These additional competencies will further strengthen the Agile Coach's ability to facilitate successful Agile transformations and help teams excel in Agile practices. It is crucial for an Agile Coach to possess a diverse skill set that encompasses both technical knowledge and interpersonal skills to effectively guide teams and organizations in their Agile journey."
+        }
+    ]
+}
+    
+    Review the list for completeness, and add to the reviewers array your name and an comprehensive feedback and suggestions on how the list can be improved.
+
+    Only return the updated json object.
+2023-07-30 20:23:27,189 - __main__ - INFO - get_review - {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support, and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ],
+    "Reviewers": [
+        {
+            "Name": "Agile Team Lead",
+            "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"
+        },
+        {
+            "Name": "Jeff Sutherland",
+            "Description": "As the Agile Coach plays a crucial role in guiding and coaching team members and organizations in the adoption of Agile methodologies, it would be beneficial to include the following additional competencies:\n\n1. Facilitation Skills: Ability to facilitate meetings, workshops, and discussions to drive collaboration and decision-making.\n2. Change Management: Understanding of change management principles and techniques to effectively manage and navigate organizational changes during Agile transformation.\n3. Communication Skills: Strong verbal and written communication skills to effectively convey ideas and instructions to team members and stakeholders.\n4. Leadership Skills: Ability to lead and influence a team towards achieving Agile goals and continuous improvement.\n5. Conflict Resolution: Proficiency in resolving conflicts and addressing disagreements within teams to ensure smooth collaboration and progress.\n6. Continuous Learning: Eagerness to continuously learn and stay updated with the latest Agile practices and methodologies.\n7. Emotional Intelligence: Awareness of one's own emotions and the ability to understand and manage emotions of team members for effective teamwork and collaboration.\n\nThese additional competencies will further enhance the effectiveness of an Agile Coach in guiding and supporting teams and organizations in their Agile journey."
+        },
+        {
+            "Name": "Linda Rising",
+            "Description": "As an additional reviewer, I would suggest considering the following competencies for an Agile Coach role:\n\n1. Knowledge of Agile frameworks: Familiarity with popular Agile frameworks such as Scrum, Kanban, or Lean, and their implementation in software development processes.\n2. Facilitation and Collaboration Techniques: Proficiency in facilitation techniques like retrospectives, workshops, and team-building exercises to promote collaboration and effective communication within the team.\n3. Dynamic Problem Solving: Ability to identify and address complex problems in Agile teams, and provide innovative and practical solutions.\n4. Stakeholder Management: Skill in managing relationships and expectations with stakeholders, such as product owners, executives, and customers, to ensure alignment and successful delivery.\n5. Agile Metrics and Measurement: Understanding of Agile metrics and their use for tracking progress, identifying bottlenecks, and driving continuous improvement.\n6. Agile Planning and Estimation: Knowledge of Agile planning techniques, user story mapping, and estimation methods to support the team in delivering valuable software increments.\n7. Agile Values and Principles: Deep understanding and commitment to Agile values and principles, and ability to promote them within the team and organization.\n\nThese additional competencies will further strengthen the Agile Coach's ability to facilitate successful Agile transformations and help teams excel in Agile practices. It is crucial for an Agile Coach to possess a diverse skill set that encompasses both technical knowledge and interpersonal skills to effectively guide teams and organizations in their Agile journey."
+        },
+        {
+            "Name": "Mike Cohn",
+            "Description": "Based on my expertise and experience, I would like to add the following suggestions to the list of competencies for an Agile Coach role:\n\n1. Systems Thinking: The ability to understand and analyze complex systems, identify dependencies, and optimize the overall value stream.\n2. Lean Thinking: Knowledge of Lean principles and practices, such as waste reduction, value stream mapping, and continuous improvement.\n3. Mentoring Skills: The capability to mentor individuals and teams in adopting Agile practices, providing guidance and support throughout their journey.\n4. Empathy: The capacity to understand and empathize with team members' challenges and perspectives, fostering a positive and inclusive environment.\n5. Facilitation of Organizational Change: The competence to facilitate and lead organizational changes to align with Agile principles and practices.\n6. Technical Coaching: Proficiency in providing technical guidance to development teams, helping them improve their technical skills and practices.\n\nThese additional competencies focus on enhancing the Agile Coach's ability to drive systemic improvements, mentor individuals and teams, and effectively facilitate organizational change. With these skills, an Agile Coach can better meet the evolving needs of the organization and guide successful Agile transformations."
+        }
+    ]
+}
+2023-07-30 20:23:27,189 - __main__ - INFO - <module> - {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support, and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        }
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ],
+    "Reviewers": [
+        {
+            "Name": "Agile Team Lead",
+            "Description": "Oversees the Agile team and is familiar with the skills and competencies required for the role of Agile Coach"
+        },
+        {
+            "Name": "Jeff Sutherland",
+            "Description": "As the Agile Coach plays a crucial role in guiding and coaching team members and organizations in the adoption of Agile methodologies, it would be beneficial to include the following additional competencies:\n\n1. Facilitation Skills: Ability to facilitate meetings, workshops, and discussions to drive collaboration and decision-making.\n2. Change Management: Understanding of change management principles and techniques to effectively manage and navigate organizational changes during Agile transformation.\n3. Communication Skills: Strong verbal and written communication skills to effectively convey ideas and instructions to team members and stakeholders.\n4. Leadership Skills: Ability to lead and influence a team towards achieving Agile goals and continuous improvement.\n5. Conflict Resolution: Proficiency in resolving conflicts and addressing disagreements within teams to ensure smooth collaboration and progress.\n6. Continuous Learning: Eagerness to continuously learn and stay updated with the latest Agile practices and methodologies.\n7. Emotional Intelligence: Awareness of one's own emotions and the ability to understand and manage emotions of team members for effective teamwork and collaboration.\n\nThese additional competencies will further enhance the effectiveness of an Agile Coach in guiding and supporting teams and organizations in their Agile journey."
+        },
+        {
+            "Name": "Linda Rising",
+            "Description": "As an additional reviewer, I would suggest considering the following competencies for an Agile Coach role:\n\n1. Knowledge of Agile frameworks: Familiarity with popular Agile frameworks such as Scrum, Kanban, or Lean, and their implementation in software development processes.\n2. Facilitation and Collaboration Techniques: Proficiency in facilitation techniques like retrospectives, workshops, and team-building exercises to promote collaboration and effective communication within the team.\n3. Dynamic Problem Solving: Ability to identify and address complex problems in Agile teams, and provide innovative and practical solutions.\n4. Stakeholder Management: Skill in managing relationships and expectations with stakeholders, such as product owners, executives, and customers, to ensure alignment and successful delivery.\n5. Agile Metrics and Measurement: Understanding of Agile metrics and their use for tracking progress, identifying bottlenecks, and driving continuous improvement.\n6. Agile Planning and Estimation: Knowledge of Agile planning techniques, user story mapping, and estimation methods to support the team in delivering valuable software increments.\n7. Agile Values and Principles: Deep understanding and commitment to Agile values and principles, and ability to promote them within the team and organization.\n\nThese additional competencies will further strengthen the Agile Coach's ability to facilitate successful Agile transformations and help teams excel in Agile practices. It is crucial for an Agile Coach to possess a diverse skill set that encompasses both technical knowledge and interpersonal skills to effectively guide teams and organizations in their Agile journey."
+        },
+        {
+            "Name": "Mike Cohn",
+            "Description": "Based on my expertise and experience, I would like to add the following suggestions to the list of competencies for an Agile Coach role:\n\n1. Systems Thinking: The ability to understand and analyze complex systems, identify dependencies, and optimize the overall value stream.\n2. Lean Thinking: Knowledge of Lean principles and practices, such as waste reduction, value stream mapping, and continuous improvement.\n3. Mentoring Skills: The capability to mentor individuals and teams in adopting Agile practices, providing guidance and support throughout their journey.\n4. Empathy: The capacity to understand and empathize with team members' challenges and perspectives, fostering a positive and inclusive environment.\n5. Facilitation of Organizational Change: The competence to facilitate and lead organizational changes to align with Agile principles and practices.\n6. Technical Coaching: Proficiency in providing technical guidance to development teams, helping them improve their technical skills and practices.\n\nThese additional competencies focus on enhancing the Agile Coach's ability to drive systemic improvements, mentor individuals and teams, and effectively facilitate organizational change. With these skills, an Agile Coach can better meet the evolving needs of the organization and guide successful Agile transformations."
+        }
+    ]
+}
+2023-07-30 20:24:28,790 - __main__ - INFO - get_final_answer - {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support, and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        },
+        {
+            "Name": "Change Management",
+            "Level": "Emergent",
+            "Description": "Understanding of change management principles and techniques"
+        },
+        {
+            "Name": "Communication Skills",
+            "Level": "Emergent",
+            "Description": "Strong verbal and written communication skills."
+        },
+        {
+            "Name": "Leadership Skills",
+            "Level": "Emergent",
+            "Description": "Ability to lead and influence a team."
+        },
+        {
+            "Name": "Conflict Resolution",
+            "Level": "Emergent",
+            "Description": "Proficiency in resolving conflicts."
+        },
+        {
+            "Name": "Continuous Learning",
+            "Level": "Emergent",
+            "Description": "Eagerness to continuously learn and stay updated."
+        },
+        {
+            "Name": "Emotional Intelligence",
+            "Level": "Emergent",
+            "Description": "Awareness of one's own emotions and the ability to understand and manage emotions of others."
+        },
+        {
+            "Name": "Knowledge of Agile Frameworks",
+            "Level": "Emergent",
+            "Description": "Familiarity with popular Agile frameworks such as Scrum, Kanban, or Lean."
+        },
+        {
+            "Name": "Facilitation Skills",
+            "Level": "Emergent",
+            "Description": "Proficiency in facilitation techniques to promote collaboration and effective communication within the team."
+        },
+        {
+            "Name": "Dynamic Problem Solving",
+            "Level": "Emergent",
+            "Description": "Ability to identify and address complex problems."
+        },
+        {
+            "Name": "Stakeholder Management",
+            "Level": "Emergent",
+            "Description": "Skill in managing relationships and expectations with stakeholders."
+        },
+        {
+            "Name": "Agile Metrics and Measurement",
+            "Level": "Emergent",
+            "Description": "Understanding of Agile metrics and their use for tracking progress."
+        },
+        {
+            "Name": "Agile Planning and Estimation",
+            "Level": "Emergent",
+            "Description": "Knowledge of Agile planning techniques and estimation methods."
+        },
+        {
+            "Name": "Agile Values and Principles",
+            "Level": "Emergent",
+            "Description": "Deep understanding and commitment to Agile values and principles."
+        },
+        {
+            "Name": "Systems Thinking",
+            "Level": "Emergent",
+            "Description": "Ability to understand and analyze complex systems."
+        },
+        {
+            "Name": "Lean Thinking",
+            "Level": "Emergent",
+            "Description": "Knowledge of Lean principles and practices."
+        },
+        {
+            "Name": "Mentoring Skills",
+            "Level": "Emergent",
+            "Description": "Capability to mentor individuals and teams in adopting Agile practices."
+        },
+        {
+            "Name": "Empathy",
+            "Level": "Emergent",
+            "Description": "The capacity to understand and empathize with team members' challenges and perspectives."
+        },
+        {
+            "Name": "Facilitation of Organizational Change",
+            "Level": "Emergent",
+            "Description": "The competence to facilitate and lead organizational changes."
+        },
+        {
+            "Name": "Technical Coaching",
+            "Level": "Emergent",
+            "Description": "Proficiency in providing technical guidance to development teams."
+        }
+
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ]
+}
+2023-07-30 20:24:28,790 - __main__ - INFO - <module> - {
+    "Role": "Agile Coach",
+    "Level": "Emergent",
+    "Description": "An Agile Coach is an individual who guides, coaches, and encourages team members and organizations in the adoption of Agile methodologies",
+    "Required": [
+        {
+            "Name": "Agile methodologies",
+            "Level": "Emergent",
+            "Description": "Understanding of basic Agile methodologies and their applications"
+        },
+        {
+            "Name": "Coaching Skills",
+            "Level": "Emergent",
+            "Description": "Ability to guide, support, and encourage team members"
+        },
+        {
+            "Name": "Team Collaboration",
+            "Level": "Emergent",
+            "Description": "Ability to work with team members at all levels and foster a collaborative environment"
+        },
+        {
+            "Name": "Understanding of banking regulatory requirements",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the regulatory framework governing the banking industry"
+        },
+        {
+            "Name": "Change Management",
+            "Level": "Emergent",
+            "Description": "Understanding of change management principles and techniques"
+        },
+        {
+            "Name": "Communication Skills",
+            "Level": "Emergent",
+            "Description": "Strong verbal and written communication skills."
+        },
+        {
+            "Name": "Leadership Skills",
+            "Level": "Emergent",
+            "Description": "Ability to lead and influence a team."
+        },
+        {
+            "Name": "Conflict Resolution",
+            "Level": "Emergent",
+            "Description": "Proficiency in resolving conflicts."
+        },
+        {
+            "Name": "Continuous Learning",
+            "Level": "Emergent",
+            "Description": "Eagerness to continuously learn and stay updated."
+        },
+        {
+            "Name": "Emotional Intelligence",
+            "Level": "Emergent",
+            "Description": "Awareness of one's own emotions and the ability to understand and manage emotions of others."
+        },
+        {
+            "Name": "Knowledge of Agile Frameworks",
+            "Level": "Emergent",
+            "Description": "Familiarity with popular Agile frameworks such as Scrum, Kanban, or Lean."
+        },
+        {
+            "Name": "Facilitation Skills",
+            "Level": "Emergent",
+            "Description": "Proficiency in facilitation techniques to promote collaboration and effective communication within the team."
+        },
+        {
+            "Name": "Dynamic Problem Solving",
+            "Level": "Emergent",
+            "Description": "Ability to identify and address complex problems."
+        },
+        {
+            "Name": "Stakeholder Management",
+            "Level": "Emergent",
+            "Description": "Skill in managing relationships and expectations with stakeholders."
+        },
+        {
+            "Name": "Agile Metrics and Measurement",
+            "Level": "Emergent",
+            "Description": "Understanding of Agile metrics and their use for tracking progress."
+        },
+        {
+            "Name": "Agile Planning and Estimation",
+            "Level": "Emergent",
+            "Description": "Knowledge of Agile planning techniques and estimation methods."
+        },
+        {
+            "Name": "Agile Values and Principles",
+            "Level": "Emergent",
+            "Description": "Deep understanding and commitment to Agile values and principles."
+        },
+        {
+            "Name": "Systems Thinking",
+            "Level": "Emergent",
+            "Description": "Ability to understand and analyze complex systems."
+        },
+        {
+            "Name": "Lean Thinking",
+            "Level": "Emergent",
+            "Description": "Knowledge of Lean principles and practices."
+        },
+        {
+            "Name": "Mentoring Skills",
+            "Level": "Emergent",
+            "Description": "Capability to mentor individuals and teams in adopting Agile practices."
+        },
+        {
+            "Name": "Empathy",
+            "Level": "Emergent",
+            "Description": "The capacity to understand and empathize with team members' challenges and perspectives."
+        },
+        {
+            "Name": "Facilitation of Organizational Change",
+            "Level": "Emergent",
+            "Description": "The competence to facilitate and lead organizational changes."
+        },
+        {
+            "Name": "Technical Coaching",
+            "Level": "Emergent",
+            "Description": "Proficiency in providing technical guidance to development teams."
+        }
+
+    ],
+    "Recommended": [
+        {
+            "Name": "Project Management",
+            "Level": "Emergent",
+            "Description": "Understanding of project management principles and techniques"
+        },
+        {
+            "Name": "Technical Knowledge",
+            "Level": "Emergent",
+            "Description": "Basic understanding of the technical aspects of software development"
+        }
+    ]
+}

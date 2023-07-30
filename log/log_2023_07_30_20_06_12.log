@@ -1,0 +1,151 @@
+2023-07-30 20:06:12,207 - __main__ - INFO - <module> - port: 5001
+2023-07-30 20:06:12,207 - __main__ - INFO - <module> - debug: True
+2023-07-30 20:06:12,207 - __main__ - INFO - <module> - log_level: INFO
+2023-07-30 20:06:12,207 - __main__ - INFO - <module> - numeric_level: 20
+2023-07-30 20:06:12,207 - __main__ - INFO - <module> - 
+            Error levels:
+            * DEBUG
+            * INFO
+            * WARNING
+            * ERROR
+            * CRITICAL
+2023-07-30 20:06:12,207 - __main__ - INFO - <module> - Role: Agile Coach
+2023-07-30 20:06:12,207 - __main__ - INFO - <module> - Competency: Emergent
+2023-07-30 20:06:12,208 - __main__ - INFO - <module> - Current answer: 
+2023-07-30 20:06:12,208 - __main__ - INFO - <module> - Prompt: 
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+2023-07-30 20:06:12,208 - __main__ - INFO - <module> - Role format: {'Role': 'Role Name', 'Level': 'Competency Level', 'Description': 'Role Description', 'Required': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}, 'etc'], 'Recommended': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}, 'etc']}
+2023-07-30 20:06:12,208 - __main__ - INFO - <module> - Expert format: {'experts': [{'Name': 'Expert Name', 'Description': 'Expert Description'}]}
+2023-07-30 20:06:12,208 - __main__ - INFO - get_skills - 
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+      Use the following format for the JSON object:
+      {"Role": "Role Name", "Level": "Competency Level", "Description": "Role Description", "Required": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description"}, "etc"], "Recommended": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description"}, "etc"]}
+2023-07-30 20:06:34,771 - __main__ - INFO - get_skills - {
+"Role": "Agile Coach", 
+"Level": "Emergent", 
+"Description": "An emergent level Agile Coach in our institution will have a foundational understanding of agile principles and frameworks. They will begin to apply that knowledge for the purpose of guiding teams and stakeholders in the adoption and improvement of agile practices.", 
+"Required": [
+    {
+        "Name": "Agile methodologies and practices", 
+        "Level": "Emergent", 
+        "Description": "Understanding of Agile principles and the ability to explain, discuss and apply Agile methodologies such as Scrum, Kanban, Lean, XP, etc."
+    }, 
+    {
+        "Name": "Team facilitation", 
+        "Level": "Emergent", 
+        "Description": "Basic skills in leading team meetings, ensuring effective dialogue, and promoting cooperative problem-solving."
+    }, 
+    {
+        "Name": "Coaching and mentoring", 
+        "Level": "Emergent", 
+        "Description": "Beginner skills in coaching techniques and the ability to assist individuals and teams in discovering solutions to their challenges."
+    }, 
+    {
+        "Name": "Technical knowledge", 
+        "Level": "Emergent", 
+        "Description": "Basic understanding of banking system and IT."
+    }
+], 
+"Recommended": [
+    {
+        "Name": "Business insight", 
+        "Level": "Emergent", 
+        "Description": "Basic understanding of the financial sector and banking regulatory requirements."
+    }, 
+    {
+        "Name": "Soft skills", 
+        "Level": "Emergent", 
+        "Description": "Effective communication skills, problem-solving abilities, and adaptability."
+    }
+    ]
+}
+2023-07-30 20:06:34,771 - __main__ - INFO - <module> - Current answer: {
+"Role": "Agile Coach", 
+"Level": "Emergent", 
+"Description": "An emergent level Agile Coach in our institution will have a foundational understanding of agile principles and frameworks. They will begin to apply that knowledge for the purpose of guiding teams and stakeholders in the adoption and improvement of agile practices.", 
+"Required": [
+    {
+        "Name": "Agile methodologies and practices", 
+        "Level": "Emergent", 
+        "Description": "Understanding of Agile principles and the ability to explain, discuss and apply Agile methodologies such as Scrum, Kanban, Lean, XP, etc."
+    }, 
+    {
+        "Name": "Team facilitation", 
+        "Level": "Emergent", 
+        "Description": "Basic skills in leading team meetings, ensuring effective dialogue, and promoting cooperative problem-solving."
+    }, 
+    {
+        "Name": "Coaching and mentoring", 
+        "Level": "Emergent", 
+        "Description": "Beginner skills in coaching techniques and the ability to assist individuals and teams in discovering solutions to their challenges."
+    }, 
+    {
+        "Name": "Technical knowledge", 
+        "Level": "Emergent", 
+        "Description": "Basic understanding of banking system and IT."
+    }
+], 
+"Recommended": [
+    {
+        "Name": "Business insight", 
+        "Level": "Emergent", 
+        "Description": "Basic understanding of the financial sector and banking regulatory requirements."
+    }, 
+    {
+        "Name": "Soft skills", 
+        "Level": "Emergent", 
+        "Description": "Effective communication skills, problem-solving abilities, and adaptability."
+    }
+    ]
+}
+2023-07-30 20:06:34,772 - __main__ - INFO - get_experts - I want a response to the following question:
+    
+    
+    Role:
+    You are a HR consultant in a large financila institution.
+    
+    Background:
+    You are looking to unsderstand the skills and competencies required to be successful in the IT part of your organization.
+
+    The candidate must be at appropriate levels to work with modern software construction methodologies,
+    and be proficient accross all elements, business and technical elements of banking, and regulatory requirements.
+
+    task:
+    Using a competency scale of emergent, competent, expert, and lead, break downt he skills and knowledge required to be "Emergent" in the role of "Agile Coach". 
+
+    Present the information as a JSON object.
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        Please return the results as a json object with the following structure:    
+        {"experts": [{"Name": "Expert Name", "Description": "Expert Description"}]}
+2023-07-30 20:06:38,078 - __main__ - INFO - get_experts - {"experts": [{"Name": "Jeff Sutherland", "Description": "Co-creator of Scrum framework and expert in agile methodologies."},
+            {"Name": "Mike Cohn", "Description": "Renowned expert in agile software development and founder of Mountain Goat Software."},
+            {"Name": "Linda Rising", "Description": "Expert in Agile adoption and organizational change, author, and international speaker."}]}
+2023-07-30 20:06:38,079 - __main__ - INFO - <module> - Experts: {"experts": [{"Name": "Jeff Sutherland", "Description": "Co-creator of Scrum framework and expert in agile methodologies."},
+            {"Name": "Mike Cohn", "Description": "Renowned expert in agile software development and founder of Mountain Goat Software."},
+            {"Name": "Linda Rising", "Description": "Expert in Agile adoption and organizational change, author, and international speaker."}]}

@@ -1,0 +1,1512 @@
+2023-07-30 19:11:23,725 - __main__ - INFO - <module> - port: 5001
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - debug: True
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - log_level: INFO
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - numeric_level: 20
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - 
+            Error levels:
+            * DEBUG
+            * INFO
+            * WARNING
+            * ERROR
+            * CRITICAL
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - Role: Agile Coach
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - Competency: Emergent
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - Current answer: 
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - Prompt: 
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - Role format: {'Role': 'Role Name', 'Level': 'Competency Level', 'Description': 'Role Description', 'Required': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description', 'Skills': ['Skill 1', 'Skill 2', 'etc'], 'Knowledge': ['Knowledge 1', 'Knowledge 2', 'etc'], 'Deliverables': ['Deliverable 1', 'Deliverable 2', 'etc'], 'Attributes': ['Attribute 1', 'Attribute 2', 'etc']}, 'etc'], 'Recommended': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description', 'Skills': ['Skill 1', 'Skill 2', 'etc'], 'Knowledge': ['Knowledge 1', 'Knowledge 2', 'etc'], 'Deliverables': ['Deliverable 1', 'Deliverable 2', 'etc'], 'Attributes': ['Attribute 1', 'Attribute 2', 'etc']}, 'etc']}
+2023-07-30 19:11:23,726 - __main__ - INFO - <module> - Expert format: {'experts': [{'Name': 'Expert Name', 'Description': 'Expert Description'}]}
+2023-07-30 19:11:23,726 - __main__ - INFO - get_skills - 
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+      Use the following format for the JSON object:
+      {"Role": "Role Name", "Level": "Competency Level", "Description": "Role Description", "Required": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description", "Skills": ["Skill 1", "Skill 2", "etc"], "Knowledge": ["Knowledge 1", "Knowledge 2", "etc"], "Deliverables": ["Deliverable 1", "Deliverable 2", "etc"], "Attributes": ["Attribute 1", "Attribute 2", "etc"]}, "etc"], "Recommended": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description", "Skills": ["Skill 1", "Skill 2", "etc"], "Knowledge": ["Knowledge 1", "Knowledge 2", "etc"], "Deliverables": ["Deliverable 1", "Deliverable 2", "etc"], "Attributes": ["Attribute 1", "Attribute 2", "etc"]}, "etc"]}
+2023-07-30 19:12:05,443 - __main__ - INFO - get_skills - {
+"Role": "Agile Coach", 
+"Level": "Emergent", 
+"Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.", 
+"Required": [
+    {"Name": "Agile Methodologies", 
+     "Level": "Emergent", 
+     "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.", 
+     "Skills": ["Agile Software Development", "Scrum", "Kanban"], 
+     "Knowledge": ["Agile Principles and Values", "Scrum Framework", "Kanban Method"], 
+     "Deliverables": ["Agile Training Materials", "Scrum Board", "Kanban Board"], 
+     "Attributes": ["Adaptive", "Collaborative", "Analytical"]
+    }, 
+    {"Name": "Coaching and Mentoring", 
+     "Level": "Emergent", 
+     "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.", 
+     "Skills": ["Communication", "Mentoring", "Conflict Resolution"], 
+     "Knowledge": ["Coaching Techniques", "Motivational Strategies", "Conflict Management Strategies"], 
+     "Deliverables": ["Coaching Sessions", "Team Building Activities", "Conflict Resolution Meetings"], 
+     "Attributes": ["Leadership", "Empathy", "Patience"]
+    }
+], 
+"Recommended": [
+    {"Name": "Continuous Improvement", 
+     "Level": "Emergent", 
+     "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.", 
+     "Skills": ["Performance Measurement", "Retrospective Facilitation", "Process Improvement"], 
+     "Knowledge": ["Continuous Improvement Techniques", "Performance Metrics", "Retrospective Techniques"], 
+     "Deliverables": ["Performance Reports", "Retrospective Reports", "Improvement Plans"], 
+     "Attributes": ["Proactive", "Analytical", "Detail-oriented"]
+    }, 
+    {"Name": "Change Management", 
+     "Level": "Emergent", 
+     "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.", 
+     "Skills": ["Change Management", "Stakeholder Management", "Risk Management"], 
+     "Knowledge": ["Change Management Theories", "Stakeholder Analysis", "Risk Mitigation Strategies"], 
+     "Deliverables": ["Change Management Plans", "Stakeholder Communication Plans", "Risk Mitigation Plans"], 
+     "Attributes": ["Resilient", "Flexible", "Strategic"]
+    }
+]
+}
+2023-07-30 19:12:05,443 - __main__ - INFO - <module> - Current answer: {
+"Role": "Agile Coach", 
+"Level": "Emergent", 
+"Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.", 
+"Required": [
+    {"Name": "Agile Methodologies", 
+     "Level": "Emergent", 
+     "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.", 
+     "Skills": ["Agile Software Development", "Scrum", "Kanban"], 
+     "Knowledge": ["Agile Principles and Values", "Scrum Framework", "Kanban Method"], 
+     "Deliverables": ["Agile Training Materials", "Scrum Board", "Kanban Board"], 
+     "Attributes": ["Adaptive", "Collaborative", "Analytical"]
+    }, 
+    {"Name": "Coaching and Mentoring", 
+     "Level": "Emergent", 
+     "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.", 
+     "Skills": ["Communication", "Mentoring", "Conflict Resolution"], 
+     "Knowledge": ["Coaching Techniques", "Motivational Strategies", "Conflict Management Strategies"], 
+     "Deliverables": ["Coaching Sessions", "Team Building Activities", "Conflict Resolution Meetings"], 
+     "Attributes": ["Leadership", "Empathy", "Patience"]
+    }
+], 
+"Recommended": [
+    {"Name": "Continuous Improvement", 
+     "Level": "Emergent", 
+     "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.", 
+     "Skills": ["Performance Measurement", "Retrospective Facilitation", "Process Improvement"], 
+     "Knowledge": ["Continuous Improvement Techniques", "Performance Metrics", "Retrospective Techniques"], 
+     "Deliverables": ["Performance Reports", "Retrospective Reports", "Improvement Plans"], 
+     "Attributes": ["Proactive", "Analytical", "Detail-oriented"]
+    }, 
+    {"Name": "Change Management", 
+     "Level": "Emergent", 
+     "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.", 
+     "Skills": ["Change Management", "Stakeholder Management", "Risk Management"], 
+     "Knowledge": ["Change Management Theories", "Stakeholder Analysis", "Risk Mitigation Strategies"], 
+     "Deliverables": ["Change Management Plans", "Stakeholder Communication Plans", "Risk Mitigation Plans"], 
+     "Attributes": ["Resilient", "Flexible", "Strategic"]
+    }
+]
+}
+2023-07-30 19:12:05,443 - __main__ - INFO - get_experts - I want a response to the following question:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        Please return the results as a json object with the following structure:    
+        {"experts": [{"Name": "Expert Name", "Description": "Expert Description"}]}
+2023-07-30 19:12:08,493 - __main__ - INFO - get_experts - {
+    "experts": [
+        {"Name": "Geoff Watts", "Description": "Agile Transformation Coach, Author, and Speaker"},
+        {"Name": "Lyssa Adkins", "Description": "Agile Coach, Trainer, and Author"},
+        {"Name": "Craig Larman", "Description": "LeSS (Large-Scale Scrum) Co-creator and Agile Coach"}
+    ]
+}
+2023-07-30 19:12:08,493 - __main__ - INFO - <module> - Experts: {
+    "experts": [
+        {"Name": "Geoff Watts", "Description": "Agile Transformation Coach, Author, and Speaker"},
+        {"Name": "Lyssa Adkins", "Description": "Agile Coach, Trainer, and Author"},
+        {"Name": "Craig Larman", "Description": "LeSS (Large-Scale Scrum) Co-creator and Agile Coach"}
+    ]
+}
+2023-07-30 19:12:08,493 - __main__ - INFO - get_review - Pretend you are Geoff Watts reviewing the output of the following task:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+    The json object to review is:
+    
+    {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": []
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": []
+    }
+  ]
+}
+    
+    Firstly, review the list for completeness, and add any elements you think are missing.
+
+    Then review each element, for each element, review the list of skills, knowledge, deliverables, attributes to make sure they are appropriate for the role and level.
+    Then add your assessment of that element to the score array, add your name, a score from 1 to 100, and a comment, noting if you added items, on how you scored the element.
+        
+    Only return the updated json object.
+2023-07-30 19:12:23,253 - __main__ - INFO - get_review - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 85,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 92,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 19:12:23,254 - __main__ - INFO - <module> - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 85,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 92,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 19:12:23,255 - __main__ - INFO - get_review - Pretend you are Lyssa Adkins reviewing the output of the following task:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+    The json object to review is:
+    
+    {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 85,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": [
+        {
+          "Name": "Geoff Watts",
+          "Score": 92,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ]
+}
+    
+    Firstly, review the list for completeness, and add any elements you think are missing.
+
+    Then review each element, for each element, review the list of skills, knowledge, deliverables, attributes to make sure they are appropriate for the role and level.
+    Then add your assessment of that element to the score array, add your name, a score from 1 to 100, and a comment, noting if you added items, on how you scored the element.
+        
+    Only return the updated json object.
+2023-07-30 19:12:38,624 - __main__ - INFO - get_review - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban",
+        "Facilitation"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board",
+        "Implementation Plan"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution",
+        "Motivation"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings",
+        "Motivation Plans"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement",
+        "Problem Solving"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans",
+        "Problem Analysis"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management",
+        "Adaptability"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans",
+        "Adaptation Plan"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 92,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 19:12:38,624 - __main__ - INFO - <module> - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban",
+        "Facilitation"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board",
+        "Implementation Plan"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution",
+        "Motivation"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings",
+        "Motivation Plans"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement",
+        "Problem Solving"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans",
+        "Problem Analysis"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management",
+        "Adaptability"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans",
+        "Adaptation Plan"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 92,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 19:12:38,625 - __main__ - INFO - get_review - Pretend you are Craig Larman reviewing the output of the following task:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+    The json object to review is:
+    
+    {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban",
+        "Facilitation"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board",
+        "Implementation Plan"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution",
+        "Motivation"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings",
+        "Motivation Plans"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement",
+        "Problem Solving"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans",
+        "Problem Analysis"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management",
+        "Adaptability"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans",
+        "Adaptation Plan"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 92,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ]
+}
+    
+    Firstly, review the list for completeness, and add any elements you think are missing.
+
+    Then review each element, for each element, review the list of skills, knowledge, deliverables, attributes to make sure they are appropriate for the role and level.
+    Then add your assessment of that element to the score array, add your name, a score from 1 to 100, and a comment, noting if you added items, on how you scored the element.
+        
+    Only return the updated json object.
+2023-07-30 19:12:56,229 - __main__ - INFO - get_review - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban",
+        "Facilitation"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board",
+        "Implementation Plan"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        },
+        {
+          "Name": "Craig Larman",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution",
+        "Motivation"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings",
+        "Motivation Plans"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        },
+        {
+          "Name": "Craig Larman",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement",
+        "Problem Solving"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans",
+        "Problem Analysis"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        },
+        {
+          "Name": "Craig Larman",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management",
+        "Adaptability"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans",
+        "Adaptation Plan"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 92,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        },
+        {
+          "Name": "Craig Larman",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ]
+}
+2023-07-30 19:12:56,229 - __main__ - INFO - <module> - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "The Agile Coach facilitates and encourages team agility, functional productivity, and organizational efficiency. At the emergent level, they are focused on improving team dynamics and performance through educating on and implementing Agile methodologies.",
+  "Required": [
+    {
+      "Name": "Agile Methodologies",
+      "Level": "Emergent",
+      "Description": "Understanding of various Agile methodologies and frameworks such as Scrum and Kanban. Ability to facilitate their implementation within the team's workflow.",
+      "Skills": [
+        "Agile Software Development",
+        "Scrum",
+        "Kanban",
+        "Facilitation"
+      ],
+      "Knowledge": [
+        "Agile Principles and Values",
+        "Scrum Framework",
+        "Kanban Method"
+      ],
+      "Deliverables": [
+        "Agile Training Materials",
+        "Scrum Board",
+        "Kanban Board",
+        "Implementation Plan"
+      ],
+      "Attributes": [
+        "Adaptive",
+        "Collaborative",
+        "Analytical"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        },
+        {
+          "Name": "Craig Larman",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Coaching and Mentoring",
+      "Level": "Emergent",
+      "Description": "Ability to provide guidance and support to team members on Agile practices and principles. Ability to motivate and improve individual and team performance.",
+      "Skills": [
+        "Communication",
+        "Mentoring",
+        "Conflict Resolution",
+        "Motivation"
+      ],
+      "Knowledge": [
+        "Coaching Techniques",
+        "Motivational Strategies",
+        "Conflict Management Strategies"
+      ],
+      "Deliverables": [
+        "Coaching Sessions",
+        "Team Building Activities",
+        "Conflict Resolution Meetings",
+        "Motivation Plans"
+      ],
+      "Attributes": [
+        "Leadership",
+        "Empathy",
+        "Patience"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        },
+        {
+          "Name": "Craig Larman",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Continuous Improvement",
+      "Level": "Emergent",
+      "Description": "Understanding and application of principles and practices that drive continuous improvement in team performance and product quality.",
+      "Skills": [
+        "Performance Measurement",
+        "Retrospective Facilitation",
+        "Process Improvement",
+        "Problem Solving"
+      ],
+      "Knowledge": [
+        "Continuous Improvement Techniques",
+        "Performance Metrics",
+        "Retrospective Techniques"
+      ],
+      "Deliverables": [
+        "Performance Reports",
+        "Retrospective Reports",
+        "Improvement Plans",
+        "Problem Analysis"
+      ],
+      "Attributes": [
+        "Proactive",
+        "Analytical",
+        "Detail-oriented"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 85,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        },
+        {
+          "Name": "Craig Larman",
+          "Score": 90,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    },
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change in the organization driven by Agile transformation or improvements in Agile practices.",
+      "Skills": [
+        "Change Management",
+        "Stakeholder Management",
+        "Risk Management",
+        "Adaptability"
+      ],
+      "Knowledge": [
+        "Change Management Theories",
+        "Stakeholder Analysis",
+        "Risk Mitigation Strategies"
+      ],
+      "Deliverables": [
+        "Change Management Plans",
+        "Stakeholder Communication Plans",
+        "Risk Mitigation Plans",
+        "Adaptation Plan"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Flexible",
+        "Strategic"
+      ],
+      "Score": [
+        {
+          "Name": "Lyssa Adkins",
+          "Score": 92,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        },
+        {
+          "Name": "Craig Larman",
+          "Score": 95,
+          "Comment": "Skills, knowledge, deliverables, and attributes are appropriate for the role and level. No additional items added."
+        }
+      ]
+    }
+  ]
+}

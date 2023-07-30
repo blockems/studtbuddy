@@ -1,0 +1,13 @@
+2023-07-30 22:19:57,762 - __main__ - INFO - <module> - port: 5001
+2023-07-30 22:19:57,762 - __main__ - INFO - <module> - debug: True
+2023-07-30 22:19:57,762 - __main__ - INFO - <module> - log_level: INFO
+2023-07-30 22:19:57,762 - __main__ - INFO - <module> - numeric_level: 20
+2023-07-30 22:19:57,762 - __main__ - INFO - <module> - 
+            Error levels:
+            * DEBUG
+            * INFO
+            * WARNING
+            * ERROR
+            * CRITICAL
+2023-07-30 22:19:57,762 - __main__ - INFO - <module> - Role format: {'Role': 'Role Name', 'Level': 'Competency Level', 'Description': 'Role Description', 'Required': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}], 'Recommended': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}]}
+2023-07-30 22:19:57,762 - __main__ - INFO - <module> - Expert format: {'experts': [{'Name': 'Expert Name', 'Description': 'Expert Description'}]}

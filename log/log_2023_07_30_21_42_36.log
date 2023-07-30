@@ -1,0 +1,80 @@
+2023-07-30 21:42:36,007 - __main__ - INFO - <module> - port: 5001
+2023-07-30 21:42:36,007 - __main__ - INFO - <module> - debug: True
+2023-07-30 21:42:36,007 - __main__ - INFO - <module> - log_level: INFO
+2023-07-30 21:42:36,007 - __main__ - INFO - <module> - numeric_level: 20
+2023-07-30 21:42:36,007 - __main__ - INFO - <module> - 
+            Error levels:
+            * DEBUG
+            * INFO
+            * WARNING
+            * ERROR
+            * CRITICAL
+2023-07-30 21:42:36,007 - __main__ - INFO - <module> - Role format: {'Role': 'Role Name', 'Level': 'Competency Level', 'Description': 'Role Description', 'Required': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}], 'Recommended': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}]}
+2023-07-30 21:42:36,007 - __main__ - INFO - <module> - Expert format: {'experts': [{'Name': 'Expert Name', 'Description': 'Expert Description'}]}
+2023-07-30 21:43:40,322 - __main__ - INFO - skills - Role: Agile Coach
+2023-07-30 21:43:40,322 - __main__ - INFO - skills - competency: None
+2023-07-30 21:43:40,322 - __main__ - INFO - skills - Prompt: 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "None" level "Agile Coach".
+    
+2023-07-30 21:43:40,323 - __main__ - INFO - get_skills - 
+      
+      The JSON object is as follows:
+      {"Role": "Role Name", "Level": "Competency Level", "Description": "Role Description", "Required": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description"}], "Recommended": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description"}]}
+2023-07-30 21:43:53,125 - __main__ - INFO - get_skills - 'Columns' in the context of data typically refer to the different types of information being recorded. In a tabular format, such as an Excel spreadsheet, these would be the headers going along the top.
+
+Looking at the provided JSON object, the different 'columns' or types of data present would be:
+
+1. Role
+2. Level
+3. Description
+4. Required (which itself contains three sub-columns: Name, Level, Description)
+5. Recommended (which also contains three sub-columns: Name, Level, Description)
+
+In terms of a tabular format:
+
+| Role     | Level    | Description | Required Name | Required Level | Required Description | Recommended Name | Recommended Level | Recommended Description |
+|----------|----------|-------------|---------------|----------------|----------------------|------------------|-------------------|------------------------|
+| Role Name| Level    | Description | Element Name  | Element Level  | Element Description  | Element Name     | Element Level     | Element Description    |
+2023-07-30 21:43:53,125 - __main__ - INFO - skills - Current answer: 'Columns' in the context of data typically refer to the different types of information being recorded. In a tabular format, such as an Excel spreadsheet, these would be the headers going along the top.
+
+Looking at the provided JSON object, the different 'columns' or types of data present would be:
+
+1. Role
+2. Level
+3. Description
+4. Required (which itself contains three sub-columns: Name, Level, Description)
+5. Recommended (which also contains three sub-columns: Name, Level, Description)
+
+In terms of a tabular format:
+
+| Role     | Level    | Description | Required Name | Required Level | Required Description | Recommended Name | Recommended Level | Recommended Description |
+|----------|----------|-------------|---------------|----------------|----------------------|------------------|-------------------|------------------------|
+| Role Name| Level    | Description | Element Name  | Element Level  | Element Description  | Element Name     | Element Level     | Element Description    |
+2023-07-30 21:43:53,126 - __main__ - INFO - get_experts - I want a response to the following question:
+    
+    
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        Please return the results as a json object with the following structure:    
+        {"experts": [{"Name": "Expert Name", "Description": "Expert Description"}]}
+2023-07-30 21:43:56,174 - __main__ - INFO - get_experts - {"experts": [
+    {"Name": "Albert Einstein", "Description": "Theoretical physicist known for his theory of relativity"},
+    {"Name": "Marie Curie", "Description": "Polish physicist and chemist, known for her pioneering research on radioactivity"},
+    {"Name": "Stephen Hawking", "Description": "Theoretical physicist known for his work on black holes and cosmology"}
+]}
+2023-07-30 21:43:56,174 - __main__ - INFO - skills - Experts: {"experts": [
+    {"Name": "Albert Einstein", "Description": "Theoretical physicist known for his theory of relativity"},
+    {"Name": "Marie Curie", "Description": "Polish physicist and chemist, known for her pioneering research on radioactivity"},
+    {"Name": "Stephen Hawking", "Description": "Theoretical physicist known for his work on black holes and cosmology"}
+]}

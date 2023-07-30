@@ -1,0 +1,422 @@
+2023-07-30 17:42:22,289 - __main__ - INFO - port: 5001
+2023-07-30 17:42:22,290 - __main__ - INFO - debug: True
+2023-07-30 17:42:22,290 - __main__ - INFO - log_level: DEBUG
+2023-07-30 17:42:22,290 - __main__ - INFO - numeric_level: 10
+2023-07-30 17:42:22,290 - __main__ - INFO - 
+            Error levels:
+            * DEBUG
+            * INFO
+            * WARNING
+            * ERROR
+            * CRITICAL
+2023-07-30 17:42:22,290 - __main__ - INFO - Role: Agile Coach
+2023-07-30 17:42:22,290 - __main__ - INFO - Competency: Emergent
+2023-07-30 17:42:22,291 - __main__ - INFO - Current answer: 
+2023-07-30 17:42:22,291 - __main__ - INFO - Prompt: 
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+2023-07-30 17:42:22,291 - __main__ - INFO - Role format: {'Role': 'Role Name', 'Level': 'Competency Level', 'Description': 'Role Description', 'Required': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description', 'Skills': ['Skill 1', 'Skill 2', 'etc'], 'Knowledge': ['Knowledge 1', 'Knowledge 2', 'etc'], 'Deliverables': ['Deliverable 1', 'Deliverable 2', 'etc'], 'Attributes': ['Attribute 1', 'Attribute 2', 'etc']}, 'etc'], 'Recommended': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description', 'Skills': ['Skill 1', 'Skill 2', 'etc'], 'Knowledge': ['Knowledge 1', 'Knowledge 2', 'etc'], 'Deliverables': ['Deliverable 1', 'Deliverable 2', 'etc'], 'Attributes': ['Attribute 1', 'Attribute 2', 'etc']}, 'etc']}
+2023-07-30 17:42:22,292 - __main__ - INFO - Expert format: {'experts': [{'Name': 'Expert Name', 'Description': 'Expert Description'}]}
+2023-07-30 17:42:22,292 - __main__ - INFO - 
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+      Use the following format for the JSON object:
+      {"Role": "Role Name", "Level": "Competency Level", "Description": "Role Description", "Required": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description", "Skills": ["Skill 1", "Skill 2", "etc"], "Knowledge": ["Knowledge 1", "Knowledge 2", "etc"], "Deliverables": ["Deliverable 1", "Deliverable 2", "etc"], "Attributes": ["Attribute 1", "Attribute 2", "etc"]}, "etc"], "Recommended": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description", "Skills": ["Skill 1", "Skill 2", "etc"], "Knowledge": ["Knowledge 1", "Knowledge 2", "etc"], "Deliverables": ["Deliverable 1", "Deliverable 2", "etc"], "Attributes": ["Attribute 1", "Attribute 2", "etc"]}, "etc"]}
+2023-07-30 17:42:57,110 - __main__ - DEBUG - {
+  "id": "chatcmpl-7hvMF2CiaC9tlueUmnvkGERZ0Re5h",
+  "object": "chat.completion",
+  "created": 1690702943,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\n    \"Role\": \"Agile Coach\", \n    \"Level\": \"Emergent\", \n    \"Description\": \"An emergent level agile coach introduces and implements agile methodologies to teams. They guide and conduct training sessions, and work with teams on specific projects to ensure successful adoption. They support the transformation of project delivery methodologies with sustainable pace.\", \n    \"Required\": [\n        {\n            \"Name\": \"Training & Facilitation\", \n            \"Level\": \"Emergent\", \n            \"Description\": \"Ability to guide and educate individuals and groups adopting agile methodologies.\", \n            \"Skills\": [\"Training Delivery\", \"Facilitation\", \"Teamwork\"], \n            \"Knowledge\": [\"Agile methodologies\", \"Training methodologies\"], \n            \"Deliverables\": [\"Training sessions\", \"Facilitated agile transformation\"], \n            \"Attributes\": [\"Empathy\", \"Patience\", \"Communicative\"]\n        }, \n        {\n            \"Name\": \"Agile Practices Knowledge\", \n            \"Level\": \"Emergent\", \n            \"Description\": \"Understanding and implementation of agile development practices.\", \n            \"Skills\": [\"Scrum\", \"Kanban\", \"SAFe\"], \n            \"Knowledge\": [\"Agile principles\", \"SDLC\"], \n            \"Deliverables\": [\"Implemented agile practices\", \"Team efficiency tracking\"], \n            \"Attributes\": [\"Detail-oriented\", \"Inquisitive\", \"Adaptive\"]\n        }\n    ], \n    \"Recommended\": [\n        {\n            \"Name\": \"Change Management\", \n            \"Level\": \"Emergent\", \n            \"Description\": \"Ability to manage change, helping the organization transition to agile practices.\", \n            \"Skills\": [\"Problem-solving\", \"Project management\"], \n            \"Knowledge\": [\"Organizational change theory\", \"Behavior modeling\"], \n            \"Deliverables\": [\"Change management plan\", \"Change impact analysis\"],\n            \"Attributes\": [\"Resilient\", \"Encouraging\", \"Proactive\"]\n        }, \n        {\n            \"Name\": \"Stakeholder Management\", \n            \"Level\": \"Emergent\", \n            \"Description\": \"Ability to effectively communicate and influence stakeholders at various levels of the organization.\", \n            \"Skills\": [\"Communication\", \"Influence\"], \n            \"Knowledge\": [\"Stakeholder analysis\"], \n            \"Deliverables\": [\"Stakeholder engagement plan\", \"Conflict resolution\"], \n            \"Attributes\": [\"Assertive\", \"Persuasive\", \"Professional\"]\n        }\n    ]\n}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 369,
+    "completion_tokens": 504,
+    "total_tokens": 873
+  }
+}
+2023-07-30 17:42:57,114 - __main__ - INFO - {
+    "Role": "Agile Coach", 
+    "Level": "Emergent", 
+    "Description": "An emergent level agile coach introduces and implements agile methodologies to teams. They guide and conduct training sessions, and work with teams on specific projects to ensure successful adoption. They support the transformation of project delivery methodologies with sustainable pace.", 
+    "Required": [
+        {
+            "Name": "Training & Facilitation", 
+            "Level": "Emergent", 
+            "Description": "Ability to guide and educate individuals and groups adopting agile methodologies.", 
+            "Skills": ["Training Delivery", "Facilitation", "Teamwork"], 
+            "Knowledge": ["Agile methodologies", "Training methodologies"], 
+            "Deliverables": ["Training sessions", "Facilitated agile transformation"], 
+            "Attributes": ["Empathy", "Patience", "Communicative"]
+        }, 
+        {
+            "Name": "Agile Practices Knowledge", 
+            "Level": "Emergent", 
+            "Description": "Understanding and implementation of agile development practices.", 
+            "Skills": ["Scrum", "Kanban", "SAFe"], 
+            "Knowledge": ["Agile principles", "SDLC"], 
+            "Deliverables": ["Implemented agile practices", "Team efficiency tracking"], 
+            "Attributes": ["Detail-oriented", "Inquisitive", "Adaptive"]
+        }
+    ], 
+    "Recommended": [
+        {
+            "Name": "Change Management", 
+            "Level": "Emergent", 
+            "Description": "Ability to manage change, helping the organization transition to agile practices.", 
+            "Skills": ["Problem-solving", "Project management"], 
+            "Knowledge": ["Organizational change theory", "Behavior modeling"], 
+            "Deliverables": ["Change management plan", "Change impact analysis"],
+            "Attributes": ["Resilient", "Encouraging", "Proactive"]
+        }, 
+        {
+            "Name": "Stakeholder Management", 
+            "Level": "Emergent", 
+            "Description": "Ability to effectively communicate and influence stakeholders at various levels of the organization.", 
+            "Skills": ["Communication", "Influence"], 
+            "Knowledge": ["Stakeholder analysis"], 
+            "Deliverables": ["Stakeholder engagement plan", "Conflict resolution"], 
+            "Attributes": ["Assertive", "Persuasive", "Professional"]
+        }
+    ]
+}
+2023-07-30 17:42:57,123 - __main__ - INFO - Current answer: {
+    "Role": "Agile Coach", 
+    "Level": "Emergent", 
+    "Description": "An emergent level agile coach introduces and implements agile methodologies to teams. They guide and conduct training sessions, and work with teams on specific projects to ensure successful adoption. They support the transformation of project delivery methodologies with sustainable pace.", 
+    "Required": [
+        {
+            "Name": "Training & Facilitation", 
+            "Level": "Emergent", 
+            "Description": "Ability to guide and educate individuals and groups adopting agile methodologies.", 
+            "Skills": ["Training Delivery", "Facilitation", "Teamwork"], 
+            "Knowledge": ["Agile methodologies", "Training methodologies"], 
+            "Deliverables": ["Training sessions", "Facilitated agile transformation"], 
+            "Attributes": ["Empathy", "Patience", "Communicative"]
+        }, 
+        {
+            "Name": "Agile Practices Knowledge", 
+            "Level": "Emergent", 
+            "Description": "Understanding and implementation of agile development practices.", 
+            "Skills": ["Scrum", "Kanban", "SAFe"], 
+            "Knowledge": ["Agile principles", "SDLC"], 
+            "Deliverables": ["Implemented agile practices", "Team efficiency tracking"], 
+            "Attributes": ["Detail-oriented", "Inquisitive", "Adaptive"]
+        }
+    ], 
+    "Recommended": [
+        {
+            "Name": "Change Management", 
+            "Level": "Emergent", 
+            "Description": "Ability to manage change, helping the organization transition to agile practices.", 
+            "Skills": ["Problem-solving", "Project management"], 
+            "Knowledge": ["Organizational change theory", "Behavior modeling"], 
+            "Deliverables": ["Change management plan", "Change impact analysis"],
+            "Attributes": ["Resilient", "Encouraging", "Proactive"]
+        }, 
+        {
+            "Name": "Stakeholder Management", 
+            "Level": "Emergent", 
+            "Description": "Ability to effectively communicate and influence stakeholders at various levels of the organization.", 
+            "Skills": ["Communication", "Influence"], 
+            "Knowledge": ["Stakeholder analysis"], 
+            "Deliverables": ["Stakeholder engagement plan", "Conflict resolution"], 
+            "Attributes": ["Assertive", "Persuasive", "Professional"]
+        }
+    ]
+}
+2023-07-30 17:42:57,137 - __main__ - DEBUG - {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An emergent level agile coach introduces and implements agile methodologies to teams. They guide and conduct training sessions, and work with teams on specific projects to ensure successful adoption. They support the transformation of project delivery methodologies with sustainable pace.",
+  "Required": [
+    {
+      "Name": "Training & Facilitation",
+      "Level": "Emergent",
+      "Description": "Ability to guide and educate individuals and groups adopting agile methodologies.",
+      "Skills": [
+        "Training Delivery",
+        "Facilitation",
+        "Teamwork"
+      ],
+      "Knowledge": [
+        "Agile methodologies",
+        "Training methodologies"
+      ],
+      "Deliverables": [
+        "Training sessions",
+        "Facilitated agile transformation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Communicative"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Agile Practices Knowledge",
+      "Level": "Emergent",
+      "Description": "Understanding and implementation of agile development practices.",
+      "Skills": [
+        "Scrum",
+        "Kanban",
+        "SAFe"
+      ],
+      "Knowledge": [
+        "Agile principles",
+        "SDLC"
+      ],
+      "Deliverables": [
+        "Implemented agile practices",
+        "Team efficiency tracking"
+      ],
+      "Attributes": [
+        "Detail-oriented",
+        "Inquisitive",
+        "Adaptive"
+      ],
+      "Score": []
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change, helping the organization transition to agile practices.",
+      "Skills": [
+        "Problem-solving",
+        "Project management"
+      ],
+      "Knowledge": [
+        "Organizational change theory",
+        "Behavior modeling"
+      ],
+      "Deliverables": [
+        "Change management plan",
+        "Change impact analysis"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Encouraging",
+        "Proactive"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Stakeholder Management",
+      "Level": "Emergent",
+      "Description": "Ability to effectively communicate and influence stakeholders at various levels of the organization.",
+      "Skills": [
+        "Communication",
+        "Influence"
+      ],
+      "Knowledge": [
+        "Stakeholder analysis"
+      ],
+      "Deliverables": [
+        "Stakeholder engagement plan",
+        "Conflict resolution"
+      ],
+      "Attributes": [
+        "Assertive",
+        "Persuasive",
+        "Professional"
+      ],
+      "Score": []
+    }
+  ]
+}
+2023-07-30 17:42:57,139 - __main__ - INFO - I want a response to the following question:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        Please return the results as a json object with the following structure:    
+        {"experts": [{"Name": "Expert Name", "Description": "Expert Description"}]}
+2023-07-30 17:43:02,849 - __main__ - DEBUG - {
+  "id": "chatcmpl-7hvMowJCShrrfYGSc8MbsZwgDe8AU",
+  "object": "chat.completion",
+  "created": 1690702978,
+  "model": "gpt-3.5-turbo-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "{\"experts\": [{\"Name\": \"Lisa Crispin\", \"Description\": \"She has been a tester for her entire career, currently as a testing advocate at the software delivery consultancy. She is the co-author, with Janet Gregory, of Agile Testing: A Practical Guide for Testers and Agile Teams.\"}, \n{\"Name\": \"Mike Cohn\", \"Description\": \"An Agile software expert. He is the founder of Agile Alliance and a leading expert on Agile and Scrum. He is the author of several Agile books including Succeeding with Agile and Agile Estimating and Planning.\"}, \n{\"Name\": \"Esther Derby\", \"Description\": \"She is a renowned Agile coach and consultant with extensive experience in coaching teams, managers, and organizations in their Agile transformations. She is also the co-author of Agile Retrospectives: Making Good Teams Great.\"}]}"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 217,
+    "completion_tokens": 176,
+    "total_tokens": 393
+  }
+}
+2023-07-30 17:43:02,853 - __main__ - INFO - {"experts": [{"Name": "Lisa Crispin", "Description": "She has been a tester for her entire career, currently as a testing advocate at the software delivery consultancy. She is the co-author, with Janet Gregory, of Agile Testing: A Practical Guide for Testers and Agile Teams."}, 
+{"Name": "Mike Cohn", "Description": "An Agile software expert. He is the founder of Agile Alliance and a leading expert on Agile and Scrum. He is the author of several Agile books including Succeeding with Agile and Agile Estimating and Planning."}, 
+{"Name": "Esther Derby", "Description": "She is a renowned Agile coach and consultant with extensive experience in coaching teams, managers, and organizations in their Agile transformations. She is also the co-author of Agile Retrospectives: Making Good Teams Great."}]}
+2023-07-30 17:43:02,855 - __main__ - INFO - Experts: {"experts": [{"Name": "Lisa Crispin", "Description": "She has been a tester for her entire career, currently as a testing advocate at the software delivery consultancy. She is the co-author, with Janet Gregory, of Agile Testing: A Practical Guide for Testers and Agile Teams."}, 
+{"Name": "Mike Cohn", "Description": "An Agile software expert. He is the founder of Agile Alliance and a leading expert on Agile and Scrum. He is the author of several Agile books including Succeeding with Agile and Agile Estimating and Planning."}, 
+{"Name": "Esther Derby", "Description": "She is a renowned Agile coach and consultant with extensive experience in coaching teams, managers, and organizations in their Agile transformations. She is also the co-author of Agile Retrospectives: Making Good Teams Great."}]}
+2023-07-30 17:43:02,856 - __main__ - INFO - Pretend you are Lisa Crispin reviewing the output of the following task:
+    
+    
+    As an expert HR consultant, I am evaluating the competencies necessary for the role of "Agile Coach" at the "Emergent" level, using a competency scale of emergent, competent, expert, and lead. 
+
+    Please generate a comprehensive overview that includes skills, knowledge, key deliverables, and personal attributes contributing to success in this role. 
+
+    Present the information as a JSON object.
+
+    Within the required and recommended array, each object should represent a key competency required for the role. 
+    Each competency should be broken down into sub-elements. 
+                  
+    Ensure the "Skills" array contains specific skills associated with each competency.
+
+    Please review each element in the json object below, and in the score array, add your name, a score from 1 to 100, and a comment on how you scored the element.
+
+    the current json object is: 
+    
+    {
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An emergent level agile coach introduces and implements agile methodologies to teams. They guide and conduct training sessions, and work with teams on specific projects to ensure successful adoption. They support the transformation of project delivery methodologies with sustainable pace.",
+  "Required": [
+    {
+      "Name": "Training & Facilitation",
+      "Level": "Emergent",
+      "Description": "Ability to guide and educate individuals and groups adopting agile methodologies.",
+      "Skills": [
+        "Training Delivery",
+        "Facilitation",
+        "Teamwork"
+      ],
+      "Knowledge": [
+        "Agile methodologies",
+        "Training methodologies"
+      ],
+      "Deliverables": [
+        "Training sessions",
+        "Facilitated agile transformation"
+      ],
+      "Attributes": [
+        "Empathy",
+        "Patience",
+        "Communicative"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Agile Practices Knowledge",
+      "Level": "Emergent",
+      "Description": "Understanding and implementation of agile development practices.",
+      "Skills": [
+        "Scrum",
+        "Kanban",
+        "SAFe"
+      ],
+      "Knowledge": [
+        "Agile principles",
+        "SDLC"
+      ],
+      "Deliverables": [
+        "Implemented agile practices",
+        "Team efficiency tracking"
+      ],
+      "Attributes": [
+        "Detail-oriented",
+        "Inquisitive",
+        "Adaptive"
+      ],
+      "Score": []
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Change Management",
+      "Level": "Emergent",
+      "Description": "Ability to manage change, helping the organization transition to agile practices.",
+      "Skills": [
+        "Problem-solving",
+        "Project management"
+      ],
+      "Knowledge": [
+        "Organizational change theory",
+        "Behavior modeling"
+      ],
+      "Deliverables": [
+        "Change management plan",
+        "Change impact analysis"
+      ],
+      "Attributes": [
+        "Resilient",
+        "Encouraging",
+        "Proactive"
+      ],
+      "Score": []
+    },
+    {
+      "Name": "Stakeholder Management",
+      "Level": "Emergent",
+      "Description": "Ability to effectively communicate and influence stakeholders at various levels of the organization.",
+      "Skills": [
+        "Communication",
+        "Influence"
+      ],
+      "Knowledge": [
+        "Stakeholder analysis"
+      ],
+      "Deliverables": [
+        "Stakeholder engagement plan",
+        "Conflict resolution"
+      ],
+      "Attributes": [
+        "Assertive",
+        "Persuasive",
+        "Professional"
+      ],
+      "Score": []
+    }
+  ]
+}
+    
+    If you think an element is missing, add it and its component skills, knowledge, deliverables, attributes and score arrays to the json object and score appropriately.
+    
+    Only return the json object.

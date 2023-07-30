@@ -24,6 +24,18 @@ router.get('/test-skills/:id/:importance', (req, res) => {
   res.render('test-skills', {title:"Test Skills", session: req.session})
 });
 
+router.post('/submit-results', (req, res) => {
+  const correctAnswers = req.body.correctAnswers;
+  const explanations = req.body.explanations;
+
+  res.render('results', {
+    title: "Skills Heirarchy",
+    session: req.session,
+    correctAnswers: correctAnswers,
+    explanations: explanations
+  });
+});
+
 router.get('/questions/:id/:importance', (req, res) => {
   const roleId = req.params.id;
   const importance = req.params.importance;
@@ -36,6 +48,8 @@ router.get('/questions/:id/:importance', (req, res) => {
   and s.id = rs.skill_id
   and q.role_id = ?
   and rs.importance = ?`
+
+  console.log (query + " roleid:" + roleId + "improtance: " + importance);
   
   db.all(query, [roleId,importance], 
     (err, rows) => {

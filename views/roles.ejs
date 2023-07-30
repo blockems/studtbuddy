@@ -3,21 +3,25 @@
 <!DOCTYPE html>
 <html>
   <%- include('partials/head') %>
+  <script src="/js/roles.js"></script>
 </head>
 <body>
   <%- include('partials/menu') %>
     <h1>Roles</h1>
-    <table class="striped-table">
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-      <% for (const role of roles) { %>
-      <tr>
-        <td><%= role.name %></td>
-        <td><%= role.description %></td>
-      </tr>
-      <% } %>
-  </table>
+    <div id="results"></div>
+    <div>
+      <table class="striped-table">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <% for (const role of roles) { %>
+        <tr>
+          <td id="roleName"><%= role.name %></td>
+          <td><%= role.description %></td>
+        </tr>
+        <% } %>
+    </table>
+  </div>
   </body>
 </html>

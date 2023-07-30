@@ -1,0 +1,812 @@
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - port: 5001
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - debug: True
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - log_level: INFO
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - numeric_level: 20
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - 
+            Error levels:
+            * DEBUG
+            * INFO
+            * WARNING
+            * ERROR
+            * CRITICAL
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - Role: Agile Coach
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - Competency: Emergent
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - Current answer: 
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - Prompt: 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    
+2023-07-30 21:21:24,255 - __main__ - INFO - <module> - Role format: {'Role': 'Role Name', 'Level': 'Competency Level', 'Description': 'Role Description', 'Required': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}], 'Recommended': [{'Name': 'Element Name', 'Level': 'Element Level', 'Description': 'Element Description'}]}
+2023-07-30 21:21:24,256 - __main__ - INFO - <module> - Expert format: {'experts': [{'Name': 'Expert Name', 'Description': 'Expert Description'}]}
+2023-07-30 21:21:24,256 - __main__ - INFO - get_skills - 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    
+      
+      The JSON object is as follows:
+      {"Role": "Role Name", "Level": "Competency Level", "Description": "Role Description", "Required": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description"}], "Recommended": [{"Name": "Element Name", "Level": "Element Level", "Description": "Element Description"}]}
+2023-07-30 21:21:37,975 - __main__ - INFO - get_skills - {
+        "Role": "Agile Coach",
+        "Level": "Emergent",
+        "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+        "Required": [
+            {
+                "Name": "Understanding of Agile Principles",
+                "Level": "Basic",
+                "Description": "Knowledge of the core values and principles of Agile methodologies."
+            },
+            {
+                "Name": "Team Collaboration & Communication Skills",
+                "Level": "Basic",
+                "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+            },
+            {
+                "Name": "Basic knowledge in Software Development",
+                "Level": "Basic",
+                "Description": "Understanding of the software development lifecycle and concepts."
+            }
+        ],
+        "Recommended": [
+            {
+                "Name": "Self Awareness & Emotional Intelligence",
+                "Level": "Basic",
+                "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+            },
+            {
+                "Name": "Business Understanding",
+                "Level": "Basic",
+                "Description": "General understanding of the business aspects of working within a complex organization."
+            }
+        ]
+    }
+2023-07-30 21:21:37,975 - __main__ - INFO - <module> - Current answer: {
+        "Role": "Agile Coach",
+        "Level": "Emergent",
+        "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+        "Required": [
+            {
+                "Name": "Understanding of Agile Principles",
+                "Level": "Basic",
+                "Description": "Knowledge of the core values and principles of Agile methodologies."
+            },
+            {
+                "Name": "Team Collaboration & Communication Skills",
+                "Level": "Basic",
+                "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+            },
+            {
+                "Name": "Basic knowledge in Software Development",
+                "Level": "Basic",
+                "Description": "Understanding of the software development lifecycle and concepts."
+            }
+        ],
+        "Recommended": [
+            {
+                "Name": "Self Awareness & Emotional Intelligence",
+                "Level": "Basic",
+                "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+            },
+            {
+                "Name": "Business Understanding",
+                "Level": "Basic",
+                "Description": "General understanding of the business aspects of working within a complex organization."
+            }
+        ]
+    }
+2023-07-30 21:21:37,975 - __main__ - INFO - get_experts - I want a response to the following question:
+    
+    
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        Please return the results as a json object with the following structure:    
+        {"experts": [{"Name": "Expert Name", "Description": "Expert Description"}]}
+2023-07-30 21:21:40,621 - __main__ - INFO - get_experts - {"experts": [{"Name": "Jeff Sutherland", "Description": "Co-creator of Scrum framework"}, 
+             {"Name": "Mary Poppendieck", "Description": "Expert in Lean Software Development and Agile methodologies"},
+             {"Name": "Mike Cohn", "Description": "Founder of Mountain Goat Software and expert in Agile project management"}]}
+2023-07-30 21:21:40,621 - __main__ - INFO - <module> - Experts: {"experts": [{"Name": "Jeff Sutherland", "Description": "Co-creator of Scrum framework"}, 
+             {"Name": "Mary Poppendieck", "Description": "Expert in Lean Software Development and Agile methodologies"},
+             {"Name": "Mike Cohn", "Description": "Founder of Mountain Goat Software and expert in Agile project management"}]}
+2023-07-30 21:21:40,622 - __main__ - INFO - <module> - Current answer: {"Role": "Agile Coach", "Level": "Emergent", "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.", "Required": [{"Name": "Understanding of Agile Principles", "Level": "Basic", "Description": "Knowledge of the core values and principles of Agile methodologies."}, {"Name": "Team Collaboration & Communication Skills", "Level": "Basic", "Description": "Ability to facilitate team discussions and ensure effective communication among team members."}, {"Name": "Basic knowledge in Software Development", "Level": "Basic", "Description": "Understanding of the software development lifecycle and concepts."}], "Recommended": [{"Name": "Self Awareness & Emotional Intelligence", "Level": "Basic", "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."}, {"Name": "Business Understanding", "Level": "Basic", "Description": "General understanding of the business aspects of working within a complex organization."}], "Reviewers": [{"Name": "Reviewer Name", "Description": "Reviewer Description"}]}
+2023-07-30 21:21:40,622 - __main__ - INFO - get_review - 
+    Your role is Jeff Sutherland reviewing the output of a task. In this capacity, you're a critical yet supportive reviewer aiming to enhance the quality of the work.
+        
+    The task you are reviewing involves the following:
+    
+    
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    
+
+    The JSON object is as follows:
+    
+    {"Role": "Agile Coach", "Level": "Emergent", "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.", "Required": [{"Name": "Understanding of Agile Principles", "Level": "Basic", "Description": "Knowledge of the core values and principles of Agile methodologies."}, {"Name": "Team Collaboration & Communication Skills", "Level": "Basic", "Description": "Ability to facilitate team discussions and ensure effective communication among team members."}, {"Name": "Basic knowledge in Software Development", "Level": "Basic", "Description": "Understanding of the software development lifecycle and concepts."}], "Recommended": [{"Name": "Self Awareness & Emotional Intelligence", "Level": "Basic", "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."}, {"Name": "Business Understanding", "Level": "Basic", "Description": "General understanding of the business aspects of working within a complex organization."}], "Reviewers": [{"Name": "Reviewer Name", "Description": "Reviewer Description"}]}
+    
+    As Jeff Sutherland, your task is to review the list methodically for completeness. 
+    Then, add your name and a feedback to the reviewers array with comprehensive feedback on how the list could be improved. 
+    This includes suggesting additional skills and knowledge, as well as improvements to existing skills and descriptions. 
+
+    The final output should be the JSON object, with your feedback in the reviewers array.
+2023-07-30 21:22:10,115 - __main__ - INFO - get_review - Here's the reviewed JSON object, complete with my additional feedback:
+
+```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    }
+  ]
+}
+```
+
+Your list already gives a strong overview of what an emergent Agile Coach should know and be able to do. However, instilling a willingness in a person to continuously learn even beyond their comfort zones is an important aspect that should be included. Experience with various Agile Frameworks would also be an asset in understanding the broader spectrum of Agile methodologies, and this knowledge can be beneficial in different working environments.
+2023-07-30 21:22:10,115 - __main__ - INFO - <module> - Here's the reviewed JSON object, complete with my additional feedback:
+
+```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    }
+  ]
+}
+```
+
+Your list already gives a strong overview of what an emergent Agile Coach should know and be able to do. However, instilling a willingness in a person to continuously learn even beyond their comfort zones is an important aspect that should be included. Experience with various Agile Frameworks would also be an asset in understanding the broader spectrum of Agile methodologies, and this knowledge can be beneficial in different working environments.
+2023-07-30 21:22:10,116 - __main__ - INFO - get_review - 
+    Your role is Mary Poppendieck reviewing the output of a task. In this capacity, you're a critical yet supportive reviewer aiming to enhance the quality of the work.
+        
+    The task you are reviewing involves the following:
+    
+    
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    
+
+    The JSON object is as follows:
+    
+    Here's the reviewed JSON object, complete with my additional feedback:
+
+```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    }
+  ]
+}
+```
+
+Your list already gives a strong overview of what an emergent Agile Coach should know and be able to do. However, instilling a willingness in a person to continuously learn even beyond their comfort zones is an important aspect that should be included. Experience with various Agile Frameworks would also be an asset in understanding the broader spectrum of Agile methodologies, and this knowledge can be beneficial in different working environments.
+    
+    As Mary Poppendieck, your task is to review the list methodically for completeness. 
+    Then, add your name and a feedback to the reviewers array with comprehensive feedback on how the list could be improved. 
+    This includes suggesting additional skills and knowledge, as well as improvements to existing skills and descriptions. 
+
+    The final output should be the JSON object, with your feedback in the reviewers array.
+2023-07-30 21:22:45,596 - __main__ - INFO - get_review - Here's the reviewed JSON object, complete with my additional feedback:
+
+```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    },
+    {
+      "Name": "Mary Poppendieck",
+      "Description": "A well thought out list. I agree with Jeff's comments on adding 'Appreciation for Continuous Learning' and 'Experience with different Agile Frameworks'. I also suggest focusing on promoting a growth mindset under 'Required' section, which is crucial for adapting quickly in Agile environment and consider adding 'Understanding of Scrum Ceremonies' in the recommended section, as this is part and parcel of Agile culture and process. Lastly, improving 'Soft Skills', like negotiation and managing up, would be beneficial as it allows to mediate and influence in a typically flat organizational structure of Agile."
+    }
+  ]
+}
+```
+2023-07-30 21:22:45,597 - __main__ - INFO - <module> - Here's the reviewed JSON object, complete with my additional feedback:
+
+```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    },
+    {
+      "Name": "Mary Poppendieck",
+      "Description": "A well thought out list. I agree with Jeff's comments on adding 'Appreciation for Continuous Learning' and 'Experience with different Agile Frameworks'. I also suggest focusing on promoting a growth mindset under 'Required' section, which is crucial for adapting quickly in Agile environment and consider adding 'Understanding of Scrum Ceremonies' in the recommended section, as this is part and parcel of Agile culture and process. Lastly, improving 'Soft Skills', like negotiation and managing up, would be beneficial as it allows to mediate and influence in a typically flat organizational structure of Agile."
+    }
+  ]
+}
+```
+2023-07-30 21:22:45,597 - __main__ - INFO - get_review - 
+    Your role is Mike Cohn reviewing the output of a task. In this capacity, you're a critical yet supportive reviewer aiming to enhance the quality of the work.
+        
+    The task you are reviewing involves the following:
+    
+    
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    
+
+    The JSON object is as follows:
+    
+    Here's the reviewed JSON object, complete with my additional feedback:
+
+```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    },
+    {
+      "Name": "Mary Poppendieck",
+      "Description": "A well thought out list. I agree with Jeff's comments on adding 'Appreciation for Continuous Learning' and 'Experience with different Agile Frameworks'. I also suggest focusing on promoting a growth mindset under 'Required' section, which is crucial for adapting quickly in Agile environment and consider adding 'Understanding of Scrum Ceremonies' in the recommended section, as this is part and parcel of Agile culture and process. Lastly, improving 'Soft Skills', like negotiation and managing up, would be beneficial as it allows to mediate and influence in a typically flat organizational structure of Agile."
+    }
+  ]
+}
+```
+    
+    As Mike Cohn, your task is to review the list methodically for completeness. 
+    Then, add your name and a feedback to the reviewers array with comprehensive feedback on how the list could be improved. 
+    This includes suggesting additional skills and knowledge, as well as improvements to existing skills and descriptions. 
+
+    The final output should be the JSON object, with your feedback in the reviewers array.
+2023-07-30 21:23:27,518 - __main__ - INFO - get_review - ```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    },
+    {
+      "Name": "Mary Poppendieck",
+      "Description": "A well thought out list. I agree with Jeff's comments on adding 'Appreciation for Continuous Learning' and 'Experience with different Agile Frameworks'. I also suggest focusing on promoting a growth mindset under 'Required' section, which is crucial for adapting quickly in Agile environment and consider adding 'Understanding of Scrum Ceremonies' in the recommended section, as this is part and parcel of Agile culture and process. Lastly, improving 'Soft Skills', like negotiation and managing up, would be beneficial as it allows to mediate and influence in a typically flat organizational structure of Agile."
+    },
+    {
+      "Name": "Mike Cohn",
+      "Description": "This list makes a great start, but there's room for further refinement. I agree with adding items about continuous learning, diverse Agile Frameworks experience, and understanding Scrum ceremonies. However, I'd also like to see 'Problem-Solving Skills' included in the 'Required' section because it's key to overcoming the challenges that arise in Agile environments. Additionally, I recommend adding 'Servant Leadership' to the recommended skills to highlight the importance of supporting the team in their quest for success. Finally, fleshing out the 'Description' for each competency to provide more context could help paint a clearer picture of expectations."
+    }
+  ]
+}
+```
+2023-07-30 21:23:27,518 - __main__ - INFO - <module> - ```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    },
+    {
+      "Name": "Mary Poppendieck",
+      "Description": "A well thought out list. I agree with Jeff's comments on adding 'Appreciation for Continuous Learning' and 'Experience with different Agile Frameworks'. I also suggest focusing on promoting a growth mindset under 'Required' section, which is crucial for adapting quickly in Agile environment and consider adding 'Understanding of Scrum Ceremonies' in the recommended section, as this is part and parcel of Agile culture and process. Lastly, improving 'Soft Skills', like negotiation and managing up, would be beneficial as it allows to mediate and influence in a typically flat organizational structure of Agile."
+    },
+    {
+      "Name": "Mike Cohn",
+      "Description": "This list makes a great start, but there's room for further refinement. I agree with adding items about continuous learning, diverse Agile Frameworks experience, and understanding Scrum ceremonies. However, I'd also like to see 'Problem-Solving Skills' included in the 'Required' section because it's key to overcoming the challenges that arise in Agile environments. Additionally, I recommend adding 'Servant Leadership' to the recommended skills to highlight the importance of supporting the team in their quest for success. Finally, fleshing out the 'Description' for each competency to provide more context could help paint a clearer picture of expectations."
+    }
+  ]
+}
+```
+2023-07-30 21:24:28,571 - __main__ - INFO - get_final_answer - ```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations. Encourages continuous learning, problem-solving, and promotes a growth mindset.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions, negotiate, manage up and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    },
+    {
+      "Name": "Appreciation for Continuous Learning",
+      "Level": "Basic",
+      "Description": "Ability to adapt and learn from experiences to improve future performance."
+    },
+    {
+      "Name": "Problem-Solving Skills",
+      "Level": "Basic",
+      "Description": "Ability to identify and solve obstacles that might hinder the progress of the team."
+    },
+    {
+      "Name": "Promote Growth Mindset",
+      "Level": "Basic",
+      "Description": "Instill a mindset of constant development and openness to new methods within the team."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    },
+    {
+      "Name": "Experience with different Agile Frameworks (Scrum, Kanban, etc.)",
+      "Level": "Basic",
+      "Description": "Having diverse Agile methodology experiences enriches the knowledge base and provides for flexible implementations."
+    },
+    {
+      "Name": "Understanding of Scrum Ceremonies",
+      "Level": "Basic",
+      "Description": "Understanding of the typical procedures and events in Scrum, an Agile methodology."
+    },
+    {
+      "Name": "Servant Leadership",
+      "Level": "Basic",
+      "Description": "Prioritizing the needs of the team and helping them to perform at their highest level."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    },
+    {
+      "Name": "Mary Poppendieck",
+      "Description": "A well thought out list. I agree with Jeff's comments on adding 'Appreciation for Continuous Learning' and 'Experience with different Agile Frameworks'. I also suggest focusing on promoting a growth mindset under 'Required' section, which is crucial for adapting quickly in Agile environment and consider adding 'Understanding of Scrum Ceremonies' in the recommended section, as this is part and parcel of Agile culture and process. Lastly, improving 'Soft Skills', like negotiation and managing up, would be beneficial as it allows to mediate and influence in a typically flat organizational structure of Agile."
+    },
+    {
+      "Name": "Mike Cohn",
+      "Description": "This list makes a great start, but there's room for further refinement. I agree with adding items about continuous learning, diverse Agile Frameworks experience, and understanding Scrum ceremonies. However, I'd also like to see 'Problem-Solving Skills' included in the 'Required' section because it's key to overcoming the challenges that arise in Agile environments. Additionally, I recommend adding 'Servant Leadership' to the recommended skills to highlight the importance of supporting the team in their quest for success. Finally, fleshing out the 'Description' for each competency to provide more context could help paint a clearer picture of expectations."
+    },
+    {
+      "Name": "HR Consultant",
+      "Description": "Reviewed and updated the skills and competencies based on expert reviewers' feedback. Added 'Appreciation for Continuous Learning', 'Problem-Solving Skills' and 'Promote Growth Mindset' to 'Required' skills. Further added 'Experience with different Agile Frameworks', 'Understanding of Scrum Ceremonies' and 'Servant Leadership' to 'Recommended' skills. Updated skill descriptions where necessary to provide clearer context."
+    }
+  ]
+}
+```
+2023-07-30 21:24:28,571 - __main__ - INFO - <module> - ```json
+{
+  "Role": "Agile Coach",
+  "Level": "Emergent",
+  "Description": "An Agile Coach in emergent level has foundational knowledge in Agile methodologies. Understands Agile principles, values and approach. Guides teams through the implementation of Agile methodology. Requires supervised support in handling complex situations. Encourages continuous learning, problem-solving, and promotes a growth mindset.",
+  "Required": [
+    {
+      "Name": "Understanding of Agile Principles",
+      "Level": "Basic",
+      "Description": "Knowledge of the core values and principles of Agile methodologies."
+    },
+    {
+      "Name": "Team Collaboration & Communication Skills",
+      "Level": "Basic",
+      "Description": "Ability to facilitate team discussions, negotiate, manage up and ensure effective communication among team members."
+    },
+    {
+      "Name": "Basic knowledge in Software Development",
+      "Level": "Basic",
+      "Description": "Understanding of the software development lifecycle and concepts."
+    },
+    {
+      "Name": "Appreciation for Continuous Learning",
+      "Level": "Basic",
+      "Description": "Ability to adapt and learn from experiences to improve future performance."
+    },
+    {
+      "Name": "Problem-Solving Skills",
+      "Level": "Basic",
+      "Description": "Ability to identify and solve obstacles that might hinder the progress of the team."
+    },
+    {
+      "Name": "Promote Growth Mindset",
+      "Level": "Basic",
+      "Description": "Instill a mindset of constant development and openness to new methods within the team."
+    }
+  ],
+  "Recommended": [
+    {
+      "Name": "Self Awareness & Emotional Intelligence",
+      "Level": "Basic",
+      "Description": "Understanding one's own emotions, strengths and weaknesses, and developing empathy for the team members."
+    },
+    {
+      "Name": "Business Understanding",
+      "Level": "Basic",
+      "Description": "General understanding of the business aspects of working within a complex organization."
+    },
+    {
+      "Name": "Experience with different Agile Frameworks (Scrum, Kanban, etc.)",
+      "Level": "Basic",
+      "Description": "Having diverse Agile methodology experiences enriches the knowledge base and provides for flexible implementations."
+    },
+    {
+      "Name": "Understanding of Scrum Ceremonies",
+      "Level": "Basic",
+      "Description": "Understanding of the typical procedures and events in Scrum, an Agile methodology."
+    },
+    {
+      "Name": "Servant Leadership",
+      "Level": "Basic",
+      "Description": "Prioritizing the needs of the team and helping them to perform at their highest level."
+    }
+  ],
+  "Reviewers": [
+    {
+      "Name": "Reviewer Name",
+      "Description": "Reviewer Description"
+    },
+    {
+      "Name": "Jeff Sutherland",
+      "Description": "I believe this list is nearly complete, but there are a few additions that could make it more comprehensive. Under the 'Required' section, I suggest adding 'Appreciation for Continuous Learning' as this along with the existing skills will set the candidate for success. Also, under 'Recommended', having 'Experience with different Agile Frameworks (Scrum, Kanban, etc.)' can provide diversity to their Agile knowledge, even at an emergent level. I found the skill descriptions to be quite apt, so they need no changes."
+    },
+    {
+      "Name": "Mary Poppendieck",
+      "Description": "A well thought out list. I agree with Jeff's comments on adding 'Appreciation for Continuous Learning' and 'Experience with different Agile Frameworks'. I also suggest focusing on promoting a growth mindset under 'Required' section, which is crucial for adapting quickly in Agile environment and consider adding 'Understanding of Scrum Ceremonies' in the recommended section, as this is part and parcel of Agile culture and process. Lastly, improving 'Soft Skills', like negotiation and managing up, would be beneficial as it allows to mediate and influence in a typically flat organizational structure of Agile."
+    },
+    {
+      "Name": "Mike Cohn",
+      "Description": "This list makes a great start, but there's room for further refinement. I agree with adding items about continuous learning, diverse Agile Frameworks experience, and understanding Scrum ceremonies. However, I'd also like to see 'Problem-Solving Skills' included in the 'Required' section because it's key to overcoming the challenges that arise in Agile environments. Additionally, I recommend adding 'Servant Leadership' to the recommended skills to highlight the importance of supporting the team in their quest for success. Finally, fleshing out the 'Description' for each competency to provide more context could help paint a clearer picture of expectations."
+    },
+    {
+      "Name": "HR Consultant",
+      "Description": "Reviewed and updated the skills and competencies based on expert reviewers' feedback. Added 'Appreciation for Continuous Learning', 'Problem-Solving Skills' and 'Promote Growth Mindset' to 'Required' skills. Further added 'Experience with different Agile Frameworks', 'Understanding of Scrum Ceremonies' and 'Servant Leadership' to 'Recommended' skills. Updated skill descriptions where necessary to provide clearer context."
+    }
+  ]
+}
+```
