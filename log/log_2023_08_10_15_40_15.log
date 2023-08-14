@@ -1,0 +1,49 @@
+2023-08-10 15:40:15,637 - __main__ - INFO - <module> - port: 50001
+2023-08-10 15:40:15,637 - __main__ - INFO - <module> - debug: True
+2023-08-10 15:40:15,637 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-10 15:40:15,637 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-10 15:40:15,637 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-10 15:40:15,637 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-10 15:40:15,640 - __main__ - DEBUG - get_skills - Prompt: 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    The JSON should have a "required" array where you list the skills.
+
+    
+2023-08-10 15:40:15,641 - __main__ - DEBUG - get_skills - skill schema: {'name': 'get_skills', 'description': 'Get the skills for the role', 'parameters': {'title': 'RoleDefinition', 'type': 'object', 'properties': {'Role': {'title': 'Role', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}, 'Required': {'title': 'Required', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Recommended': {'title': 'Recommended', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Reviewers': {'title': 'Reviewers', 'type': 'array', 'items': {'$ref': '#/definitions/Reviewer'}}}, 'required': ['Role', 'Level', 'Description', 'Required', 'Recommended', 'Reviewers'], 'definitions': {'Skill': {'title': 'Skill', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Level', 'Description']}, 'Reviewer': {'title': 'Reviewer', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Description']}}}, 'return_type': 'json'}
+2023-08-10 15:41:04,398 - __main__ - DEBUG - get_skills - response:{
+  "id": "chatcmpl-7lsh4Q4Nh730NHaGAwoxYBcwbmab9",
+  "object": "chat.completion",
+  "created": 1691646014,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_skills",
+          "arguments": "{\n  \"Role\": \"Agile Coach\",\n  \"Level\": \"Emergent\",\n  \"Description\": \"The Agile Coach at an Emergent level is an individual who is learning the ropes in Agile methodologies and coaching. They work under more experienced Agile Coaches to provide guidance, support, and coaching to teams within the organization.\",\n  \"Required\": [\n    {\n      \"Name\": \"Understanding of Agile methodologies\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Knowledge of Agile methodologies such as Scrum, Kanban, Lean, XP etc. and the applicability of each one.\"\n    },\n    {\n      \"Name\": \"Effective communication skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to communicate effectively with different stakeholders, including team members, management, and clients.\"\n    },\n    {\n      \"Name\": \"Teamwork\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to work well within a team, promoting collaboration and coordination.\"\n    },\n    {\n      \"Name\": \"Basic technical understanding\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Understanding of the basic technicalities of software development, including coding, testing, CI/CD, etc.\"\n    }\n  ],\n  \"Recommended\": [\n    {\n      \"Name\": \"Problem-solving skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to identify problems and suggest feasible solutions for the same.\"\n    },\n    {\n      \"Name\": \"Leadership skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to influence, inspire, and motivate team members towards achieving their goals.\"\n    },\n    {\n      \"Name\": \"Ability to learn and adapt\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to learn new concepts/techniques and adapt to changes in the workplace.\"\n    }\n  ],\n  \"Reviewers\": []\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 294,
+    "completion_tokens": 391,
+    "total_tokens": 685
+  }
+}
+2023-08-10 15:41:04,399 - __main__ - INFO - get_skills - {'Role': 'Agile Coach', 'Level': 'Emergent', 'Description': 'The Agile Coach at an Emergent level is an individual who is learning the ropes in Agile methodologies and coaching. They work under more experienced Agile Coaches to provide guidance, support, and coaching to teams within the organization.', 'Required': [{'Name': 'Understanding of Agile methodologies', 'Level': 'Emergent', 'Description': 'Knowledge of Agile methodologies such as Scrum, Kanban, Lean, XP etc. and the applicability of each one.'}, {'Name': 'Effective communication skills', 'Level': 'Emergent', 'Description': 'Ability to communicate effectively with different stakeholders, including team members, management, and clients.'}, {'Name': 'Teamwork', 'Level': 'Emergent', 'Description': 'Ability to work well within a team, promoting collaboration and coordination.'}, {'Name': 'Basic technical understanding', 'Level': 'Emergent', 'Description': 'Understanding of the basic technicalities of software development, including coding, testing, CI/CD, etc.'}], 'Recommended': [{'Name': 'Problem-solving skills', 'Level': 'Emergent', 'Description': 'Ability to identify problems and suggest feasible solutions for the same.'}, {'Name': 'Leadership skills', 'Level': 'Emergent', 'Description': 'Ability to influence, inspire, and motivate team members towards achieving their goals.'}, {'Name': 'Ability to learn and adapt', 'Level': 'Emergent', 'Description': 'Ability to learn new concepts/techniques and adapt to changes in the workplace.'}], 'Reviewers': []}
+2023-08-10 15:41:04,399 - __main__ - INFO - <module> - Current JSON: {'Role': 'Agile Coach', 'Level': 'Emergent', 'Description': 'The Agile Coach at an Emergent level is an individual who is learning the ropes in Agile methodologies and coaching. They work under more experienced Agile Coaches to provide guidance, support, and coaching to teams within the organization.', 'Required': [{'Name': 'Understanding of Agile methodologies', 'Level': 'Emergent', 'Description': 'Knowledge of Agile methodologies such as Scrum, Kanban, Lean, XP etc. and the applicability of each one.'}, {'Name': 'Effective communication skills', 'Level': 'Emergent', 'Description': 'Ability to communicate effectively with different stakeholders, including team members, management, and clients.'}, {'Name': 'Teamwork', 'Level': 'Emergent', 'Description': 'Ability to work well within a team, promoting collaboration and coordination.'}, {'Name': 'Basic technical understanding', 'Level': 'Emergent', 'Description': 'Understanding of the basic technicalities of software development, including coding, testing, CI/CD, etc.'}], 'Recommended': [{'Name': 'Problem-solving skills', 'Level': 'Emergent', 'Description': 'Ability to identify problems and suggest feasible solutions for the same.'}, {'Name': 'Leadership skills', 'Level': 'Emergent', 'Description': 'Ability to influence, inspire, and motivate team members towards achieving their goals.'}, {'Name': 'Ability to learn and adapt', 'Level': 'Emergent', 'Description': 'Ability to learn new concepts/techniques and adapt to changes in the workplace.'}], 'Reviewers': []}

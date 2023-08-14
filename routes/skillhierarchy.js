@@ -14,25 +14,31 @@ router.get('/', (req, res) => {
   WHERE r.id = rs.role_id and s.id = rs.skill_id
   order by r.name asc, seniorityorder, rs.importance desc`, [], (err, rows) => {
     if (err) {
-      return console.error(err.message);
+      return console.error(err.message)
     }
     res.render('skillhierarchy', { title:"Skills Heirarchy", skills: rows, session: req.session});
   });
 });
 
 router.get('/test-skills/:id/:importance', (req, res) => {
-  res.render('test-skills', {title:"Test Skills", session: req.session})
+  const getSKillS_PORT = process.env.getSKills_PORT || '5001';
+  res.render('test-skills', {
+    title:"Test Skills", 
+    session: req.session,
+    getSkillsPort: getSKillS_PORT
+  })
 });
 
 router.post('/submit-results', (req, res) => {
   const correctAnswers = req.body.correctAnswers;
   const explanations = req.body.explanations;
-
+  
   res.render('results', {
     title: "Skills Heirarchy",
     session: req.session,
     correctAnswers: correctAnswers,
-    explanations: explanations
+    explanations: explanations,
+    getSkillsPort: getSKillS_PORT
   });
 });
 

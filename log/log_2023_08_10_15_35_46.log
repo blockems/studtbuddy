@@ -1,0 +1,49 @@
+2023-08-10 15:35:46,396 - __main__ - INFO - <module> - port: 50001
+2023-08-10 15:35:46,396 - __main__ - INFO - <module> - debug: True
+2023-08-10 15:35:46,396 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-10 15:35:46,396 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-10 15:35:46,396 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-10 15:35:46,396 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-10 15:35:46,399 - __main__ - DEBUG - get_skills - Prompt: 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    The JSON should have a "required" array where you list the skills.
+
+    
+2023-08-10 15:35:46,399 - __main__ - DEBUG - get_skills - skill schema: {'name': 'get_skills', 'description': 'Get the skills for the role', 'parameters': {'title': 'RoleDefinition', 'type': 'object', 'properties': {'Role': {'title': 'Role', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}, 'Required': {'title': 'Required', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Recommended': {'title': 'Recommended', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Reviewers': {'title': 'Reviewers', 'type': 'array', 'items': {'$ref': '#/definitions/Reviewer'}}}, 'required': ['Role', 'Level', 'Description', 'Required', 'Recommended', 'Reviewers'], 'definitions': {'Skill': {'title': 'Skill', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Level', 'Description']}, 'Reviewer': {'title': 'Reviewer', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Description']}}}, 'return_type': 'json'}
+2023-08-10 15:36:29,864 - __main__ - DEBUG - get_skills - response:{
+  "id": "chatcmpl-7lscjAX0NW8nmVCrn8C1JaXQivRdw",
+  "object": "chat.completion",
+  "created": 1691645745,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_skills",
+          "arguments": "{\n  \"Role\": \"Agile Coach\",\n  \"Level\": \"Emergent\",\n  \"Description\": \"An Agile Coach at the emergent level is responsible for fostering an Agile environment primarily at the team level. The coach should aid the team in understanding and adopting Agile principles and practices, focusing mainly on Scrum, Kanban, and XP.\",\n  \"Required\": [\n    {\n      \"Name\": \"Agile methodologies\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Basic knowledge of Agile principles, values, and practices. Familiarity with Scrum and Kanban methodologies.\"\n    },\n    {\n      \"Name\": \"Team facilitation\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to facilitate team discussions and decision-making processes.\"\n    },\n    {\n      \"Name\": \"Coaching and mentoring\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to offer guidance and support to team members, encouraging growth and learning.\"\n    },\n    {\n      \"Name\": \"Communication\",\n      \"Level\": \"Competent\",\n      \"Description\": \"Good verbal and written communication skills, able to effectively convey information to team members.\"\n    }\n  ],\n  \"Recommended\": [\n    {\n      \"Name\": \"Project Management\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Understanding of project management concepts, preferably within a software development context.\"\n    },\n    {\n      \"Name\": \"Conflict Resolution\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to mediate disagreements within the team, promoting a positive and harmonious team environment.\"\n    }\n  ],\n  \"Reviewers\": [\n    {\n      \"Name\": \"Senior Agile Coach\",\n      \"Description\": \"A seasoned and experienced Agile Coach who can provide guidance, mentorship and feedback on performance and skill development.\"\n    }\n  ]\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 285,
+    "completion_tokens": 380,
+    "total_tokens": 665
+  }
+}
+2023-08-10 15:36:29,865 - __main__ - INFO - get_skills - {'Role': 'Agile Coach', 'Level': 'Emergent', 'Description': 'An Agile Coach at the emergent level is responsible for fostering an Agile environment primarily at the team level. The coach should aid the team in understanding and adopting Agile principles and practices, focusing mainly on Scrum, Kanban, and XP.', 'Required': [{'Name': 'Agile methodologies', 'Level': 'Emergent', 'Description': 'Basic knowledge of Agile principles, values, and practices. Familiarity with Scrum and Kanban methodologies.'}, {'Name': 'Team facilitation', 'Level': 'Emergent', 'Description': 'Ability to facilitate team discussions and decision-making processes.'}, {'Name': 'Coaching and mentoring', 'Level': 'Emergent', 'Description': 'Ability to offer guidance and support to team members, encouraging growth and learning.'}, {'Name': 'Communication', 'Level': 'Competent', 'Description': 'Good verbal and written communication skills, able to effectively convey information to team members.'}], 'Recommended': [{'Name': 'Project Management', 'Level': 'Emergent', 'Description': 'Understanding of project management concepts, preferably within a software development context.'}, {'Name': 'Conflict Resolution', 'Level': 'Emergent', 'Description': 'Ability to mediate disagreements within the team, promoting a positive and harmonious team environment.'}], 'Reviewers': [{'Name': 'Senior Agile Coach', 'Description': 'A seasoned and experienced Agile Coach who can provide guidance, mentorship and feedback on performance and skill development.'}]}
+2023-08-10 15:36:29,865 - __main__ - INFO - <module> - Current JSON: {'Role': 'Agile Coach', 'Level': 'Emergent', 'Description': 'An Agile Coach at the emergent level is responsible for fostering an Agile environment primarily at the team level. The coach should aid the team in understanding and adopting Agile principles and practices, focusing mainly on Scrum, Kanban, and XP.', 'Required': [{'Name': 'Agile methodologies', 'Level': 'Emergent', 'Description': 'Basic knowledge of Agile principles, values, and practices. Familiarity with Scrum and Kanban methodologies.'}, {'Name': 'Team facilitation', 'Level': 'Emergent', 'Description': 'Ability to facilitate team discussions and decision-making processes.'}, {'Name': 'Coaching and mentoring', 'Level': 'Emergent', 'Description': 'Ability to offer guidance and support to team members, encouraging growth and learning.'}, {'Name': 'Communication', 'Level': 'Competent', 'Description': 'Good verbal and written communication skills, able to effectively convey information to team members.'}], 'Recommended': [{'Name': 'Project Management', 'Level': 'Emergent', 'Description': 'Understanding of project management concepts, preferably within a software development context.'}, {'Name': 'Conflict Resolution', 'Level': 'Emergent', 'Description': 'Ability to mediate disagreements within the team, promoting a positive and harmonious team environment.'}], 'Reviewers': [{'Name': 'Senior Agile Coach', 'Description': 'A seasoned and experienced Agile Coach who can provide guidance, mentorship and feedback on performance and skill development.'}]}

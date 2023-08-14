@@ -1,0 +1,47 @@
+2023-08-10 15:31:20,845 - __main__ - INFO - <module> - port: 50001
+2023-08-10 15:31:20,845 - __main__ - INFO - <module> - debug: True
+2023-08-10 15:31:20,845 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-10 15:31:20,846 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-10 15:31:20,846 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-10 15:31:20,846 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-10 15:31:20,849 - __main__ - DEBUG - get_skills - Prompt: 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    The JSON should have a "required" array where you list the skills.
+
+    
+2023-08-10 15:31:20,849 - __main__ - DEBUG - get_skills - skill schema: {'name': 'get_skills', 'description': 'Get the skills for the role', 'parameters': {'title': 'RoleDefinition', 'type': 'object', 'properties': {'Role': {'title': 'Role', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}, 'Required': {'title': 'Required', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Recommended': {'title': 'Recommended', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Reviewers': {'title': 'Reviewers', 'type': 'array', 'items': {'$ref': '#/definitions/Reviewer'}}}, 'required': ['Role', 'Level', 'Description', 'Required', 'Recommended', 'Reviewers'], 'definitions': {'Skill': {'title': 'Skill', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Level', 'Description']}, 'Reviewer': {'title': 'Reviewer', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Description']}}}, 'return_type': 'json', 'examples': [{'Name': 'Agile Methodologies', 'Level': 'Emergent', 'Description': 'Understanding of agile principles and practices.', 'required': [{'Name': 'Agile Methodologies', 'Level': 'Emergent', 'Description': 'Understanding of agile principles and practices.'}], 'recommended': [{'Name': 'Project management skills', 'Level': 'Emergent', 'Description': 'Understanding of project management methodologies such as Waterfall.'}], 'reviews': [{'Name': 'Jeff Sutherland', 'Description': 'HR Consultant in a large financial institution. Comprehensive feedback: I would suggest adding a few more skills to make it even more complete.'}]}]}
+2023-08-10 15:31:59,561 - __main__ - DEBUG - get_skills - response:{
+  "id": "chatcmpl-7lsYRYIi3JwFivhIpP9M8arFlmTll",
+  "object": "chat.completion",
+  "created": 1691645479,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_skills",
+          "arguments": "{\n  \"Role\": \"Agile Coach\",\n  \"Level\": \"Emergent\",\n  \"Description\": \"An emergent Agile Coach in our organization is expected to help teams implement Agile to improve their productivity, collaboration and delivery. They will help the team understand Agile principles and practices, foster a healthy cultural shift, facilitate meetings, and provide support for overcoming challenges and obstacles.\",\n  \"Required\": [\n    {\n      \"Name\": \"Agile and Scrum Knowledge\",\n      \"Level\": \"Competent\",\n      \"Description\": \"Understanding the fundamentals of Agile and Scrum, able to explain and guide the team in Agile principles and Scrum practices.\"\n    },\n    {\n      \"Name\": \"Facilitation Skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Able to facilitate team meetings, ensuring they are focused, efficient and productive.\"\n    }, \n    {\n      \"Name\": \"Coaching Skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Basics in inspiring and guiding teams to reach their full potential.\"\n    },\n    {\n      \"Name\": \"Communication Skills\",\n      \"Level\": \"Competent\",\n      \"Description\": \"Being able to effectively communicate with team members and stakeholders.\"\n    }\n  ],\n  \"Recommended\": [\n    {\n      \"Name\": \"Leadership Skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Even in an emergent role, some leadership skills will be beneficial to effectively guide the team.\"\n    },\n    {\n      \"Name\": \"Problem-Solving Skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Ability to tackle challenges and obstacles the team may encounter.\"\n    }\n  ],\n  \"Reviewers\": [\n    {\n      \"Name\": \"Senior Agile Coach\",\n      \"Description\": \"An experienced Agile Coach who can mentor and guide the emergent Agile Coach in their role.\"\n    }\n  ]\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 285,
+    "completion_tokens": 389,
+    "total_tokens": 674
+  }
+}

@@ -1,17 +1,40 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS, cross_origin
-import openai
+#OS imports
 import os
-from dotenv import load_dotenv
 import json
 import logging
 from datetime import datetime
+
+#Env Mgt
+from dotenv import load_dotenv
+
+#Web Page
+from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
+
+#JSON Structures
+from pydantic import BaseModel
+from typing import List
+
+#AI Client
+import openai
+
+#Database Access
+import sqlite3
 
 openai.api_key = os.getenv('OPENAI_API_KEY')  # get OpenAI key from environment variables
 port = os.getenv('getSkills_PORT', 5001)
 debug = os.getenv('getSkills_DEBUG', True)
 log_level = os.getenv('getSkills_LOG_LEVEL', 'WARNING').upper()
+data_dir = os.getenv('DATA_DIRECTORY', './data/roles')
+data_conn = os.getenv('DATA_CONNECTION_STRING', './data/database.db')
 
+# Define the directory path for the JSON data files
+directory_path = data_dir
+
+# Create a connection to the SQLite database
+conn = sqlite3.connect(data_conn)
+
+#Set up logging
 numeric_level = getattr(logging, log_level, None)
 if not isinstance(numeric_level, int):
     raise ValueError(f'Invalid log level: {log_level}')
@@ -37,31 +60,42 @@ logger.info(f'port: {port}')
 logger.info(f'debug: {debug}')
 logger.info(f'log_level: {log_level}')
 logger.info(f'numeric_level: {numeric_level}')
-
-logger.info('''
-            Error levels:
-            * DEBUG
-            * INFO
-            * WARNING
-            * ERROR
-            * CRITICAL''')
+logger.info(f'Data Directory: {data_dir}')
+logger.info(f'Data Connection String: {data_conn}')
 
 current_answer = ""
 competency = ""
 role = ""
 prompt = ""
 
-roleformat = {
-        "Role": "Role Name",
-        "Level": "Competency Level",
-        "Description": "Role Description",
-        "Required": [{"Name": "Element Name","Level": "Element Level","Description": "Element Description"}],
-        "Recommended": [{"Name": "Element Name","Level": "Element Level","Description": "Element Description"}]
-      }
-logger.info(f'Role format: {roleformat}')
+#Now define our json object:
+class Skill(BaseModel):
+    Name: str
+    Level: str
+    Description: str
 
-expertformat = {"experts":[{"Name": "Expert Name", "Description": "Expert Description"}]}
-logger.info(f'Expert format: {expertformat}')
+class Reviewer(BaseModel):
+    Name: str
+    Description: str
+
+class RoleDefinition(BaseModel):
+    Role: str
+    Level: str
+    Description: str
+    Required: List[Skill]
+    Recommended: List[Skill]
+    Reviewers: List[Reviewer]
+
+schema = Skill.schema()
+
+class Expert(BaseModel):
+    Name: str
+    Description: str
+
+class ExpertsModel(BaseModel):
+    experts: List[Expert]
+
+expert = Expert.schema()
 
 #Make an API
 app = Flask(__name__)
@@ -91,9 +125,9 @@ def get_experts():
     )
     logger.debug(response)
 
-    if response['choices'] and response['choices'][0]['message']:
-        logger.info(response['choices'][0]['message']['content'].strip())
-        return response['choices'][0]['message']['content'].strip()
+    if response['choices'] and response['choices'][0]['message']: # type: ignore
+        logger.info(response['choices'][0]['message']['content'].strip()) # type: ignore
+        return response['choices'][0]['message']['content'].strip() # type: ignore
 
 def get_skills():
     
@@ -114,9 +148,9 @@ def get_skills():
     )
     logger.debug(response)
 
-    if response['choices'] and response['choices'][0]['message']:
-      logger.info(response['choices'][0]['message']['content'].strip())
-      return response['choices'][0]['message']['content'].strip()
+    if response['choices'] and response['choices'][0]['message']: # type: ignore
+      logger.info(response['choices'][0]['message']['content'].strip()) # type: ignore
+      return response['choices'][0]['message']['content'].strip() # type: ignore
     
 def get_review(data):
     prompttext = f'''
@@ -148,9 +182,9 @@ def get_review(data):
     )
     logger.debug(response)
 
-    if response['choices'] and response['choices'][0]['message']:
-      logger.info(response['choices'][0]['message']['content'].strip()) 
-      return response['choices'][0]['message']['content'].strip()
+    if response['choices'] and response['choices'][0]['message']: # type: ignore
+      logger.info(response['choices'][0]['message']['content'].strip()) # type: ignore
+      return response['choices'][0]['message']['content'].strip() # type: ignore
 
 def get_final_answer():
     prompttext = f'''role:
@@ -182,9 +216,9 @@ def get_final_answer():
     )
     logger.debug(response)
 
-    if response['choices'] and response['choices'][0]['message']:
-      logger.info(response['choices'][0]['message']['content'].strip())
-      return response['choices'][0]['message']['content'].strip()
+    if response['choices'] and response['choices'][0]['message']: # type: ignore
+      logger.info(response['choices'][0]['message']['content'].strip()) # type: ignore
+      return response['choices'][0]['message']['content'].strip() # type: ignore
 
 #Set up an API end point
 @app.route('/getSkills', methods=['POST'])
@@ -211,15 +245,32 @@ def skills():
     '''
     logger.info(f'Prompt: {prompt}')
 
-    current_answer = get_skills()
-    logger.info(f'Current answer: {current_answer}')
+    #Get the first qttempt and an answer
+    current_answer = get_skills()    
+    if current_answer:
+      try:
+          json_obj = json.loads(current_answer)
+          #Add the reviewers section
+          json_obj['Reviewers'] = [{"Name": "Reviewer Name", "Description": "Reviewer Description" }]
 
+      except json.JSONDecodeError:
+        logger.error(f"Invalid JSON string: {current_answer}")
+        logger.info(f'Current answer: {current_answer}')
+    
+    #Get the experts to review the answer
     experts = get_experts()
-    logger.info(f'Experts: {experts}')
+    if experts:
+      try:
+          json_obj = json.loads(experts)
+          logger.info(f'Experts: {experts}')
+          #Add the reviewers section
+          json_obj['Reviewers'] = [{"Name": "Reviewer Name", "Description": "Reviewer Description" }]
 
-    # Now we add the reviewers comments section
-    json_obj = json.loads(current_answer)
-    json_obj['Reviewers'] = [{"Name": "Reviewer Name", "Description": "Reviewer Description" }]
+      except json.JSONDecodeError:
+        logger.error(f"Invalid JSON string: {experts}")
+        logger.info(f'Current answer: {experts}')
+    
+    #Now update the working JSON object to send to the AI 
     current_answer = json.dumps(json_obj)
     logger.info(f'Current answer: {current_answer}') 
     

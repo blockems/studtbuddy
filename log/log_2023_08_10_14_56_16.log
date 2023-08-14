@@ -1,0 +1,44 @@
+2023-08-10 14:56:16,689 - __main__ - INFO - <module> - port: 50001
+2023-08-10 14:56:16,689 - __main__ - INFO - <module> - debug: True
+2023-08-10 14:56:16,689 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-10 14:56:16,689 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-10 14:56:16,689 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-10 14:56:16,689 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-10 14:56:16,692 - __main__ - DEBUG - get_skills - 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    
+2023-08-10 14:56:23,105 - __main__ - DEBUG - get_skills - {
+  "id": "chatcmpl-7ls0VZXSF9ghmCEYFwCw2zr1TcA05",
+  "object": "chat.completion",
+  "created": 1691643375,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_skills",
+          "arguments": "{\n    \"Name\": \"Agile Coach\",\n    \"Level\": \"Emergent\",\n    \"Description\": \"An emergent Agile Coach possesses a foundational understanding of agile methodologies and has some experience in coaching teams in the implementation of these methodologies. They are adept at facilitation, possess good communication skills, and are able to handle conflicts.\"\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "completion_tokens": 69,
+    "total_tokens": 282
+  }
+}

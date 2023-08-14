@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const sqlite3 = require('sqlite3').verbose();
 
 //Shared dn connection
 const db = require('../shared.js');

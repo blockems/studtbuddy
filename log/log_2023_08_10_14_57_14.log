@@ -1,0 +1,45 @@
+2023-08-10 14:57:14,768 - __main__ - INFO - <module> - port: 50001
+2023-08-10 14:57:14,768 - __main__ - INFO - <module> - debug: True
+2023-08-10 14:57:14,768 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-10 14:57:14,768 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-10 14:57:14,768 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-10 14:57:14,768 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-10 14:57:14,771 - __main__ - DEBUG - get_skills - 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    
+2023-08-10 14:57:14,772 - __main__ - DEBUG - get_skills - {'name': 'get_skills', 'description': 'Get the skills for the role', 'parameters': {'title': 'Skill', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Level', 'Description']}, 'return_type': 'json'}
+2023-08-10 14:57:19,543 - __main__ - DEBUG - get_skills - {
+  "id": "chatcmpl-7ls1Rn1nMOLGJBp1rXkcwQiqjgY8I",
+  "object": "chat.completion",
+  "created": 1691643433,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_skills",
+          "arguments": "{\n  \"Name\": \"Agile Coach\",\n  \"Level\": \"Emergent\",\n  \"Description\": \"An Agile Coach at the emergent level assists the team in improving the process of delivering software and creates an environment that promotes Agile values and principles.\"\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "completion_tokens": 53,
+    "total_tokens": 266
+  }
+}

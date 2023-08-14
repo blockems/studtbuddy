@@ -5,13 +5,15 @@ const session = require('express-session');
 const path = require('path');
 const morgan = require('morgan');
 
-//Port
-const port = 3000;
-process.env.NODE_ENV = 'development';
-process.env.DEBUG_LEVEL = '1';
+
+//Load env variables:
+require('dotenv').config();
+const UI_PORT = process.env.UI_PORT || 3000;;
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const DEBUG_LEVEL = process.env.DEBUG_LEVEL || '1';
 
 //loging!
-if (process.env.NODE_ENV === 'development' && process.env.DEBUG_LEVEL > '1') {
+if (NODE_ENV === 'development' && DEBUG_LEVEL > '1') {
   app.use(morgan('dev'));
 }
 
@@ -64,8 +66,8 @@ app.use('/skillhierarchy', authMiddleware, skillhierarchyRoutes);
 app.use('/',authMiddleware, indexRoutes);
 app.use('/stories', storyRoutes);
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(UI_PORT, () => {
+  console.log(`Server running at http://localhost:${UI_PORT}`);
 });
 
 // Handle the "exit" event to close the database connection

@@ -1,17 +1,39 @@
-import openai
+#OS imports
 import os
-from dotenv import load_dotenv
 import json
 import logging
 from datetime import datetime
 
-load_dotenv()  # load environment variables from .env file
+#Env Mgt
+from dotenv import load_dotenv
 
+#JSON Structures
+from pydantic import BaseModel
+from typing import List
+
+#AI Client
+import openai
+
+#Database Access
+import sqlite3
+
+#Load env variables:
+load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')  # get OpenAI key from environment variables
 port = os.getenv('getSkills_PORT', 5001)
 debug = os.getenv('getSkills_DEBUG', True)
-log_level = os.getenv('getSkills_LOG_LEVEL', 'WARNING').upper()
+#log_level = os.getenv('getSkills_LOG_LEVEL', 'WARNING').upper()
+log_level = 'DEBUG'
+data_dir = os.getenv('DATA_DIRECTORY', './data/roles')
+data_conn = os.getenv('DATA_CONNECTION_STRING', './data/database.db')
 
+# Define the directory path for the JSON data files
+directory_path = data_dir
+
+# Create a connection to the SQLite database
+conn = sqlite3.connect(data_conn)
+
+#Set up logging
 numeric_level = getattr(logging, log_level, None)
 if not isinstance(numeric_level, int):
     raise ValueError(f'Invalid log level: {log_level}')
@@ -37,102 +59,53 @@ logger.info(f'port: {port}')
 logger.info(f'debug: {debug}')
 logger.info(f'log_level: {log_level}')
 logger.info(f'numeric_level: {numeric_level}')
-
-logger.info('''
-            Error levels:
-            * DEBUG
-            * INFO
-            * WARNING
-            * ERROR
-            * CRITICAL''')
+logger.info(f'Data Directory: {data_dir}')
+logger.info(f'Data Connection String: {data_conn}')
 
 role = "Agile Coach"
-logger.info(f'Role: {role}')
-
 competency = "Emergent"
-logger.info(f'Competency: {competency}')
-
 current_answer = ""
-logger.info(f'Current answer: {current_answer}')
+current_json = ""
+prompt = ""
 
+#Now define our json objects:
+class Skill(BaseModel):
+    Name: str
+    Level: str
+    Description: str
 
-prompt = f'''
-    Role:
-    You are a HR consultant in a large financial institution.
+class Reviewer(BaseModel):
+    Name: str
+    Description: str
 
-    Background:
-    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+class RoleDefinition(BaseModel):
+    Role: str
+    Level: str
+    Description: str
+    Required: List[Skill]
+    Recommended: List[Skill]
+    Reviewers: List[Reviewer]
 
-    Task:
-    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+skill_schema = {
+    "name" : "get_skills",
+    "description" : "Get the skills for the role",
+    "parameters" : RoleDefinition.schema(),
+    "return_type" : "json" 
+    }
 
-    Output:
-    The task's output is a JSON object which outlines the required and recommended skills for an "{competency}" level "{role}".
-    '''
-logger.info(f'Prompt: {prompt}')
+class Expert(BaseModel):
+    Name: str
+    Description: str
 
-roleformat = {
-        "Role": "Role Name",
-        "Level": "Competency Level",
-        "Description": "Role Description",
-        "Required": [{"Name": "Element Name","Level": "Element Level","Description": "Element Description"}],
-        "Recommended": [{"Name": "Element Name","Level": "Element Level","Description": "Element Description"}]
-      }
-logger.info(f'Role format: {roleformat}')
+class ExpertsModel(BaseModel):
+    experts: List[Expert]
 
-expertformat = {"experts":[{"Name": "Expert Name", "Description": "Expert Description"}]}
-logger.info(f'Expert format: {expertformat}')
-
-def get_experts():
-    prompttext = '''I want a response to the following question:
-    
-    ''' + prompt + '''
-
-        Name 3 world-class experts (past or present) who would be great at answering this?
-        Don't answer the question yet. Just name the experts.
-        Please return the results as a json object with the following structure:    
-        '''
-    
-    prompttext = prompttext + json.dumps(expertformat)
-    logger.info(prompttext)
-
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-          {
-            "role": "assistant",
-            "content": prompttext
-          }
-        ]
-    )
-    logger.debug(response)
-
-    if response['choices'] and response['choices'][0]['message']:
-        logger.info(response['choices'][0]['message']['content'].strip())
-        return response['choices'][0]['message']['content'].strip()
-
-def get_skills():
-    
-    prompttext = prompt + '''
-      
-      The JSON object is as follows:
-      ''' + json.dumps(roleformat)
-    logger.info(prompttext)
-
-    response = openai.ChatCompletion.create(
-      model="gpt-4",
-      messages=[
-        {
-            "role": "assistant",
-            "content": prompttext
-        }
-      ]
-    )
-    logger.debug(response)
-
-    if response['choices'] and response['choices'][0]['message']:
-      logger.info(response['choices'][0]['message']['content'].strip())
-      return response['choices'][0]['message']['content'].strip()
+expert_schema = {
+    "name" : "get_experts",
+    "description" : "Get a list of experts for answering this question",
+    "parameters" : ExpertsModel.schema(),
+    "return_type" : "json" 
+    } 
     
 def get_review(data):
     prompttext = f'''
@@ -164,9 +137,9 @@ def get_review(data):
     )
     logger.debug(response)
 
-    if response['choices'] and response['choices'][0]['message']:
-      logger.info(response['choices'][0]['message']['content'].strip()) 
-      return response['choices'][0]['message']['content'].strip()
+    if response['choices'] and response['choices'][0]['message']: #type: ignore
+      logger.info(response['choices'][0]['message']['content'].strip())  #type: ignore
+      return response['choices'][0]['message']['content'].strip() #type: ignore
 
 def get_final_answer():
     prompttext = f'''role:
@@ -198,29 +171,87 @@ def get_final_answer():
     )
     logger.debug(response)
 
-    if response['choices'] and response['choices'][0]['message']:
-      logger.info(response['choices'][0]['message']['content'].strip())
-      return response['choices'][0]['message']['content'].strip()
+    if response['choices'] and response['choices'][0]['message']: #type: ignore
+      logger.info(response['choices'][0]['message']['content'].strip()) #type: ignore
+      return response['choices'][0]['message']['content'].strip() #type: ignore
 
+def get_skills():
+    
+    logger.debug(f'Prompt: {prompt}')
+    logger.debug(f'Skill schema: {skill_schema}')
+    response = openai.ChatCompletion.create(
+      model="gpt-4",
+      messages=[
+        {
+            "role": "assistant",
+            "content": f'{prompt} Dont populate the reviewers list at this stage.'
+        }
+      ],
+      functions = [skill_schema],
+      function_call = {"name":"get_skills"}
+    )
+    logger.debug(f'response:{response}')
+
+    #if we have a response
+    if response['choices'] and response['choices'][0]['message']: #type: ignore
+      return_json = json.loads(response.choices[0]["message"]["function_call"]["arguments"]) #type: ignore
+      logger.info(f'First Answer run: {return_json}')
+      return return_json
+
+def get_experts():
+    prompttext = '''I want a response to the following question:
+    
+    ''' + prompt + '''
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        '''
+    logger.info(prompttext)
+
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+          {
+            "role": "assistant",
+            "content": prompttext
+          }
+        ],
+      functions = [expert_schema],
+      function_call = {"name":"get_experts"}
+    )
+    logger.debug(response)
+
+    if response['choices'] and response['choices'][0]['message']: #type: ignore
+      return_json = json.loads(response.choices[0]["message"]["function_call"]["arguments"]) #type: ignore
+      logger.info(f'List of Experts: {return_json}')
+      return return_json
 
 if __name__ == '__main__':
-    current_answer = get_skills()
-    logger.info(f'Current answer: {current_answer}')
+    prompt = f'''
+    Role:
+    You are a HR consultant in a large financial institution.
 
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "{competency}" level "{role}".
+    The JSON should have a "required" array where you list the skills.
+
+    '''
+    #Get the first answer
+    current_json = get_skills()
+    #get some experts to delibarate
     experts = get_experts()
-    logger.info(f'Experts: {experts}')
-
-    # Now we add the reviewers comments section
-    json_obj = json.loads(current_answer)
-    json_obj['Reviewers'] = [{"Name": "Reviewer Name", "Description": "Reviewer Description" }]
-    current_answer = json.dumps(json_obj)
-    logger.info(f'Current answer: {current_answer}') 
-    
+        
     # Now we go and get the reviewers comments
     data = json.loads(experts)
     for expert in data['experts']:
         current_answer = get_review(expert['Name'])
         logger.info(current_answer)
 
-    current_answer = get_final_answer()
-    logger.info(current_answer)
+    #current_answer = get_final_answer()
+    #logger.info(current_answer)

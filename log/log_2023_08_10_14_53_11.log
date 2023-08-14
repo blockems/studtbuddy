@@ -1,0 +1,31 @@
+2023-08-10 14:53:11,064 - __main__ - INFO - <module> - port: 50001
+2023-08-10 14:53:11,064 - __main__ - INFO - <module> - debug: True
+2023-08-10 14:53:11,064 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-10 14:53:11,064 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-10 14:53:11,064 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-10 14:53:11,064 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-10 14:53:25,588 - __main__ - DEBUG - get_skills - {
+  "id": "chatcmpl-7lrxY0H5xsAqGeCNC7w4BsSKPTtsb",
+  "object": "chat.completion",
+  "created": 1691643192,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_skills",
+          "arguments": "\n{\n\"Name\": \"Agile Coach\",\n\"Level\": \"Emergent\",\n\"Description\": \"An emergent Agile Coach is expected to have a foundational understanding of agile principles, practices and methodologies. They are required to demonstrate a commitment to continuous improvement and the ability to encourage team collaboration. An emergent Agile Coach should be starting to facilitate agile ceremonies and should be familiar with agile tracking and management tools, as well as have a basic understanding of the banking and financial industry.\"\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "completion_tokens": 97,
+    "total_tokens": 310
+  }
+}

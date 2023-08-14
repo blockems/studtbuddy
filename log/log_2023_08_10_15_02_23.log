@@ -1,0 +1,47 @@
+2023-08-10 15:02:23,253 - __main__ - INFO - <module> - port: 50001
+2023-08-10 15:02:23,253 - __main__ - INFO - <module> - debug: True
+2023-08-10 15:02:23,253 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-10 15:02:23,253 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-10 15:02:23,253 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-10 15:02:23,253 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-10 15:02:23,256 - __main__ - DEBUG - get_skills - 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+
+    Add the skills into the appropriate section of the JSON object.
+    
+2023-08-10 15:02:23,256 - __main__ - DEBUG - get_skills - {'name': 'get_skills', 'description': 'Get the skills for the role', 'parameters': {'title': 'Skill', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Level', 'Description']}, 'return_type': 'json'}
+2023-08-10 15:02:38,953 - __main__ - DEBUG - get_skills - {
+  "id": "chatcmpl-7ls6QzJASVNyoCMLTAlRkkBZC8tqa",
+  "object": "chat.completion",
+  "created": 1691643742,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_skills",
+          "arguments": "{\n  \"Name\": \"Agile Coach - Emergent\",\n  \"Level\": \"Emergent\",\n  \"Description\": [\n    {\n      \"Required Skills\": [\n        {\n          \"skill_name\": \"Basic Agile Principles\",\n          \"description\": \"Understanding of core values and principles of Agile methodologies.\"\n        },\n        {\n          \"skill_name\": \"Facilitation Skills\",\n          \"description\": \"Ability to facilitate meetings and discussions.\"\n        },\n        {\n          \"skill_name\": \"Communication Skills\",\n          \"description\": \"Ability to communicate effectively with team members.\"\n        },\n        {\n          \"skill_name\": \"Problem Solving\",\n          \"description\": \"Ability to identify problems and recommend solutions.\"\n        }\n      ],\n      \"Recommended Skills\": [\n        {\n          \"skill_name\": \"Agile Project Management Tools\",\n          \"description\": \"Familiarity with tools like JIRA or Trello.\"\n        },\n        {\n          \"skill_name\": \"Change Management\",\n          \"description\": \"Basic understanding of how to manage change in an organization.\"\n        }\n      ]\n    }\n  ]\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 226,
+    "completion_tokens": 219,
+    "total_tokens": 445
+  }
+}

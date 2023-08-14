@@ -1,0 +1,22 @@
+2023-08-14 12:06:16,652 - __main__ - INFO - <module> - port: 50001
+2023-08-14 12:06:16,653 - __main__ - INFO - <module> - debug: True
+2023-08-14 12:06:16,653 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-14 12:06:16,653 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-14 12:06:16,653 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-14 12:06:16,653 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-14 12:06:16,658 - __main__ - DEBUG - get_skills - Prompt: 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    The JSON should have a "required" array where you list the skills.
+
+    
+2023-08-14 12:06:16,659 - __main__ - DEBUG - get_skills - Skill schema: {'name': 'get_skills', 'description': 'Get the skills for the role', 'parameters': {'title': 'RoleDefinition', 'type': 'object', 'properties': {'Role': {'title': 'Role', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}, 'Required': {'title': 'Required', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Recommended': {'title': 'Recommended', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Reviewers': {'title': 'Reviewers', 'type': 'array', 'items': {'$ref': '#/definitions/Reviewer'}}}, 'required': ['Role', 'Level', 'Description', 'Required', 'Recommended', 'Reviewers'], 'definitions': {'Skill': {'title': 'Skill', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Level', 'Description']}, 'Reviewer': {'title': 'Reviewer', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Description']}}}, 'return_type': 'json'}

@@ -1,0 +1,97 @@
+2023-08-10 15:51:28,750 - __main__ - INFO - <module> - port: 50001
+2023-08-10 15:51:28,750 - __main__ - INFO - <module> - debug: True
+2023-08-10 15:51:28,750 - __main__ - INFO - <module> - log_level: DEBUG
+2023-08-10 15:51:28,750 - __main__ - INFO - <module> - numeric_level: 10
+2023-08-10 15:51:28,750 - __main__ - INFO - <module> - Data Directory: ./data/roles
+2023-08-10 15:51:28,750 - __main__ - INFO - <module> - Data Connection String: ./data/database.db
+2023-08-10 15:51:28,753 - __main__ - DEBUG - get_skills - Prompt: 
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    The JSON should have a "required" array where you list the skills.
+
+    
+2023-08-10 15:51:28,754 - __main__ - DEBUG - get_skills - skill schema: {'name': 'get_skills', 'description': 'Get the skills for the role', 'parameters': {'title': 'RoleDefinition', 'type': 'object', 'properties': {'Role': {'title': 'Role', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}, 'Required': {'title': 'Required', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Recommended': {'title': 'Recommended', 'type': 'array', 'items': {'$ref': '#/definitions/Skill'}}, 'Reviewers': {'title': 'Reviewers', 'type': 'array', 'items': {'$ref': '#/definitions/Reviewer'}}}, 'required': ['Role', 'Level', 'Description', 'Required', 'Recommended', 'Reviewers'], 'definitions': {'Skill': {'title': 'Skill', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Level': {'title': 'Level', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Level', 'Description']}, 'Reviewer': {'title': 'Reviewer', 'type': 'object', 'properties': {'Name': {'title': 'Name', 'type': 'string'}, 'Description': {'title': 'Description', 'type': 'string'}}, 'required': ['Name', 'Description']}}}, 'return_type': 'json'}
+2023-08-10 15:51:59,451 - __main__ - DEBUG - get_skills - response:{
+  "id": "chatcmpl-7lsrvBgC542wHpwGBXbeypRTe8pVU",
+  "object": "chat.completion",
+  "created": 1691646687,
+  "model": "gpt-4-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_skills",
+          "arguments": "{\n  \"Role\": \"Agile Coach\",\n  \"Level\": \"Emergent\",\n  \"Description\": \"An Agile Coach at the Emergent level is expected to assist teams in adopting Agile practices and mindsets. This role should facilitate change and promote a culture of continuous improvement and adaptability\",\n  \"Required\": [\n    {\n      \"Name\": \"Understanding of Agile methodologies\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Basics of Agile practices and principles, such as Scrum, Kanban, and Lean\"\n    },\n    {\n      \"Name\": \"Team Coaching and Facilitation\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Teaching skills to help teams in understanding and adopting Agile practices and principles\"\n    }, \n    {\n      \"Name\": \"Communication skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Effective communication and engagement with team members to encourage transparency and collaboration\"\n     }\n  ],\n  \"Recommended\": [\n    {\n      \"Name\": \"Understanding of software development\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Basics of software development lifecycle and software delivery\"\n    },\n    {\n      \"Name\": \"Problem-solving skills\",\n      \"Level\": \"Emergent\",\n      \"Description\": \"Analytical skills for solving problems and removing roadblocks\"\n    }\n  ],\n  \"Reviewers\": [\n  ]\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 294,
+    "completion_tokens": 285,
+    "total_tokens": 579
+  }
+}
+2023-08-10 15:51:59,452 - __main__ - INFO - get_skills - {'Role': 'Agile Coach', 'Level': 'Emergent', 'Description': 'An Agile Coach at the Emergent level is expected to assist teams in adopting Agile practices and mindsets. This role should facilitate change and promote a culture of continuous improvement and adaptability', 'Required': [{'Name': 'Understanding of Agile methodologies', 'Level': 'Emergent', 'Description': 'Basics of Agile practices and principles, such as Scrum, Kanban, and Lean'}, {'Name': 'Team Coaching and Facilitation', 'Level': 'Emergent', 'Description': 'Teaching skills to help teams in understanding and adopting Agile practices and principles'}, {'Name': 'Communication skills', 'Level': 'Emergent', 'Description': 'Effective communication and engagement with team members to encourage transparency and collaboration'}], 'Recommended': [{'Name': 'Understanding of software development', 'Level': 'Emergent', 'Description': 'Basics of software development lifecycle and software delivery'}, {'Name': 'Problem-solving skills', 'Level': 'Emergent', 'Description': 'Analytical skills for solving problems and removing roadblocks'}], 'Reviewers': []}
+2023-08-10 15:51:59,452 - __main__ - INFO - <module> - First Answer run: {'Role': 'Agile Coach', 'Level': 'Emergent', 'Description': 'An Agile Coach at the Emergent level is expected to assist teams in adopting Agile practices and mindsets. This role should facilitate change and promote a culture of continuous improvement and adaptability', 'Required': [{'Name': 'Understanding of Agile methodologies', 'Level': 'Emergent', 'Description': 'Basics of Agile practices and principles, such as Scrum, Kanban, and Lean'}, {'Name': 'Team Coaching and Facilitation', 'Level': 'Emergent', 'Description': 'Teaching skills to help teams in understanding and adopting Agile practices and principles'}, {'Name': 'Communication skills', 'Level': 'Emergent', 'Description': 'Effective communication and engagement with team members to encourage transparency and collaboration'}], 'Recommended': [{'Name': 'Understanding of software development', 'Level': 'Emergent', 'Description': 'Basics of software development lifecycle and software delivery'}, {'Name': 'Problem-solving skills', 'Level': 'Emergent', 'Description': 'Analytical skills for solving problems and removing roadblocks'}], 'Reviewers': []}
+2023-08-10 15:51:59,452 - __main__ - INFO - get_experts - I want a response to the following question:
+    
+    
+    Role:
+    You are a HR consultant in a large financial institution.
+
+    Background:
+    Your task involves understanding the necessary skills and competencies for success in the IT department of your organization. The role requires the appropriate level of proficiency with modern software construction methodologies, in addition to thorough familiarity with the business and technical aspects of banking, and regulatory requirements.
+
+    Task:
+    Given a competency scale of emergent, competent, expert, and lead, break down the skills and knowledge necessary for an "Emergent" level "Agile Coach". Present the information in the form of a JSON object.
+
+    Output:
+    The task's output is a JSON object which outlines the required and recommended skills for an "Emergent" level "Agile Coach".
+    The JSON should have a "required" array where you list the skills.
+
+    
+
+        Name 3 world-class experts (past or present) who would be great at answering this?
+        Don't answer the question yet. Just name the experts.
+        
+2023-08-10 15:52:02,583 - __main__ - DEBUG - get_experts - {
+  "id": "chatcmpl-7lssQHTVauj6867hwyplcoMBpCJbj",
+  "object": "chat.completion",
+  "created": 1691646718,
+  "model": "gpt-3.5-turbo-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "get_experts",
+          "arguments": "{\n  \"experts\": [\n    {\n      \"Name\": \"Lisa Adkins\",\n      \"Description\": \"Agile coach and author known for her work on agile transformation.\"\n    },\n    {\n      \"Name\": \"Mike Cohn\",\n      \"Description\": \"Renowned agile expert and author of several books on agile methodologies.\"\n    },\n    {\n      \"Name\": \"Esther Derby\",\n      \"Description\": \"Agile coach and author known for her expertise in organizational change and agile transitions.\"\n    }\n  ]\n}"
+        }
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 281,
+    "completion_tokens": 106,
+    "total_tokens": 387
+  }
+}
+2023-08-10 15:52:02,584 - __main__ - INFO - get_experts - {'experts': [{'Name': 'Lisa Adkins', 'Description': 'Agile coach and author known for her work on agile transformation.'}, {'Name': 'Mike Cohn', 'Description': 'Renowned agile expert and author of several books on agile methodologies.'}, {'Name': 'Esther Derby', 'Description': 'Agile coach and author known for her expertise in organizational change and agile transitions.'}]}
+2023-08-10 15:52:02,584 - __main__ - INFO - <module> - List of Experts: {'experts': [{'Name': 'Lisa Adkins', 'Description': 'Agile coach and author known for her work on agile transformation.'}, {'Name': 'Mike Cohn', 'Description': 'Renowned agile expert and author of several books on agile methodologies.'}, {'Name': 'Esther Derby', 'Description': 'Agile coach and author known for her expertise in organizational change and agile transitions.'}]}
